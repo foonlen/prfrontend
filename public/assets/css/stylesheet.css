@@ -1,0 +1,3970 @@
+body {
+  font-family: "Noto Sans SC", sans-serif;
+}
+.page {
+  background: #f6f7fa;
+}
+
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.modal.show {
+  display: block;
+  padding-right: 17px;
+}
+
+.page::-webkit-scrollbar {
+  display: none;
+}
+.container-dash {
+  padding-left: 285px;
+}
+
+a:hover {
+  color: #0a4eb5;
+  text-decoration: none;
+}
+.btn-success {
+  background-color: hsl(175deg 95% 40%);
+  border-color: hsl(175deg 95% 40%);
+}
+.error_class {
+  color: #ff808b;
+  margin-top: 9px;
+}
+
+.cp-primary-btn {
+  background: #074cb4;
+  height: 46px;
+  font-weight: 400;
+  padding: 0 15px;
+  text-align: left;
+  border: 0;
+  min-width: 150px;
+  color: #fff;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+.custom_secondary_button {
+  margin-top: 20px;
+  margin-left: 11px;
+  border-radius: 8px;
+  height: 46px;
+}
+
+.cp-primary-btn i {
+  float: right;
+  position: relative;
+  top: 0px;
+  margin-left: 10px;
+}
+
+.cp-btn {
+  min-width: 0px;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: none;
+}
+
+.custom_badge_success {
+  background-color: #189e36;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 300;
+}
+.custom_badge_danger {
+  background: #ff7575;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 300;
+}
+
+/*Start Navbar*/
+
+.navbar-nav {
+  padding: 10px;
+}
+.navbar-nav .nav-item {
+  margin: 0 20px;
+}
+.navbar-nav .nav-link {
+  color: #686868;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+.nav_images {
+  display: flex;
+  color: #545454;
+}
+.nav_images img {
+  width: 17px;
+  height: 17px;
+  margin-right: 11px;
+  margin-top: 3px;
+}
+
+.topMenuBarDropDown li a {
+  cursor: pointer;
+}
+
+/*End Navbar*/
+
+/*Start Auth Pages*/
+
+.country_input_field {
+  border-left: 0px !important;
+  margin-left: -5px;
+  border-radius: 0px 8px 8px 0px !important;
+  padding-left: 10px !important;
+}
+.my_custom_select {
+  background: #fff;
+  color: #6b6d7b;
+  font-weight: 400;
+}
+
+.auth_page {
+  padding: 0 15px;
+}
+
+.auth_page .auth__inner {
+  width: 100%;
+  max-width: 100%;
+  margin: auto 0 auto auto;
+  padding: 0;
+}
+
+.auth_page .auth__inner h1 {
+  color: #0a4eb5;
+  font-weight: 400;
+}
+
+.auth_page .auth__inner .auth__title p {
+  color: #b3b3b3;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.auth_page .auth_left {
+  background: url(/assets/images/auth_main_img.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ad_reg .auth_left {
+  background: url(/assets/images/ad_reg_bg_img.png);
+  background-size: cover;
+}
+
+.ad_reg .bg_auth_left {
+  background: none;
+}
+
+.ad_reg .plan_details {
+  color: #fff;
+  box-shadow: none;
+  background: none;
+  letter-spacing: 0.3px;
+  font-size: 21px;
+  margin-top: 21vh;
+  font-weight: 300;
+}
+
+.ad_reg .plan_details li {
+  line-height: 2.5;
+}
+.ad_reg .reg_auth_link {
+  color: hsl(216deg 99% 69%);
+}
+
+.ad_reg .reg_auth_link a {
+  color: hsl(216deg 99% 69%);
+}
+
+.bg_auth_left {
+  background: rgb(7 76 180 / 82%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.auth_page .auth_right {
+  min-height: 100vh;
+  padding-top: 25vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  background: #fbfbfb;
+}
+
+.plan_details {
+  background: #fff;
+  margin-top: 30vh;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 20px 0px rgb(255 255 255 / 50%);
+}
+
+.plan_details h4 {
+  font-weight: 400;
+}
+
+.plan_details ul {
+  line-height: 2.5;
+  margin-top: 20px;
+}
+
+.plan_details li {
+  line-height: 3;
+}
+
+.plan_details li img {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 7px;
+  width: 28px;
+}
+
+.auth_page .auth_right .field__icon {
+  left: 15px;
+  right: auto;
+}
+
+.auth_page .auth_right .field__input,
+.field__select {
+  padding-left: 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 400;
+}
+
+.field__textarea {
+  height: 84px;
+  border: 1px solid #ddd;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 11px 10px;
+}
+
+.auth_page .auth_right .field__label {
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.auth_page .auth_right .auth_forgot {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+  color: #5297ff;
+  margin-top: 5px;
+}
+
+.reg_auth_link {
+  margin-top: 15px;
+  letter-spacing: 0.3px;
+}
+
+.otp_auth_field {
+  margin-bottom: 50px;
+}
+
+.otp_auth_field input {
+  border-bottom: 2px solid #929292;
+  width: 2em !important;
+  font-size: 20px;
+  background: transparent;
+  margin: 0 5px;
+  font-weight: 400;
+}
+
+.reg_go_back i {
+  color: #0a4eb5;
+  font-size: 40px;
+  margin-bottom: 42px;
+}
+.greet_user {
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+.greet_user_sub {
+  font-size: 16px;
+  color: hsl(0deg 0% 73%);
+  margin-bottom: 44px;
+  font-weight: 300;
+}
+.custom_dropdown_icon {
+  right: 9px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.reg_auth_right {
+  padding-top: 18vh !important;
+}
+.auth__link {
+  font-weight: 400;
+  margin: 0px 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.resend_otp {
+  color: #3b89fe;
+  margin: 10px 0px 0px 0px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sub_text_verify_email span {
+  color: #606060;
+}
+.select_option_span {
+  border-right: 0px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/*End Auth Pages*/
+
+/* Sidebar menu starts here */
+.custom_nav {
+  display: block;
+  width: 285px !important;
+  padding: 15px;
+  overflow-x: scroll;
+}
+
+.custom_nav::-webkit-scrollbar {
+  display: none;
+}
+.custom_action_button {
+  background: #fff !important;
+}
+.evan_yates {
+  margin-left: 10px;
+}
+.custom_action_button i {
+  margin-left: 10px;
+  color: #fff;
+}
+.user_dropdown i {
+  color: #fff;
+}
+/* .user_media {
+  padding: 11px;
+  margin: 20px 0px;
+} */
+
+.user_media {
+  padding: 11px 24px;
+  margin: 20px 0px;
+}
+
+.user_media .row {
+  align-items: center;
+}
+.user_dropdown {
+  padding: 0px !important;
+}
+.user_main_name {
+  color: #fff;
+  font-size: 19px;
+}
+.user_sub_name {
+  color: #fff;
+}
+/* .nav_logo_title {
+  padding: 0px !important;
+} */
+.nav_logo {
+  width: 175px;
+}
+.pr_custom_nav {
+  background: hsl(216deg 93% 37%) !important;
+  width: 284px !important;
+  display: block;
+}
+.pr_nav_links .nav__title {
+  color: #fff !important;
+}
+.pr_nav_links .nav__preview {
+  color: #fff !important;
+}
+.custom_nav_logo {
+  padding: 10px 17px 14px !important;
+}
+/* .custom_nav .earnings_block {
+  padding: 0 15px;
+  margin: 33px 0px 11px 0px;
+  color: #fff;
+  font-size: 16px;
+} */
+
+.custom_nav .earnings_block {
+  padding: 0 31px;
+  margin: 33px 18px 11px 0px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.custom_nav .sidemenu_navbar li.active {
+  background: #06419a;
+  border-radius: 10px;
+}
+
+.custom_nav .register-select-country {
+  width: 100%;
+  background: #07439c;
+  border: 0;
+}
+
+.custom_nav .container__new {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.custom_nav .new__icon {
+  background: rgb(7 77 182);
+  color: #fff;
+}
+
+.custom_nav .new__title {
+  font-weight: 300;
+  font-family: "Noto Sans SC", sans-serif !important;
+  color: #fff;
+  font-size: 14px;
+}
+
+.custom_nav .new__item {
+  display: flex;
+  padding: 10px;
+}
+
+.custom_nav .user_media img {
+  width: 50px;
+}
+
+.custom_nav .user_media .media-body h4 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.custom_nav .user_media .media-body p {
+  color: #ccc;
+}
+
+/* .custom_nav .nav__link {
+  padding: 10px 14px 14px;
+  color: #fff;
+} */
+
+.custom_nav .nav__link {
+  padding: 10px 26px 14px;
+  color: #fff;
+}
+
+.custom_nav .nav__link a {
+  width: 100%;
+}
+
+.custom_nav .nav__link:hover {
+  color: #1c1d21;
+  text-decoration: none;
+}
+
+.custom_nav .nav__title {
+  padding: 0 15px;
+  font-weight: 300;
+  font-size: 14px;
+  min-height: 35px;
+  display: inline !important;
+  color: #fff;
+}
+
+.custom_nav .nav__link {
+  display: block;
+}
+
+.custom_nav .nav__preview {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  top: 4px;
+}
+
+.custom_nav .side-menu-dropdown-icon {
+  float: right;
+  margin-top: 5px;
+}
+
+.custom_nav .grow_earnings_menu .nav__title {
+  font-weight: 100;
+}
+
+.custom_nav .dropdown_list {
+  display: block;
+  padding: 15px 15px 0 30px;
+  border-radius: 10px;
+}
+
+.custom_nav .dropdown_list ul li {
+  line-height: 2.5;
+  list-style: circle;
+  color: #fff;
+}
+
+.custom_nav .sidemenu_navbar {
+  padding: 0 15px;
+}
+
+.custom_nav .hrefLinks {
+  color: #fff;
+}
+
+.custom_nav .hrefLinks:hover {
+  text-decoration: none;
+}
+
+.custom_nav .dropdown_list .sidebar_dropdown ul {
+  padding: 0 0 0 15px;
+}
+
+.greet_user {
+  color: hsl(216deg 80% 40%);
+}
+.invite_block {
+  padding: 20px;
+  background-color: hsl(216deg 86% 40%);
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 0 15px;
+  margin-top: 20px;
+}
+.invite_block img {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.invite_block h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.invite_block h4 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+.invite_link_btn {
+  background-color: #fff;
+  color: #074db6;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 0 26px;
+  font-weight: 700;
+}
+.grow_earnings_menu .main_block_menu {
+  padding: 0 15px;
+}
+
+/* Sidebar menu ends here */
+
+/* Top menu ends here */
+
+.top_menubar {
+  padding: 15px 20px;
+  align-items: center;
+  background: #fff;
+}
+.dash_menu_bar .row .col-lg-4,
+.dash_menu_bar .row .col-lg-2,
+.dash_menu_bar .row .col-lg-1,
+.dash_menu_bar .row .col-lg-5,
+.dash_menu_bar .row .col-lg-3 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+}
+.dash_menu_bar .list_platform a {
+  color: #777;
+  font-weight: 400;
+}
+.dash_menu_bar .list_platform img {
+  /* height: 19px; */
+  margin-right: 8px;
+}
+.dashboard_top_menu_right li {
+  align-items: center;
+}
+.dashboard_top_menu_right li p {
+  margin-top: 1px;
+}
+.dash_menu_bar .new__items {
+  display: flex;
+}
+
+.top_menubar .custom_action_button img {
+  margin: 0 5px;
+}
+
+.top_menubar .dropdown-menu {
+  right: 0;
+  bottom: auto;
+  left: auto;
+  border: 0px;
+  box-shadow: 0 0 15px #ddd;
+  margin-top: 15px;
+}
+
+.top_menubar .new__item {
+  display: flex;
+  padding: 3px 15px;
+}
+
+.top_menubar .dropdown-menu .new__icon {
+  margin-right: 5px;
+  background: transparent;
+}
+
+.top_menubar .dropdown-menu .new__title {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.dashboard_top_menu_right {
+  float: right;
+}
+
+.dashboard_top_menu_right li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.dashboard_top_menu_right .action {
+  padding: 0;
+}
+
+.mobile_top_menu .navbar-dark .navbar-toggler {
+  border: 0;
+  outline: 0;
+}
+
+.mobile_top_menu {
+  background: #1f3bb3;
+}
+
+.mobile_top_menu .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+.mobile_top_menu .navbar-nav .nav-item {
+  margin: 0;
+}
+
+.mobile_top_menu .navbar-nav li img {
+  float: left;
+  margin-right: 10px;
+}
+
+.mobile_top_menu .navbar-nav li .dropdown-menu {
+  background: transparent;
+  border: 0;
+}
+
+.mobile_top_menu .navbar-nav li .dropdown-menu li {
+  list-style-type: circle;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.mobile_top_menu .navbar-nav li .dropdown-menu ul {
+  margin-left: 35px;
+}
+
+.mobile_top_menu .navbar-nav li .dropdown-menu li a {
+  padding-left: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.mobile_top_menu .navbar {
+  padding: 10px 10px;
+}
+
+.mobile_top_menu .nav_logo {
+  width: 150px;
+}
+
+/* Top menu ends here */
+
+/* welcome popup starts here */
+.popup_row {
+  background-color: hsl(203deg 89% 96%);
+  min-height: 100vh;
+}
+.popup_main_block {
+  margin-top: 15vh;
+  padding: 15px;
+  background-color: hsl(0deg 0% 100%);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ddd;
+  align-items: center;
+  text-align: center;
+}
+
+.popup_main_block img {
+  margin: auto;
+}
+.popup_main_block h4 {
+  color: #0a4eb5;
+  margin-top: 15px;
+  margin-bottom: 13px;
+  font-weight: 300;
+  font-size: 26px;
+}
+.popup_main_block p {
+  color: hsl(0deg 0% 73%);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+.may_be_later {
+  margin-top: 8px;
+}
+.may_be_later_link {
+  color: hsl(0deg 0% 73%);
+  font-weight: 300;
+  font-size: 14px;
+}
+/* welcome popup ends here */
+
+/* Panel table css starts here */
+.panel-table .table td,
+.panel-table .table td {
+  padding: 15px 14px !important;
+  vertical-align: middle;
+  border: 0px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.panel-table table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.panel-table tr {
+  box-shadow: none;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.panel-table tbody tr td:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.panel-table tbody tr td:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.table-primary-btn {
+  padding: 8px 22px;
+  background: #1f3bb3 !important;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.dashboard_table_btn {
+  margin: 0 5px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.custom_panel {
+  background: none;
+}
+
+.panel-table .table thead th {
+  vertical-align: bottom;
+  border-bottom: 0px solid #dee2e6;
+  border-top: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  padding: 10px 10px;
+}
+.table_primary_edit {
+  height: 29px !important;
+}
+
+.pagination {
+  margin-top: 10px;
+}
+
+.pagination li {
+  padding: 4px 10px;
+  height: 30px;
+}
+
+.pagination li.active {
+  background: #074db6;
+  color: #fff;
+  border-radius: 3px;
+}
+.pager__arrow {
+  font-weight: 500;
+}
+.table_order_title {
+  min-width: 129px;
+}
+.table_platform {
+  min-width: 137px;
+}
+.table_platform_name {
+  min-width: 166px;
+}
+.table_service {
+  min-width: 166px;
+}
+.table_order_ends_on {
+  min-width: 166px;
+}
+.table_status {
+  min-width: 185px;
+}
+.table_price {
+  min-width: 104px;
+}
+
+.table_platform_action {
+  min-width: 186px;
+}
+
+.table_ad_order_title {
+  min-width: 144px;
+}
+.table_ad_order_id {
+  min-width: 71px;
+}
+
+/* Panel table css ends here */
+
+/* Panel Title starts here */
+
+.panel_title_block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.panel_title_block h2 {
+  font-weight: 400;
+  color: #1556b8 !important;
+  letter-spacing: 0.2px;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.panel_title_block p {
+  color: #666;
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+/* Panel Title ends here */
+
+/* add new platform starts here */
+.create_platform_img {
+  width: 27px;
+  height: 27px !important;
+  margin-right: 10px;
+}
+.platform_field_wrap img {
+  height: 19px;
+}
+.addNewPlatform {
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 13px;
+  padding: 24px;
+  margin-top: 64px;
+}
+.platform_field_label {
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.platform_field_wrap .field__icon {
+  left: 15px;
+  right: auto;
+}
+.platform_field_wrap input {
+  padding-left: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 400;
+}
+.pr_platform_country_list .searchWrapper {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0px;
+  min-height: 13px;
+}
+
+.pr_platform_country_list .multiSelectContainer ul::-webkit-scrollbar {
+  display: none;
+}
+
+.addNewPlatform .auth__field {
+  margin-bottom: 15px;
+}
+
+.addNewPlatform .panel_title_block {
+  text-align: center;
+  margin: 0;
+}
+.create_platform {
+  display: flex;
+  justify-content: center;
+}
+
+.create_platform i {
+  margin-left: 10px;
+}
+
+.create_platform_main {
+  text-align: center;
+  padding: 25px;
+  background: #fff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.create_platform_main h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.create_platform_main p {
+  margin-bottom: 15px;
+}
+
+.pr_verified {
+  margin: auto;
+}
+.fields_block {
+  margin-top: 22px;
+}
+
+.platform_field_wrap input,
+.platform_field_wrap select {
+  height: 40px;
+}
+
+.select_platform .create_platform_select {
+  border: 1px solid #8fd9ac !important;
+  border-radius: 9px;
+}
+
+.platform_create_modal .modal-content {
+  padding: 24px 0px 0px 0px;
+  border-radius: 13px;
+  height: 605px;
+  width: 563px;
+  border: 0px;
+}
+
+.platform_create_modal .modal-body {
+  padding: 0px;
+}
+
+.platform_create_modal .platform_create_status {
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+}
+.platform_create_modal .platform_create_notice {
+  color: #b0b0b0;
+  font-weight: 400;
+  margin-top: 22px;
+  text-align: center;
+  font-size: 16px;
+}
+.platform_create_modal h3 {
+  color: #1556b8;
+  text-align: center;
+  margin-bottom: 22px;
+  font-weight: 400;
+  margin-top: 28px;
+}
+.guide_block {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+.platform_create_modal img {
+  margin-top: 41px;
+}
+
+.pr_platform_country_list .optionListContainer {
+  z-index: 9999;
+}
+
+.pr_platform_country_list .searchWrapper .chip {
+  vertical-align: top;
+  margin-top: 7px;
+}
+
+.pr_platform_country_list .searchWrapper .chip:first-child {
+  margin-left: 42px;
+}
+
+/* add new platform ends here */
+
+/* update new platform starts here */
+.platform_update_blocks {
+  margin-top: 30px;
+}
+.platform_overview {
+  padding: 20px 25px;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+}
+.platform_overview h3 {
+  font-weight: 400;
+}
+.overview_edit {
+  float: right;
+}
+.overview_edit img {
+  height: 22px;
+}
+.platform_form_col {
+  margin-top: 22px !important;
+}
+.update_wrap {
+  border-bottom: 1px solid #ddd;
+}
+.update_wrap .field__icon {
+  right: auto !important;
+}
+.update_wrap .field__input {
+  margin-left: 27px;
+  border: 0px !important;
+  height: 38px;
+  margin-top: 12px;
+  font-weight: 400;
+}
+.update_wrap input::placeholder {
+  color: #000 !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.update_wrap i {
+  font-size: 21px;
+}
+.platform_overview_row {
+  align-items: center;
+}
+.platform_overview .form__col {
+  padding: 0 0px;
+}
+.platform_overview .table th {
+  background: #fff !important;
+}
+.platform_overview .table {
+  margin-bottom: 0px !important;
+  margin-top: 19px;
+}
+.platform_overview .table thead th {
+  padding: 0px !important;
+}
+.addMoreServices {
+  float: right;
+  font-weight: 500;
+  color: hsl(216deg 82% 39%);
+}
+.addMoreServices i {
+  margin-right: 10px;
+  background: #074cb4;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  padding: 7px;
+}
+.custom_tag_gray {
+  min-width: 0px !important;
+  padding: 5px 8px 5px !important;
+  font-size: 11px;
+}
+.followers p {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #8181a5;
+  z-index: 2;
+}
+.followers_count {
+  line-height: 2.2;
+}
+.followers_count span {
+  margin-right: 10px;
+  display: inline-block;
+}
+.panel-table .platform_update td,
+.panel-table .platform_update td {
+  padding: 15px 0px 21px 0px !important;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 14px;
+}
+.panel-table .platform_update tbody tr td:first-child {
+  border-radius: 0px !important;
+}
+.panel-table .platform_update tbody tr td:last-child {
+  border-radius: 0px !important;
+}
+.platform_countries {
+  height: 25px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.platform_update .la-trash-o {
+  color: red;
+}
+
+/* update new platform ends here */
+
+/* update services css code starts here */
+.services_update_blocks {
+  margin-top: 22px;
+}
+.services_update_blocks h3 {
+  color: hsl(175deg 95% 40%);
+  font-weight: 400;
+}
+.services_list_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 25px;
+}
+
+.custom_form_check_inline input {
+  height: unset;
+}
+
+.services_list_block button {
+  margin-bottom: 0;
+  /* margin-top: 20px; */
+  height: 40px;
+  border-radius: 5px;
+}
+
+.services_list_block .form-control,
+.services_list_block .form-control {
+  background: #eaeaea !important;
+  border: 0px solid #ddd;
+  font-size: 14px;
+  height: 40px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.follow_unfollow {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.follow_unfollow .form-check-inline .form-check-input {
+  margin-top: -5px !important;
+}
+.services_list_block label {
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.save_service {
+  margin-top: 20px;
+}
+.save_service .form-group {
+  margin-bottom: 0px;
+}
+
+.services_edit .rc-time-picker-input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.services_block {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ddd;
+}
+
+.services_update .field__select,
+.services_input {
+  padding-left: 12px;
+  background: #eaeaea;
+  color: #535353;
+  font-weight: 500;
+  height: 43px !important;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.services_update_blocks .table td {
+  padding: 10px 10px 10px 10px !important;
+}
+.services_update .field__icon {
+  right: 15px !important;
+  color: #535353;
+}
+.update_services {
+  font-weight: 500;
+  color: hsl(216deg 82% 39%);
+}
+
+.update_services i {
+  margin-right: 10px;
+  background: #074cb4;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  padding: 7px;
+}
+
+.submit_services {
+  float: right;
+}
+
+.services_list_row {
+  margin-bottom: 22px;
+  color: hsl(0deg 0% 69%);
+}
+
+.platform_form_col .field__label {
+  position: relative;
+  margin-bottom: -10px;
+  font-size: 12px;
+  color: #aaa;
+}
+.table_social_media {
+  min-width: 127px;
+}
+.table_follow_unfollow {
+  min-width: 122px;
+}
+.table_video_duration {
+  min-width: 122px;
+}
+.table_services_price {
+  min-width: 86px;
+}
+/* update services css code ends here */
+
+/* order details page css starts here */
+.brands_need {
+  background: #074cb4;
+  color: #fff;
+  font-weight: 100;
+}
+.brand_details p {
+  text-transform: capitalize;
+}
+.brand_details h3 {
+  font-weight: 300;
+  margin-top: 5px;
+  border-bottom: 2px solid #04409a;
+  padding-bottom: 13px;
+  margin-bottom: 20px;
+}
+.description_first_block {
+  color: #999999;
+  letter-spacing: 0.3px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  font-weight: 300;
+}
+.completed_detail_fields {
+  margin: 4px 0px 10px 0px;
+  color: #999999;
+  font-weight: 300;
+}
+.employee_tip {
+  color: #999999;
+  letter-spacing: 0.3px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+.order_assigned_date {
+  margin-top: 10px;
+  color: #fff !important;
+}
+.description_second_block {
+  color: #999999;
+  letter-spacing: 0.3px;
+  margin-top: 22px;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+.brand_details {
+  margin-top: 25px;
+}
+.referral_link {
+  margin-top: 10px;
+  font-size: 13px;
+  margin-bottom: 17px;
+  border-bottom: 2px solid #04409a;
+  padding-bottom: 13px;
+  display: flex;
+}
+.referral_link img {
+  margin-right: 10px;
+}
+.order_deadline {
+  margin-top: 10px;
+  font-size: 13px;
+  margin-bottom: 17px;
+  border-bottom: 2px solid #04409a;
+  padding-bottom: 13px;
+}
+.order_deadline p {
+  color: #8babdc;
+}
+.order_reject {
+  background-color: hsl(0deg 100% 73%);
+  padding: 20px 30px;
+  border-radius: 8px;
+  color: hsl(0deg 62% 54%);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+  width: 100%;
+}
+.order_accept {
+  background-color: hsl(47deg 100% 73%);
+  padding: 20px 30px;
+  border-radius: 8px;
+  color: hsl(47deg 70% 37%);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.order_details_modal .modal-content {
+  padding: 24px;
+  border-radius: 13px;
+}
+.modifyOrdersTitle {
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+.order_details_modal .auth__field {
+  margin-bottom: 10px;
+}
+.order_details_modal .error_class {
+  margin-top: 5px;
+}
+.order_details_modal button {
+  margin-right: 10px;
+}
+.completed_order_details h5 {
+  font-weight: 400;
+  color: #1556b8;
+  margin-bottom: 9px;
+  font-size: 22px;
+}
+
+/* order details page css ends here */
+
+/* new order page css starts here */
+.order_status {
+  color: #6c6c6c;
+  font-weight: 500;
+}
+.order_date_time {
+  color: #b8b8c0;
+  font-size: 12px;
+}
+.activity_log_btn img {
+  margin-right: 10px;
+}
+.show_more {
+  display: flex;
+  justify-content: flex-end;
+}
+.show_more img {
+  height: 11px;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+.details_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 38px;
+  margin-top: 34px;
+}
+.orders_progress {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 33px;
+}
+.orders_details_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+}
+.orders_conversation_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+  margin-top: 34px;
+}
+.custom_progress {
+  height: 4px !important;
+  margin-bottom: 10px;
+  background: #c4c4c4;
+}
+.custom_progress .progress__value {
+  height: 6px;
+  background: #2db944;
+}
+.details_block .row {
+  margin-bottom: 34px;
+}
+.details_block .row .col-lg-8 h4 {
+  font-weight: 500;
+}
+.details_block .row .col-lg-4 p {
+  float: right;
+  color: #2360bc;
+  font-weight: 500;
+}
+.details_block .row .col-lg-4 i {
+  margin-left: 8px;
+}
+.checkmark img {
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -6px;
+}
+
+.reference_link_title {
+  color: #9a9ba6;
+  margin: 17px 0px;
+}
+.reference_links {
+  color: #65c5ad;
+  margin: 15px 0px;
+}
+.reference_links a {
+  color: #65c5ad;
+  border-bottom: 1px solid #65c5ad;
+}
+.referance_description {
+  color: #8f949e;
+  margin: 15px 0px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+.orders_details_block .first {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 23px;
+}
+.orders_details_block .first p {
+  color: #868686;
+  margin-bottom: 18px;
+}
+.orders_details_block .second {
+  padding: 0px 14px;
+}
+.orders_details_block .second button {
+  background-color: #074cb4;
+}
+.conversation_block {
+  margin-top: 22px;
+}
+.conversation_media h6 {
+  margin: 7px 0px;
+}
+
+.conversation_media p {
+  color: #8c919a;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.conversation_time {
+  color: #8c919a;
+  font-size: 12px;
+}
+.conversation_send {
+  padding: 7px 10px;
+  border: 1px solid #e3e9f4;
+  border-radius: 10px;
+}
+.conversation_send p {
+  color: #8d94a0;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+.conversation_send .form-control {
+  padding: 0.375rem 0px;
+  border: 0px;
+  font-size: 13px;
+}
+
+.conversation_send img {
+  float: right;
+  width: 35px;
+  height: 29px;
+  margin-top: 2px;
+}
+
+.conversation_send i {
+  float: right;
+}
+
+.orders_progress .align-baseline {
+  padding: 0px 70px;
+}
+
+.order_progress_status {
+  margin-top: -28px;
+}
+
+.order_progress_status li {
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.order_progress_status li img {
+  margin: 0 auto;
+  /* width: 25px; */
+}
+
+.order_progress_status li p {
+  font-size: 13px;
+}
+
+.order_progress_status li.completed p {
+  color: #2cb742;
+  font-weight: 500;
+}
+
+.order_progress_status li.pending .pending_block {
+  display: block;
+  background: #c4c4c4;
+  width: 14px;
+  height: 14px;
+  margin: 8px auto;
+  border-radius: 50px;
+}
+
+.order_progress_status li.pending p {
+  color: #828282;
+  font-weight: 500;
+}
+
+/* bootsnipp code for vertical list starts here */
+
+.vertical-timeline {
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 0 1rem;
+}
+
+.vertical-timeline::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  height: 87%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #2db944 0%,
+    #2db944 50%,
+    #ccc 50%,
+    #ccc 100%
+  );
+  border-radius: 0.25rem;
+}
+
+.vertical-timeline-element {
+  position: relative;
+  margin: 0 0 1.3rem;
+}
+
+.vertical-timeline-element-icon {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+
+.vertical-timeline-element-icon .badge-dot-xl {
+  background-color: hsl(130deg 61% 45%);
+}
+.activity_block .badge {
+  min-width: 11px !important;
+}
+
+.badge-dot-xl {
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.badge-dot-xl::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 0.25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5px 0 0 -5px;
+  background-color: hsl(130deg 61% 45%);
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  margin-left: 50px;
+  font-size: 0.8rem;
+}
+
+.vertical-timeline-element-content .timeline-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  padding: 2px 0 0;
+  font-weight: bold;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  display: block;
+  position: absolute;
+  left: -90px;
+  top: 0;
+  padding-right: 10px;
+  text-align: right;
+  color: #adb5bd;
+  font-size: 0.7619rem;
+  white-space: nowrap;
+}
+
+.vertical-timeline-element-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* bootsnipp code for vertical list ends here */
+
+.orders_activity {
+  float: right;
+  background-color: #dedfe2;
+  color: #b9b9ba;
+}
+
+.activity_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 38px;
+  margin-top: 34px;
+}
+
+.activity_block .row_title {
+  margin-bottom: 22px;
+}
+
+.activity_block .row_title h6 {
+  font-weight: 500;
+}
+
+.activity_block .row_title p {
+  color: #d1d1d1;
+  font-weight: 300;
+  font-size: 12px;
+  float: right;
+}
+.order_details_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 38px;
+  margin-top: 34px;
+}
+
+.order_details_block .reference_link_title {
+  color: #91929e;
+  margin-top: 12px;
+}
+.order_details_block .show_more {
+  float: right;
+  color: #91929e;
+}
+.order_details_block .reference_link a {
+  color: #53bea4;
+}
+.pending .badge-dot-xl::before {
+  background-color: #c4c4c4;
+}
+.pending .vertical-timeline-element-icon .badge-dot-xl {
+  background-color: #c4c4c4;
+}
+/* new order page css ends here */
+
+/**** Dashboard Page CSS starts here ****/
+
+.wallet_details_block {
+  text-align: center;
+  background: #1f3bb3;
+  padding: 15px 0;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(31 59 179 / 47%);
+  margin-bottom: 25px;
+}
+
+.dashboard_wallet_block {
+  min-height: 303px;
+}
+
+.wallet_details_block h2 {
+  font-size: 32px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.dash_available_balance {
+  font-size: 20px !important;
+}
+
+.wallet_details_block h2 span {
+  font-size: 18px;
+}
+
+.wallet_details_block h4 {
+  font-size: 20px;
+  padding-bottom: 5px;
+  /* margin-bottom: 15px; */
+}
+
+.wallet_details_block h5 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.wallet_details_block h6 {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+.wallet_img {
+  margin: 10px auto;
+}
+
+.wallet_line {
+  margin: 5px auto 0;
+  width: 50px;
+}
+
+.wallet_btn p {
+  padding: 25px 0 10px;
+}
+
+.wallet_btn p a {
+  padding: 7px 20px;
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 68%);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.orders_details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #eee;
+  min-height: 150px;
+}
+
+.orders_details img {
+  height: 25px;
+}
+
+.orders_details h2 {
+  text-align: center;
+  color: #1556b8;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.orders_details p {
+  text-align: center;
+  color: #2465c7;
+  font-weight: 400;
+}
+
+.new_order {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #eee;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.dash_new_order {
+  display: none !important;
+}
+.dash_coming_soon {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.new_amount_block {
+  margin-top: 30px;
+}
+
+.new_order img {
+  float: left;
+  width: 25px;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+
+.new_order h3 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 2;
+}
+
+.new_order h4 {
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 300;
+}
+
+.new_order h4 span {
+  color: #333;
+  font-weight: 500;
+}
+
+.go_to_orders {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.go_to_orders a {
+  background: #cfd4f5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #ddd;
+}
+
+.dashboard_notifications {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.dash_hide_table {
+  display: none;
+}
+
+.dashboard_table_row .panel__title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #074db6;
+}
+
+.my_orders_dashboard .go_back {
+  text-align: right;
+}
+
+.my_orders_dashboard a {
+  color: #666;
+}
+
+.my_orders_dashboard {
+  margin-top: 20px;
+}
+
+/**** Dashboard Page CSS ends here ****/
+
+/* wallet page css code starts here */
+.wallet_filters .view_all {
+  display: flex;
+  justify-content: center;
+  color: #a3a4a4;
+  font-weight: 400;
+  font-size: 13px;
+}
+.wallet_filters .view_all i {
+  margin-left: 10px;
+}
+.search {
+  color: #a3a4a4;
+  font-weight: 500;
+  font-size: 13px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e9eaeb;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.search img {
+  width: 14px;
+  height: 13px;
+}
+.wallet_filters h4 {
+  font-weight: 400;
+  color: #1556b8;
+  letter-spacing: 0.2px;
+}
+.wallet_blocks {
+  margin-top: 40px;
+}
+.wallet_filters {
+  margin-bottom: 17px;
+}
+.wallet_main_title {
+  margin-top: 71px;
+}
+.wallet_main_title .custom_header_subtitle {
+  font-size: 19px;
+}
+.view_reciept {
+  margin-top: 0px;
+  min-width: 120px;
+  height: 34px;
+  font-size: 12px;
+}
+.view_reciept img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.table_wallet_date {
+  min-width: 158px;
+}
+.table_wallet_Amount {
+  min-width: 100px;
+}
+.table_wallet_order_name {
+  min-width: 195px;
+}
+.table_wallet_status {
+  min-width: 195px;
+}
+.table_wallet_view {
+  min-width: 164px;
+}
+/* wallet page css code ends here */
+
+/* success platform creation modal css code starts here */
+.success_modal .modal-header {
+  border-bottom: 1px solid #fff;
+}
+.success_modal .modal-content {
+  border-radius: 13px;
+  border: 0px;
+}
+.success_modal .modal-body {
+  margin-top: 8px;
+  padding: 0px;
+}
+.success_modal h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #1556b8;
+}
+
+.success_modal .message {
+  font-weight: 600;
+  margin-top: 29px;
+  margin-bottom: 27px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.success_modal .instructions {
+  color: #b4b4b4;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.success_modal .guide {
+  width: 45%;
+}
+.success_modal img {
+  margin-top: 30px;
+  width: 96%;
+}
+/* success platform creation modal css code ends here */
+
+/* notification page css starts here */
+.mark_read {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.mark_read p {
+  font-weight: 400;
+  color: #1556b8;
+  letter-spacing: 0.2px;
+}
+.messages {
+  padding: 15px 20px;
+  border-bottom: 1px solid #dfe2ea;
+}
+.messages:nth-child(even) {
+  background-color: #e6edfa;
+}
+.messages h6 {
+  font-weight: 600;
+  color: #333;
+}
+.messages .message_body {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  color: #333;
+  font-size: 13px;
+}
+
+.messages .message_time {
+  font-style: italic;
+  color: #8181a5;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+/* notification page css ends here */
+
+/* withdraw page css code starts here */
+.withdraw_view {
+  min-width: 0px;
+  margin-top: 0px;
+  height: 27px;
+  border-radius: 5px;
+}
+.withdraw_block {
+  margin-bottom: 50px;
+  margin-top: 48px;
+}
+.withdraw_request {
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 13px;
+  padding: 24px;
+}
+.withdraw_request h4 {
+  margin-bottom: 22px;
+  font-size: 16px;
+}
+
+.withdraw_popup .data__label {
+  color: #b4b4b4;
+  margin: 10px 0px;
+}
+.withdraw_popup p {
+  color: #b4b4b4;
+  margin: 4px 0px;
+}
+.modal_transaction_details {
+  color: #000;
+  font-weight: 500;
+  margin: 4px 0px;
+}
+.form_input_limit {
+  font-size: 10px;
+}
+
+.table_withdraw_payment_recieve_type {
+  min-width: 167px;
+}
+.table_withdraw_date {
+  min-width: 96px;
+}
+.table_withdraw_rate {
+  min-width: 100px;
+}
+.table_withdraw_token_value {
+  min-width: 109px;
+}
+.table_withdraw_status {
+  min-width: 149px;
+}
+
+/* withdraw page css code ends here */
+
+/* platform list page css code starts here */
+.platform_list_view_modal .modal-content {
+  padding: 24px;
+  border: 0px;
+  border-radius: 13px;
+}
+.platform_list_view_modal .table th {
+  background: #fff;
+  vertical-align: bottom;
+  border-bottom: 0px solid #dee2e6;
+  border-top: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+.platform_list_view_modal p {
+  color: #8181a5;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 9px 0px;
+}
+.data_values {
+  color: #000;
+}
+.data_values p {
+  color: #000;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+/* platform list page css code ends here */
+
+/* publisher order list  css code starts here */
+
+.orders_filter_row {
+  margin-top: 20px;
+}
+
+.orders_filters_row_ul {
+  display: -webkit-inline-box;
+}
+.orders_filters_row_ul li {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 27px;
+}
+.orders_filter_row .row {
+  align-items: center;
+}
+.orders_filters_row_ul li p {
+  margin-left: 8px;
+  color: #626263;
+}
+
+.order_search .input-group {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #b9b9b9;
+  padding: 1px;
+}
+
+.order_search .form-control {
+  border: 0px;
+  font-size: 14px;
+}
+
+.order_search .form-control option {
+  color: #adadad;
+}
+
+.order_search .input-group-text {
+  background: #fff;
+  border: 0px;
+  padding: 6px 5px;
+}
+.order_search .input-group-text img {
+  width: 17px;
+  margin-right: 6px;
+}
+
+.platform_filter li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.span_status {
+  position: relative;
+  margin-left: 12px;
+}
+.span_status_two {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 0;
+  margin-top: -6px;
+  position: absolute;
+  z-index: 0;
+}
+
+.status_accepted {
+  background: hsl(109deg 81% 90%);
+}
+
+.status_accepted_text {
+  color: rgb(80, 178, 71);
+}
+
+.status_pending {
+  background-color: hsl(40deg 100% 88%);
+}
+.status_pending_text {
+  color: hsl(40deg 100% 64%);
+}
+.status_rejected {
+  background-color: hsl(14deg 91% 91%);
+}
+.status_rejected_text {
+  color: hsl(0deg 100% 63%);
+}
+
+.status_hire_people {
+  background-color: #cbe1ff;
+}
+
+.status_hire_people_text {
+  color: #83b1ed;
+}
+
+.status_work_process {
+  background-color: #442288;
+}
+
+.status_work_process_text {
+  color: #765da8;
+}
+
+/* publisher order list  css code ends here */
+
+/* footer css code starts here */
+.new_panel_footer {
+  margin-top: 0px;
+}
+
+.new_panel_footer .pager,
+.pager__list {
+  justify-content: center;
+}
+
+/* footer css code ends here */
+
+/* advertiser panel orders list page starts here */
+.completed_status {
+  color: #69ad59;
+  font-weight: 500;
+}
+.rejected_status {
+  color: #fda9a2;
+  font-weight: 500;
+}
+.pending_status {
+  color: #ffbf43 !important;
+  font-weight: 500;
+}
+.orders_details_block .first {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+.advertiser_orders_progress {
+  box-shadow: 0 0 0px #fff;
+  padding: 0px !important;
+  margin-bottom: 11px;
+}
+.progress_bar_panel {
+  padding: 24px 0px;
+}
+.progress_table .table {
+  margin-bottom: 0px;
+  margin-top: 22px;
+}
+.progress_table .table th {
+  text-align: center !important;
+}
+.progress_table .table td {
+  text-align: center !important;
+  vertical-align: middle;
+}
+.order_progress_status .pending a {
+  color: hsl(0deg 0% 36%);
+}
+
+.order_progress_status .completed a {
+  color: #1fb337;
+}
+
+.order_values {
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+.pending_hire_dot {
+  background-color: #ffac0b;
+}
+.approved_hire_dot {
+  background-color: #1fb337;
+}
+
+.pending_hire_status {
+  color: #ffc047;
+}
+.completed_hire_status {
+  color: #74d082;
+}
+/* advertiser panel orders list page ends here */
+
+/* advertiser panel create campaign css code starts here */
+.details_block .row {
+  margin-bottom: 0px;
+}
+.add_new_btn {
+  margin: auto;
+}
+.services_form {
+  margin-top: 22px;
+}
+.leave_agent_block {
+  margin-bottom: 31px;
+}
+.leave_agent {
+  font-weight: 400;
+  color: #1556b8;
+  letter-spacing: 0.2px;
+}
+
+.orders_estimated_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+}
+
+.orders_estimated_block .first .row .estimate {
+  color: #8181a5;
+  margin-bottom: 0px;
+}
+.orders_estimated_block .first .row .estimate_price {
+  color: #000;
+  margin-bottom: 0px;
+}
+
+.create_order_fields .platform_field_label {
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  font-size: 14px;
+}
+
+.create_order_fields .platform_field_label img {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.create_order_fields .platform_field_wrap input,
+.create_order_fields .platform_field_wrap select {
+  padding-left: 15px !important;
+  color: #949494;
+  font-weight: 400;
+  height: 40px;
+}
+
+.create_order_fields .field__textarea {
+  border: 1px solid #d8dade;
+  background: #fff;
+  color: #949494;
+  font-weight: 400;
+}
+/* .campaign_details {
+  margin-top: 37px;
+} */
+.create_campaign_form {
+  padding: 24px;
+  background: #fafafa;
+  margin: 0px 35px;
+}
+.campaign_services {
+  background: #fff;
+  box-shadow: 0 0 5px #ddd;
+  border-radius: 13px;
+  padding: 24px;
+}
+.campaign_services_block h5 {
+  font-weight: 300;
+  color: #939393;
+  letter-spacing: 0.2px;
+  margin: 27px 0px 34px 0px;
+}
+.campaign_services img {
+  min-width: 0px;
+  max-width: none;
+}
+.create_campaign_form .leave_agent_block h5 {
+  font-weight: 300;
+  color: #6b6b6b;
+  letter-spacing: 0.2px;
+  margin: 27px 0px 34px 0px;
+}
+
+.add_new_campaign button {
+  margin-top: 25px;
+  height: 40px;
+  min-width: unset;
+}
+
+.add_new_campaign {
+  color: #074cb4;
+  font-weight: 400;
+}
+
+.add_new_campaign i {
+  margin-left: 3px;
+}
+
+/* advertiser panel create campaign css code ends here */
+
+/* advertiser panel funds page css starts here */
+.ad_wallet_amount {
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 31px;
+  background: #fff;
+}
+.qrcodenpm {
+  text-align: center;
+  zoom: 0.8;
+  margin: 25px 0;
+}
+.qr_code_title {
+  margin: 30px 0px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1556b8;
+}
+.addressToCopy {
+  text-align: center;
+  color: #8181a5;
+  font-weight: 300;
+  overflow: scroll;
+}
+.getQRcodeBtn button {
+  margin-top: 0px;
+}
+
+.funds_page .platform_field_wrap input,
+.select {
+  padding-left: 15px;
+}
+.addressToCopy::-webkit-scrollbar {
+  display: none;
+}
+.addressCopyBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 17px;
+}
+.addressCopyBtn button {
+  min-width: 0px;
+}
+.payment_instructions {
+  color: #8181a5;
+  text-align: center;
+  margin-top: 17px;
+}
+.hash_paste {
+  display: flex;
+  justify-content: center;
+}
+
+.deposit_within {
+  float: right;
+}
+
+.deposit_within span {
+  margin-left: 20px;
+}
+.deposit_go_back {
+  float: right;
+}
+
+.funds_table_block h4 {
+  font-weight: 400;
+  color: #1556b8;
+  letter-spacing: 0.2px;
+  margin-bottom: 22px;
+}
+
+.modal_fields .row {
+  margin: 15px 0px;
+  font-weight: 400;
+}
+.modal_label {
+  color: #8181a5;
+}
+.modal_value {
+  color: #000;
+}
+.funds_modal .modal-content {
+  border-radius: 13px;
+  padding: 24px;
+  border: 1px solid #fff;
+}
+
+.funds_modal .modal-header {
+  border-bottom: 0px;
+}
+.fundsAddCountDownSpan {
+  float: right;
+  margin-top: -22px;
+}
+
+/* advertiser panel funds page css ends here */
+
+/* advertiser dashboard page css starts here */
+.dashboard_top_row {
+  margin-top: 40px;
+}
+.ad_links {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.locked_amount {
+  border-radius: 21px;
+  padding: 15px 0px;
+  background: hsl(229deg 84% 35%);
+  color: #fff;
+  box-shadow: 0 0 5px hsl(229deg 84% 35%);
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 173px;
+}
+
+.available_amount {
+  border-radius: 21px;
+  padding: 15px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: hsl(0deg 0% 89%);
+  color: hsl(0deg 0% 45%);
+  min-width: 173px;
+}
+.dash_row_filters {
+  margin-top: 49px;
+}
+.ad_dash h4 {
+  /* margin-top: 19px; */
+  font-size: 17px;
+}
+.ad_dash h2 {
+  font-size: 39px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+.ad_dash {
+  border-radius: 51px;
+}
+.ad_dash .wallet_btn p {
+  padding: 25px 0 10px;
+  margin-top: 25px;
+}
+
+.ad_dash .wallet_btn p a {
+  border: 0px;
+}
+.ad_dash .wallet_btn p a i {
+  margin-left: 10px;
+}
+
+.dash_row_filters ul li {
+  margin-right: 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.dash_row_filters p {
+  color: #575757;
+  letter-spacing: 0.3px;
+}
+
+.dash_row_filters ul li img {
+  margin-right: 10px;
+  margin-top: -3px;
+  display: inline;
+  position: relative;
+  top: 8px;
+}
+
+.ad_search .input-group {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.ad_search .input-group input {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  height: 40px;
+  outline: 0;
+  box-shadow: none;
+}
+
+.ad_search .input-group .input-group-text {
+  background: transparent;
+  border: 0;
+}
+
+.ad_search .input-group img {
+  width: 18px;
+}
+
+.ad_search img {
+  width: 16px;
+  height: 19px;
+  margin-top: 1px;
+}
+.order_status_dashboard {
+  display: flex;
+}
+.ad_orders_view {
+  width: 22px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  display: block;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.pending_order_dot {
+  background-color: #ffc557;
+}
+
+.pending_order_status {
+  color: #ffc557;
+  font-weight: 500;
+}
+
+.hire_order_dot {
+  background-color: #6ca2ea;
+}
+
+.hire_order_status {
+  color: #6ca2ea;
+  font-weight: 500;
+}
+
+.hire_people_order_status {
+  color: #83b1ed;
+  font-weight: 500;
+}
+.hire_people_order_dot {
+  background-color: #6ca2ea;
+}
+.work_process_order_dot {
+  background-color: #442288;
+}
+.work_process_order_status {
+  color: #765da8;
+  font-weight: 500;
+}
+
+.completed_order_dot {
+  background-color: hsl(72deg 63% 53%);
+}
+.completed_order_status {
+  color: #bad64a;
+  font-weight: 500;
+}
+
+.reject_order_dot {
+  background-color: #ea562e;
+}
+.reject_order_status {
+  color: #eb613c;
+  font-weight: 500;
+}
+
+/* advertiser dashboard page css ends here */
+
+/* navbar css code starts here */
+.default .navbar {
+  padding: 1rem 1rem;
+  background: hsl(216deg 93% 37%) !important;
+}
+.custom_nav_title {
+  display: flex;
+  color: #fff;
+}
+.custom_nav_link a {
+  display: flex;
+  color: #fff;
+}
+.custom_nav_link .dropdown_list .sidebar_dropdown {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -102px;
+  background: #06419a;
+  padding: 21px 36px;
+  z-index: 99999;
+  border-radius: 13px;
+}
+
+.custom_nav_link .side-menu-dropdown-icon {
+  margin-left: 10px;
+}
+
+.custom_nav_link .dropdown_list .sidebar_dropdown ul li {
+  line-height: 2.5;
+  list-style: circle;
+  color: #fff;
+}
+
+/* navbar css code ends here */
+
+/* advertiser panel order details page css starts here */
+.select_modal button {
+  margin-right: 10px;
+}
+.alert-image-center {
+  width: 16%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+
+.select_modal .modal-description {
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.custom_table_button {
+  margin-right: 0px;
+  border-radius: 5px;
+  border: 0 !important;
+  outline: 0 !important;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.platform_filter {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.platform_filter img {
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  top: -2px;
+}
+
+.reject_modal .modal-content {
+  padding: 24px;
+  border: 1px solid #fff;
+  border-radius: 13px;
+}
+.reject_modal .modal-content h5 {
+  margin-bottom: 22px;
+}
+
+.reject_modal .data__label {
+  margin-bottom: 10px;
+}
+.reject_modal button {
+  margin-right: 10px;
+}
+/* advertiser panel order details page css ends here */
+
+/* advertiser panel hire people page css code starts here */
+.hire_people_title {
+  margin: 41px 0px 21px 0px;
+}
+.hire_people_title p {
+  color: #828383;
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 12px;
+}
+.hire_people_title p span {
+  color: #52bda3;
+}
+
+.hire_people_btn {
+  background: #3f8cff;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.reject_people_btn {
+  background: #ffb444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.waiting_people_btn {
+  background: #c7c7c7;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.completed_people_btn {
+  background: #40d67c;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.waiting_for_work {
+  background: #c7c7c7;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.hire_people_second_row {
+  margin-top: 43px;
+}
+.hire_people_left_block {
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+  background: #fff;
+}
+
+.hire_people_count {
+  padding: 24px 24px 0px 24px;
+  border-radius: 13px;
+  border: 1px solid #ddd;
+  margin-bottom: 33px;
+}
+
+.hire_people_count .progress_table .table {
+  margin-top: 0px;
+}
+.hire_people_left_block .left_title {
+  margin-bottom: 16px;
+}
+.hire_people_left_block .left_title p {
+  margin-top: 15px;
+  color: #3b4554;
+}
+.hire_search .input-group {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #b9b9b9;
+  padding: 1px;
+}
+
+.hire_search .form-control {
+  border: 0px;
+}
+
+.hire_search .input-group-text {
+  background: #fff;
+  border: 0px;
+}
+.hire_search img {
+  width: 19px;
+}
+
+.hire_people_estimated_price {
+  background: #f4f4f4;
+  border-radius: 13px;
+  margin-top: 22px;
+}
+
+.hire_people_estimated_price .estimated_title {
+  font-weight: 500;
+  color: #000;
+}
+.hire_people_estimated_price .estimated_link {
+  margin-top: 10px;
+}
+
+.hire_people_estimated_price .estimated_link a {
+  color: #a9a9a9;
+}
+.hire_values {
+  float: right;
+}
+.view_publisher .modal-content {
+  background-color: hsl(0deg 0% 100%);
+  border-radius: 13px;
+  padding: 24px;
+}
+
+.view_publisher .modal-header {
+  border-bottom: 0px;
+}
+.view_publisher .work_titles {
+  color: #b5bdf1;
+}
+.view_publisher textarea {
+  border: 1px solid #ededee;
+  border-radius: 13px;
+  padding: 16px 9px 127px 10px;
+  margin-top: 13px;
+}
+.view_publisher textarea::placeholder {
+  color: #555555;
+  font-weight: 500;
+}
+
+.view_publisher .close {
+  background: #f4f9fd;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.view_publisher button.close {
+  padding: 10px;
+  background-color: #f4f9fd;
+}
+.view_publisher .buttons_block {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.view_publisher .buttons_block .reject {
+  background-color: #ff6d3f;
+  color: #fff;
+  border-radius: 5px;
+  min-width: 170px;
+}
+
+.view_publisher .buttons_block .approve {
+  background: #17b569;
+  color: #fff;
+  border-radius: 5px;
+  min-width: 170px;
+}
+
+/* advertiser panel hire people page css code ends here */
+
+/* new advertiser panel design for order details page starts here */
+.orders_waiting {
+  margin: 44px 0px;
+}
+
+.orders_waiting p {
+  color: #afafaf;
+  font-weight: 400;
+}
+.orders_waiting h2 span {
+  color: #dbdbdc;
+  font-weight: 400;
+  font-size: 19px;
+}
+.orders_waiting_left_block {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+}
+.orders_waiting_approval .orders_progress {
+  margin-bottom: 36px;
+}
+
+.orders_title {
+  margin-bottom: 30px;
+}
+.orders_waiting_left_block .order_details h5 {
+  color: hsl(216deg 53% 52%);
+  font-weight: 500;
+  margin: 30px 0px;
+}
+.orders_waiting_left_block .order_details p {
+  color: #838993;
+  margin: 39px 0px;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+.orders_waiting_left_block .show_more {
+  color: #3970c3;
+  font-weight: 500;
+}
+.orders_waiting_approval .orders_details_block .first {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+.waiting_approval_btn {
+  margin-top: 22px;
+}
+.waiting_approval_btn button {
+  color: #fff;
+  border-radius: 8px;
+  background: #ffb13d;
+  font-weight: 500;
+}
+.estimated_price {
+  background-color: hsl(32deg 100% 60%);
+  border-radius: 13px;
+
+  margin-top: 22px;
+}
+
+.estimated_title {
+  color: hsl(33deg 75% 46%);
+  padding: 15px 0px;
+}
+.estimated_link {
+  color: hsl(32deg 76% 45%);
+}
+.estimated_price h3 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.estimated_link a {
+  color: hsl(32deg 74% 48%);
+}
+
+.estimated_link {
+  padding-bottom: 14px;
+}
+.paid {
+  background-color: #1fb337;
+}
+
+/* new advertiser panel design for order details page ends here */
+
+/* Profile Page css starts here */
+
+.profile_textarea_block textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 100px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.profiledetails_tabs .custom_button {
+  margin-right: 15px;
+  border: 0;
+}
+
+.profiledetails_tabs .react-tabs__tab--selected {
+  background: #007bff;
+  color: #fff;
+  border: 0;
+}
+
+.profiledetails_tabs .react-tabs__tab-list {
+  margin-bottom: 25px;
+}
+
+.profiledetails_tabs .field__label {
+  margin-bottom: 3px;
+}
+
+.profiledetails_tabs .field__icon {
+  right: 10px;
+}
+
+.profiledetails_tabs .title {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.profile_textarea_block .input-group-text {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ddd;
+}
+
+.profile_textarea_block .input-group-text select {
+  border: 0;
+  font-weight: 400;
+}
+
+.profile_textarea_block input {
+  outline: 0;
+  box-shadow: none;
+}
+
+.profile_textarea_block select {
+  padding-left: 0px !important;
+}
+
+.profiledetails_tabs .web_meet_id {
+  box-shadow: none;
+  outline: none;
+  padding: 0 15px;
+  height: 44px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.profiledetails_tabs .field__select {
+  height: 42px;
+  border: 0 !important;
+}
+
+.profiledetails_tabs .people_range_select {
+  padding-left: 15px !important;
+}
+
+.profiledetails_tabs .field__wrap {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profiledetails_tabs .field__input {
+  border-bottom: 0;
+}
+
+.profiledetails_tabs .profile_auth input {
+  padding-left: 15px;
+}
+
+.profiledetails_tabs .crypto_details input {
+  font-weight: 400;
+  height: 44px;
+}
+
+.my_profile .profilehead .field__label {
+  margin-bottom: 0px;
+}
+
+.my_profile .profilehead .field__input,
+.my_profile .profilehead .field__select {
+  height: 44px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0px 15px;
+  font-weight: 400;
+  line-height: unset;
+}
+
+.my_profile .profilehead .field__wrap .field__icon {
+  right: 10px;
+}
+
+.profilehead .panel__title {
+  margin-bottom: 10px;
+}
+
+.security_details .field__input,
+.security_details .field__select {
+  height: 44px;
+}
+
+/* Profile Page css ends here */
+
+/* new modal design code code starts here */
+.pr_modal .modal-content {
+  border-radius: 13px;
+  padding: 16px;
+}
+
+.pr_modal h4 {
+  text-align: center;
+}
+.pr_modal p {
+  color: #333;
+  font-weight: 300;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+.modal_disable {
+  min-width: unset;
+  margin-top: 0px;
+}
+.modal_action_buttons {
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+}
+
+.pr_modal .modal-header {
+  padding: 0px 16px 5px 16px;
+  border-bottom: 0px;
+}
+
+.success_modal_block .modal-content .modal-header .close {
+  margin: 0px;
+  padding: 0px 10px;
+}
+
+.success_modal_block .modal_block .modal-header {
+  padding: 0px 0px 0px 34px;
+  border-bottom: 0px;
+}
+.success_modal_block img {
+  margin: auto;
+  margin-bottom: 16px;
+  width: 54px;
+}
+.success_modal_block .modal-body h6,
+.success_modal_block .modal-body p {
+  text-align: center;
+}
+.success_modal .modal-header .close {
+  padding: 0rem 1rem;
+}
+.order_accept_modal_btn {
+  margin-top: 0px;
+  margin-right: 15px;
+}
+.confim_action_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.confirmation_modal_h5 {
+  text-align: center;
+}
+.order_rejected_modal .modal-body {
+  padding: 0px;
+}
+
+/* new modal design code code starts here */
+
+/* advertiser panel welcome screen page css code starts here */
+
+.ad_register_success {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.welcome_title {
+  text-align: center;
+  padding: 0px 15px;
+  margin-top: 10vh;
+}
+.welcome_title h2 {
+  font-weight: 400;
+  color: #1556b8 !important;
+  letter-spacing: 0.2px;
+  font-size: 28px;
+}
+.welcome_title p {
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-top: 11px;
+}
+.welcome_steps {
+  margin-top: 108px;
+  width: 100%;
+  padding: 0 15px;
+}
+.welcome_steps ul {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+.welcome_steps ul li {
+  margin: 0% 1%;
+  width: 17%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+
+.welcome_steps ul li img {
+  margin: auto;
+  height: 46px;
+}
+
+.welcome_steps ul li img {
+  margin: auto;
+}
+.welcome_steps_block .row {
+  margin: 0px;
+}
+
+.welcome_step {
+  text-align: center;
+  color: #438eff;
+  font-weight: 500;
+  margin: 10px 0px;
+  font-size: 18px;
+}
+.welcome_step_title {
+  text-align: center;
+  color: #8e8e8e;
+  font-weight: 400;
+  font-size: 16px;
+}
+.welcome_action {
+  margin-top: 61px;
+  text-align: center;
+}
+
+.start_campaign {
+  text-align: center;
+}
+.load_wallet_first {
+  text-align: center;
+  color: #a4a4a4;
+  margin-top: 15px;
+}
+.load_wallet_first a {
+  color: #a4a4a4;
+}
+.start_campaign:hover {
+  color: #fff;
+}
+
+/* advertiser panel welcome screen page css code ends here */
+
+/* background object css code starts here */
+.ad_reg_success {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.object_one {
+  background: #ffb08d;
+  height: 354px;
+  width: 354px;
+  float: right;
+  bottom: 30%;
+  border-radius: 200px;
+  position: absolute;
+  right: -10%;
+}
+
+.object_two {
+  background: #05c6b7;
+  height: 265px;
+  width: 265px;
+  position: absolute;
+  bottom: -10%;
+  border-radius: 200px;
+  margin-left: -6%;
+}
+.object_three {
+  background: #074cb4;
+  height: 300px;
+  width: 300px;
+  border-radius: 200px;
+  margin-left: -203px;
+  margin-top: -224px;
+}
+
+/* background object css code ends here */
+
+/* media queries starts here */
+
+@media (min-width: 1342px) {
+  .span_status_two {
+    position: relative;
+    top: 26px;
+    margin-top: -30px;
+  }
+}
+
+@media (min-width: 1452px) and (max-width: 1597px) {
+  .services_edit {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .services_edit .rc-time-picker-input {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-device-width: 991px) and (max-device-width: 1675px) {
+  .amount_block .row .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .available_amount {
+    margin-top: 20px;
+  }
+  .ad_dash .wallet_btn p {
+    margin-top: 0px;
+  }
+  .ad_dash h4 {
+    margin-top: 0px;
+  }
+  .wallet_details_block h4 {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-device-width: 991px) and (max-device-width: 1452px) {
+  .services_form .row .col-lg-10 .row .col-lg-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .services_form .row .col-lg-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .add_new_btn {
+    margin: 0px;
+    margin-bottom: 12px;
+  }
+  .add_new_btn .cp-btn {
+    min-width: 90px;
+  }
+  .wallet_details_block h4 {
+    font-size: 18px;
+  }
+  .create_order_fields .row .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .orders_activity {
+    font-size: 12px;
+  }
+  .hire_people_second_row .row .col-lg-8,
+  .hire_people_second_row .row .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hire_people_second_row .orders_details_block {
+    margin-top: 22px;
+  }
+
+  .left_title .row .col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .left_title .row .col-lg-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .add_new_services {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .pr_platform_website_share_block {
+    display: flex;
+  }
+  .pr_platform_website_share_block .form-check {
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1349px) {
+  .select_platform {
+    flex: 0 0 100.333333%;
+    max-width: 100.333333%;
+  }
+  .create_platform_fields {
+    flex: 0 0 100.333333%;
+    max-width: 100.333333%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1294px) {
+  .platform_overview_block {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .services_list_block {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .waiting_for_work {
+    font-size: 10px;
+  }
+  .completed_people_btn {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-device-width: 991px) and (max-device-width: 1200px) {
+  .wallet_blocks .row .col-lg-3,
+  .wallet_blocks .row .col-lg-9 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .funds_page .row .col-lg-4,
+  .funds_page .row .col-lg-8 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .funds_table_block h4 {
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile_top_menu {
+    display: none;
+  }
+  .logo_below_mobile_screen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .orders_estimated_block {
+    margin-top: 22px;
+  }
+  .dashboard_table_row {
+    margin-top: 22px;
+  }
+  .qr_code_title {
+    font-size: 18px;
+  }
+  .create_campaign_form {
+    margin: 0px;
+  }
+  .orders_activity {
+    margin-bottom: 10px;
+  }
+  .platform_overview {
+    margin-top: 20px;
+  }
+  .platform_update_blocks {
+    margin-top: 0px;
+  }
+  .platform_overview h3 {
+    font-size: 18px;
+  }
+  .panel_title_block {
+    margin-bottom: 0px;
+  }
+  .description_first_block {
+    margin-top: 7px;
+    margin-bottom: 6px;
+  }
+  .platform_form_col {
+    margin-top: 11px !important;
+  }
+  .services_update_blocks .form__field,
+  .form__details {
+    margin-bottom: 10px;
+  }
+  .services_list_block {
+    margin-top: 22px;
+  }
+  .add_new_campaign button {
+    margin-top: 0px;
+  }
+  .orders_waiting_approval .orders_progress {
+    margin-top: 22px;
+    padding: 19px 10px 10px 10px;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1087px) {
+  .dashboard_wallet_block {
+    min-height: 321px;
+  }
+  .ad_dash .wallet_btn p a {
+    font-size: 11px;
+  }
+  .order_deadline {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 991px) and (max-width: 1026px) {
+  .go_to_orders a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 939px) and (max-width: 992px) {
+  .pr_platform_website_share_block .form-check-inline {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 787px) {
+  .go_to_orders a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1359px) {
+  .span_status_two {
+    position: relative;
+    top: 26px;
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .funds_table_block h4 {
+    margin-top: 22px;
+  }
+  .funds_table_block h2 {
+    margin-top: 22px;
+  }
+  .orders_details_block {
+    margin-top: 22px;
+  }
+  .panel-table .table thead th {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .add_new_services {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 866px) {
+  .services_list_block .form-control,
+  .services_list_block .form-control {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 794px) {
+  .orders_filters_row_ul li {
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 815px) {
+  .addNewPlatform .platform_field_wrap input,
+  .addNewPlatform .platform_field_wrap select {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order_progress_status li p {
+    font-size: 9px;
+  }
+  .object_one,
+  .object_two,
+  .object_three {
+    display: none;
+  }
+  .welcome_steps ul li img {
+    height: 40px;
+    width: 40px;
+  }
+  .logo_above_mobile_screen {
+    display: none;
+  }
+  .welcome_step_title {
+    font-size: 14px;
+  }
+  .welcome_steps {
+    margin-top: 40px;
+  }
+  .welcome_action {
+    margin-top: 0px;
+  }
+  .welcome_title {
+    margin-top: 12vh;
+  }
+  .welcome_title h2 {
+    font-size: 24px;
+  }
+  .welcome_title p {
+    font-size: 14px;
+  }
+  .orders_filters_row_ul li p {
+    font-size: 12px;
+  }
+  .panel_title_block {
+    margin-top: 0px;
+  }
+  .addNewPlatform {
+    margin-top: 10px;
+    padding: 14px;
+  }
+  .services_list_block {
+    margin-top: 22px;
+    padding: 14px;
+  }
+  .platform_form_col {
+    margin-top: 0px;
+  }
+  .cp-primary-btn {
+    height: 38px;
+    line-height: 36px;
+    font-size: 14px;
+  }
+  .custom_secondary_button {
+    height: 38px;
+    line-height: 36px;
+    font-size: 14px;
+    height: 46px !important;
+  }
+  .pr_platform_country_list .searchWrapper {
+    padding: 0px;
+    min-height: 23px;
+  }
+  .multiSelectContainer input {
+    margin-top: 0px !important;
+  }
+  .platform_field_wrap input,
+  .platform_field_wrap select {
+    font-size: 12px !important;
+    height: 39px;
+    padding-left: 44px;
+  }
+  .completed_detail_fields {
+    font-size: 13px;
+  }
+  .completed_order_details h6 {
+    font-size: 14px;
+  }
+  .platform_overview h5 {
+    font-size: 16px;
+  }
+  .platform_overview {
+    padding: 14px;
+  }
+  .wallet_blocks {
+    margin-top: 12px;
+  }
+
+  .hire_search {
+    margin-top: 15px;
+  }
+  .available_amount {
+    margin-top: 22px;
+  }
+  .funds_table_block h4 {
+    margin-top: 22px;
+  }
+  .qr_code_title {
+    font-size: 18px;
+  }
+  .dashboard_table_row h3 {
+    padding: 0px 10px;
+  }
+  .go_to_orders {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .go_to_orders a {
+    padding: 7px 20px;
+  }
+
+  .container-dash {
+    padding-left: 0;
+  }
+
+  .profilehead,
+  .profiledetails_tabs {
+    background: #fff;
+    padding: 20px 20px;
+  }
+
+  .profiledetails_tabs .react-tabs__tab-list .custom_button {
+    height: 40px;
+  }
+
+  .profiledetails_tabs .custom_button {
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .panel_title_block p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .panel_title_block h2 {
+    font-size: 24px;
+  }
+
+  .profiledetails_tabs .custom_button i {
+    display: none;
+  }
+
+  .my_orders_dashboard {
+    padding: 0px;
+  }
+
+  .orders_details {
+    margin-bottom: 30px;
+  }
+
+  .new_order h4 {
+    line-height: 1.5;
+  }
+
+  .pr_custom_nav {
+    display: none;
+  }
+  .top_menubar {
+    display: none;
+  }
+  .funds_table_block h2 {
+    margin-top: 22px;
+  }
+  .orders_details_block {
+    margin-top: 22px;
+  }
+  .default .navbar .nav__link {
+    padding: 8px 0px;
+  }
+
+  .default .navbar .nav_link .active {
+    background: #06419a;
+    border-radius: 10px;
+  }
+  .default .navbar-collapse {
+    margin-top: 26px;
+  }
+  .wallet_details_block {
+    padding: 15px 10px;
+  }
+  .wallet_details_block h6 {
+    font-size: 10px;
+  }
+  .orders_details {
+    min-height: auto;
+  }
+  .services_update_blocks {
+    margin-top: 0px;
+  }
+  .platform_create_modal .modal-content {
+    width: unset;
+    height: unset;
+  }
+  .pr_platform_website_share_block {
+    display: flex;
+  }
+  .pr_platform_website_share_block .form-check {
+    margin-right: 10px;
+  }
+  .save_service {
+    margin-top: 0px;
+  }
+  .order_progress_status li img {
+    margin-top: 5px;
+    width: 22px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .available_amount {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 668px) {
+  .orders_filters_row_ul li {
+    margin-right: 9px;
+  }
+  .orders_filters_row_ul li p {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  .orders_activity {
+    float: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .orders_filters_search {
+    margin-top: 10px;
+  }
+  .welcome_steps ul li {
+    width: 31%;
+  }
+  .welcome_step_title {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .addressToCopy {
+    overflow: scroll;
+  }
+  .addressToCopy::-webkit-scrollbar {
+    display: none;
+  }
+  .addressCopyBtn {
+    margin-bottom: 27px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .default .navbar-brand {
+    margin-right: 0rem;
+  }
+  .orders_filter_row .row .col-lg-10 ul li {
+    margin-right: 9px;
+  }
+  .orders_filter_row .row .col-lg-10 ul li p {
+    font-size: 12px;
+  }
+  .welcome_steps ul li {
+    width: 48%;
+  }
+  .welcome_step_title {
+    font-size: 12px;
+  }
+  .welcome_steps {
+    margin-top: 27px;
+  }
+}

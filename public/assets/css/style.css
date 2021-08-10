@@ -1,0 +1,149 @@
+@media(max-width: 1299px) {
+  .auth_page .auth_right {
+    padding-top: 20vh;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 10px;
+  }
+}
+
+@media(max-width: 1110px) {
+  .auth_page .auth__inner h1 {
+    font-size: 26px;
+  }
+
+  .plan_details {
+    padding: 25px;
+  }
+
+  .ad_reg .plan_details {
+    padding: 0;
+    margin-top: 75px;
+  }
+
+}
+
+@media(max-width: 900px) {
+  .auth_page .auth_right {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0px;
+  }
+
+  .nav_images {
+    font-size: 12px;
+  }
+
+  .nav_images img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .ad_reg .plan_details li {
+    font-size: 16px;
+  }
+
+  .ad_reg .plan_details h2 {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 768px) {
+  .auth__head {
+    margin-bottom: 20px;
+  }
+
+  .desktop_menu {
+    display: none;
+  }
+
+  .auth_page .auth_right {
+    padding-top: 50px;
+  }
+
+  .auth_page .auth_left {
+    height: auto;
+  }
+
+  .plan_details {
+    margin-top: 75px;
+    margin-bottom: 50px;
+  }
+
+  .auth_page .navbar-toggler {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    padding: 0.25rem 0rem;
+  }
+
+  .reg_auth_right {
+    padding-top: 50px !important;
+  }
+
+  .auth_page .navbar-expand-md {
+    background-color: #346cc2 !important;
+  }
+
+  .auth_page .auth_right {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+
+  .auth_page .auth__inner h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .auth_page .nav_images {
+    color: #fff;
+  }
+
+  .auth_page .auth__inner .auth__title p {
+    font-size: 14px;
+  }
+
+  .auth_page .navbar-nav .nav-item {
+    margin: 0;
+  }
+
+  .plan_details {
+    padding: 25px;
+  }
+
+  .dash_row_filters ul li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  .span_status_two {
+    position: relative;
+    top: 15px;
+  }
+
+  .span_status {
+    top: -10px;
+  }
+
+  .withdraw_request {
+    padding: 15px;
+  }
+
+  .withdraw_block {
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+
+}
+
+@media(max-width: 568px) {
+  .ad_reg .plan_details li {
+    font-size: 14px;
+  }
+}
