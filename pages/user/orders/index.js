@@ -67,6 +67,11 @@ function orders({userAgent})
     setOffset(selectedPage * perPage)
   };
 
+
+  // ordersList.map((item, i) =>{
+  //   console.log(i.length)
+  // })
+
     useEffect(()=>{
         orderList()
     },[offset]) 
@@ -96,148 +101,130 @@ return(
           ordersList.length > 0
           ?
           <>
-          <div className="table-responsive">
-            <table className="table custom-table">
-              <thead>
-                <tr>
-                  <th>Order Id</th>
-                  <th>Order Title</th>
-                  <th>Price Range</th>
-                  <th>Created On</th>
-                  <th>Orders Ends On</th>
-                  <th>Platform</th>
-                  <th>No Of Publishers</th>
-                  <th>Status</th>
-                  <th>View</th>
-                </tr>
-              </thead>
-              <tbody>
-              {
-              dataLoaderStatus === false ?
-              ordersList.length > 0 ?
-              ordersList.map((item, i) =>{
-              return <tr key={i}>
-                  <td className="table_ad_order_id">{item.id}</td>
-                  <td className="table_ad_order_title">{item.title.length > 20 ? (item.title).slice(0, 15)+"..." : item.title}</td>
-                  <td></td>
-                  <td className="table_order_ends_on">{moment(item.date_n_time).format("DD MMM YYYY")}</td>
-                  <td className="table_order_ends_on">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
-                  <td></td>
-                  <td></td>
-                  <td className="table_status">
-                    {
-                        parseInt(item.order_status)  === 0 
-                        ?
-                        // <div className="order_status_dashboard">
-                        //   <div className="dot pending_order_dot"></div>
-                        //   <span className="pending_order_status">Approval Pending</span>
-                        // </div>
-                        <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Approval Pending</span></>
-                       
-                        : parseInt(item.order_status) === 1 
-                        ? 
-                        // <div className="order_status_dashboard">
-                        //   <div className="dot pending_order_dot"></div>
-                        //   <span className="pending_order_status">Hire People</span>
-                        // </div>
-                        <><span className="span_status_two status_hire_people"></span><span className="span_status status_hire_people_text">Hire People</span></>
-
-                        : 
-                        parseInt(item.order_status) === 2 
-                        ? 
-                        // <div className="order_status_dashboard">
-                        //   <div className="dot reject_order_dot"></div>
-                        //   <span className="work_process_order_status">Rejected</span>
-                        // </div>
-                        <><span className="span_status_two status_rejected"></span><span className="span_status status_rejected_text">Rejected</span></>
-                        
-                        :
-                        parseInt(item.order_status) === 3 
-                        ? 
-                        // <div className="order_status_dashboard">
-                        //   <div className="dot work_process_order_dot"></div>
-                        //   <span className="work_process_order_status">Work Process</span>
-                        // </div>
-                        <><span className="span_status_two status_work_process"></span><span className="span_status status_work_process_text">Work Process</span></>
-                        :
-                        parseInt(item.order_status) === 4 
-                        ? 
-                        // <div className="order_status_dashboard">
-                        //   <div className="dot completed_order_dot"></div>
-                        //   <span className="completed_order_status">Completed</span>
-                        // </div>
-                        <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
-                        
-                        :
-                        null
-                    }
-                  </td>
-
-                  {
-                    parseInt(item.order_status)  === 0 ? 
-                    <td>
-                      <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
-                        <img src="/assets/images/eye.png" class="ad_orders_view" />
-                      </a></Link>
-                    </td>
-                    : parseInt(item.order_status) === 1 ? 
-                    <td>
-                      <Link href={'/user/orders/hire-people/'+item.id}><a title='view'>
-                        <img src="/assets/images/eye.png" class="ad_orders_view" />
-                      </a></Link>
-                    </td>
-                    : 
-                    parseInt(item.order_status) === 2 ? 
-                    <td>
-                      <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
-                        <img src="/assets/images/eye.png" class="ad_orders_view" />
-                      </a></Link>
-                    </td>
-                    : 
-                    parseInt(item.order_status) === 3 ? 
-                    <td>
-                      <Link href={'/user/orders/work-process/'+item.id}><a title='view'>
-                        <img src="/assets/images/eye.png" class="ad_orders_view" />
-                      </a></Link>
-                    </td>
-                    : 
-                    parseInt(item.order_status) === 4 ? 
-                    <td>
-                      <Link href={'/user/orders/completed/'+item.id}><a title='view'>
-                        <img src="/assets/images/eye.png" class="ad_orders_view" />
-                      </a></Link>
-                    </td>
-                    :
-                    null
-                  }
-                  
-                  
-                  {/* <td>{item.title.length > 25 ? (item.title).slice(0, 25)+"..." : item.title}</td>
-                  <td>${parseFloat(item.min_price)} to ${parseFloat(item.max_price)}</td> */}
-                  
-                </tr>
+            <div className="table-responsive">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Serial Number</th>
+                    <th>Order Id</th>
+                    <th>Order Title</th>
+                    <th>Price Range</th>
+                    <th>Created On</th>
+                    <th>Orders Ends On</th>
+                    <th>Platform</th>
+                    <th>No Of Publishers</th>
+                    <th>Status</th>
+                    <th>View</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {
+                dataLoaderStatus === false ?
+                ordersList.length > 0 ?
+                ordersList.map((item, i) =>{
+                return <tr key={i}>
+                    <td className="table_ad_order_id">{i+1}
                       
-                  }
-                  )
-                  :
-                  <p className="data__item text-center">
-                    <strong>Sorry, No Releated data found.</strong>
-                  </p>
-                  :
-                  <TableLoader row="5" col="6" /> 
-              
-            }
-              </tbody>
-            </table>
-          </div>
-          
-          </>
+                    </td>
+                    <td className="table_ad_order_id">{item.order_id}</td>
+                    <td className="table_ad_order_title">{item.title.length > 20 ? (item.title).slice(0, 15)+"..." : item.title}</td>
+                    <td></td>
+                    <td className="table_order_ends_on">{moment(item.date_n_time).format("DD MMM YYYY")}</td>
+                    <td className="table_order_ends_on">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
+                    <td></td>
+                    <td></td>
+                    <td className="table_status">
+                      {
+                          parseInt(item.order_status)  === 0 
+                          ?
+                          <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Approval Pending</span></>
+                        
+                          : parseInt(item.order_status) === 1 
+                          ? 
+                          <><span className="span_status_two status_hire_people"></span><span className="span_status status_hire_people_text">Hire People</span></>
+
+                          : 
+                          parseInt(item.order_status) === 2 
+                          ? 
+                          <><span className="span_status_two status_rejected"></span><span className="span_status status_rejected_text">Rejected</span></>
+                          
+                          :
+                          parseInt(item.order_status) === 3 
+                          ? 
+                          <><span className="span_status_two status_work_process"></span><span className="span_status status_work_process_text">Work Process</span></>
+                          :
+                          parseInt(item.order_status) === 4 
+                          ? 
+                          <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                          :
+                          null
+                      }
+                    </td>
+
+                    {
+                      parseInt(item.order_status)  === 0 ? 
+                      <td>
+                        <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
+                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                        </a></Link>
+                      </td>
+                      : parseInt(item.order_status) === 1 ? 
+                      <td>
+                        <Link href={'/user/orders/hire-people/'+item.id}><a title='view'>
+                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                        </a></Link>
+                      </td>
+                      : 
+                      parseInt(item.order_status) === 2 ? 
+                      <td>
+                        <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
+                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                        </a></Link>
+                      </td>
+                      : 
+                      parseInt(item.order_status) === 3 ? 
+                      <td>
+                        <Link href={'/user/orders/work-process/'+item.id}><a title='view'>
+                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                        </a></Link>
+                      </td>
+                      : 
+                      parseInt(item.order_status) === 4 ? 
+                      <td>
+                        <Link href={'/user/orders/completed/'+item.id}><a title='view'>
+                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                        </a></Link>
+                      </td>
+                      :
+                      null
+                    }
+                    
+                    
+                    {/* <td>{item.title.length > 25 ? (item.title).slice(0, 25)+"..." : item.title}</td>
+                    <td>${parseFloat(item.min_price)} to ${parseFloat(item.max_price)}</td> */}
+                    
+                  </tr>
+                        
+                    }
+                    )
+                    :
+                    <p className="data__item text-center">
+                      <strong>Sorry, No Releated data found.</strong>
+                    </p>
+                    :
+                    <TableLoader row="5" col="9" /> 
+                
+              }
+                </tbody>
+              </table>
+            </div>
+           </>
           :
           <div className="data__item text-center">
             <strong>Sorry, No Releated data found.</strong>
           </div>
           :
-          <TableContentLoader row="5" col="7" />
+          <TableContentLoader row="5" col="9" />
         }
 
 

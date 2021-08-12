@@ -260,15 +260,16 @@ class login extends React.Component {
                                 </div>
                                 <p className="auth_forgot"><Link href="/forgot-password"><a>Forgot password ?</a></Link></p>
                               </div>
-                              
-                              
-                                <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.loginFun() }} >
-                                  {this.state.loader ? (
-                                    <div className="loader"></div>
-                                  ) : (
-                                    <>Take Me In <i className="la la-arrow-right"></i></>
-                                  )}
-                                </button>
+                              <button className="btn cp-primary-btn" type="button" onClick={() => { this.loginFun() }} >
+                                {this.state.loader ? (
+                                  <div className="loader"><span class="spinner-border spinner-border-md"></span></div>
+                                ) : (
+                                  <>Take Me In <i className="la la-arrow-right"></i></>
+                                )}
+                              </button>
+
+
+
                            
 
                               <div className="row">

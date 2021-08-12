@@ -96,6 +96,7 @@ function orders(props) {
                     <table className="table">
                       <thead>
                         <tr>
+                          <th className="table_order_title">Serial Number</th>
                           <th className="table_order_title">Order Title</th>
                           <th className="table_platform_name">Platform Name</th>
                           <th className="table_service">Services</th>
@@ -114,6 +115,7 @@ function orders(props) {
                           ?
                           data.map((e, i) => {
                             return <tr id={e.id} key={i}>
+                              <td>{i+1}</td>
                               <td className="text-capitalize">{e.platform_name.length > 25 ? (e.platform_name).slice(0,25) + "..." : e.platform_name}</td>
                               <td className="text-capitalize">{e.order_title.length > 25 ? (e.order_title).slice(0, 25) + "..." : e.order_title}</td>
                               <td className="text-capitalize">{e.service_name}</td>
@@ -154,7 +156,7 @@ function orders(props) {
                           <div className="data__item text-center">Sorry, No Releated data found.</div>
                             
                           :
-                          <TableContentLoader row="5" col="7" />
+                          <TableContentLoader row="5" col="8" />
                         }
                         
                       </tbody>

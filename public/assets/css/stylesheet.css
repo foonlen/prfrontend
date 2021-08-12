@@ -26,13 +26,13 @@ a:hover {
   color: #0a4eb5;
   text-decoration: none;
 }
-.btn-success {
+/* .btn-success {
   background-color: hsl(175deg 95% 40%);
   border-color: hsl(175deg 95% 40%);
-}
+} */
 .error_class {
   color: #ff808b;
-  margin-top: 9px;
+  font-size: 12px;
 }
 
 .cp-primary-btn {
@@ -46,6 +46,10 @@ a:hover {
   color: #fff;
   border-radius: 7px;
   margin-top: 20px;
+}
+
+.cp-primary-btn:hover {
+  color: #fff;
 }
 
 .custom_secondary_button {
@@ -85,7 +89,9 @@ a:hover {
   border-radius: 5px;
   font-weight: 300;
 }
-
+.form-control:focus {
+  box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
+}
 /*Start Navbar*/
 
 .navbar-nav {
@@ -362,13 +368,8 @@ input::-webkit-inner-spin-button {
 .user_dropdown i {
   color: #fff;
 }
-/* .user_media {
-  padding: 11px;
-  margin: 20px 0px;
-} */
-
 .user_media {
-  padding: 11px 24px;
+  padding: 11px;
   margin: 20px 0px;
 }
 
@@ -402,19 +403,15 @@ input::-webkit-inner-spin-button {
 .pr_nav_links .nav__preview {
   color: #fff !important;
 }
+
 .custom_nav_logo {
-  padding: 10px 17px 14px !important;
+  padding: 0px !important;
+  margin-left: 13px;
 }
-/* .custom_nav .earnings_block {
-  padding: 0 15px;
-  margin: 33px 0px 11px 0px;
-  color: #fff;
-  font-size: 16px;
-} */
 
 .custom_nav .earnings_block {
-  padding: 0 31px;
-  margin: 33px 18px 11px 0px;
+  padding: 0 15px;
+  margin: 33px 0px 11px 0px;
   color: #fff;
   font-size: 16px;
 }
@@ -592,23 +589,26 @@ input::-webkit-inner-spin-button {
   align-items: center;
   background: #fff;
 }
-.dash_menu_bar .row .col-lg-4,
-.dash_menu_bar .row .col-lg-2,
-.dash_menu_bar .row .col-lg-1,
-.dash_menu_bar .row .col-lg-5,
-.dash_menu_bar .row .col-lg-3 {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0px;
-}
+
 .dash_menu_bar .list_platform a {
   color: #777;
   font-weight: 400;
 }
 .dash_menu_bar .list_platform img {
-  /* height: 19px; */
+  display: inline;
   margin-right: 8px;
+  position: relative;
+  top: 3px;
+}
+
+.list_platform:hover {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 5px 0px;
+}
+
+.create_campaign_img {
+  top: 5px !important;
+  margin-top: -9px;
 }
 .dashboard_top_menu_right li {
   align-items: center;
@@ -616,9 +616,9 @@ input::-webkit-inner-spin-button {
 .dashboard_top_menu_right li p {
   margin-top: 1px;
 }
-.dash_menu_bar .new__items {
+/* .dash_menu_bar .new__items {
   display: flex;
-}
+} */
 
 .top_menubar .custom_action_button img {
   margin: 0 5px;
@@ -873,6 +873,9 @@ input::-webkit-inner-spin-button {
 .table_ad_order_id {
   min-width: 71px;
 }
+.table_action {
+  min-width: 159px;
+}
 
 /* Panel table css ends here */
 
@@ -898,6 +901,11 @@ input::-webkit-inner-spin-button {
   text-transform: capitalize;
 }
 
+.panel_title_block span {
+  color: #666;
+  font-size: 18px;
+}
+
 /* Panel Title ends here */
 
 /* add new platform starts here */
@@ -906,9 +914,7 @@ input::-webkit-inner-spin-button {
   height: 27px !important;
   margin-right: 10px;
 }
-.platform_field_wrap img {
-  height: 19px;
-}
+
 .addNewPlatform {
   background: #fff;
   box-shadow: 0 0 10px #ddd;
@@ -924,18 +930,32 @@ input::-webkit-inner-spin-button {
   left: 15px;
   right: auto;
 }
-.platform_field_wrap input {
+/* .platform_field_wrap input {
+  padding-left: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 400;
+} */
+
+.platform_field_wrap .field__input {
   padding-left: 40px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #fff;
   font-weight: 400;
 }
+
 .pr_platform_country_list .searchWrapper {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: unset;
   padding: 0px;
   min-height: 13px;
+  margin-left: 43px;
+}
+
+.pr_platform_country_list .multiSelectContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .pr_platform_country_list .multiSelectContainer ul::-webkit-scrollbar {
@@ -987,6 +1007,7 @@ input::-webkit-inner-spin-button {
 .platform_field_wrap input,
 .platform_field_wrap select {
   height: 40px;
+  line-height: unset;
 }
 
 .select_platform .create_platform_select {
@@ -1044,8 +1065,17 @@ input::-webkit-inner-spin-button {
   margin-top: 7px;
 }
 
-.pr_platform_country_list .searchWrapper .chip:first-child {
-  margin-left: 42px;
+.go_back_btn {
+  margin-top: 20px;
+  background: #eff2fe;
+  color: #3a61de;
+  margin-right: 15px;
+}
+
+.go_back_btn:hover {
+  background: #d7dffd;
+  color: #212259;
+  border: #d7dffd;
 }
 
 /* add new platform ends here */
@@ -1172,6 +1202,7 @@ input::-webkit-inner-spin-button {
 .services_update_blocks h3 {
   color: hsl(175deg 95% 40%);
   font-weight: 400;
+  font-size: 22px;
 }
 .services_list_block {
   background: #fff;
@@ -1186,9 +1217,14 @@ input::-webkit-inner-spin-button {
 
 .services_list_block button {
   margin-bottom: 0;
-  /* margin-top: 20px; */
   height: 40px;
   border-radius: 5px;
+  background-color: hsl(175deg 95% 40%);
+  border-color: hsl(175deg 95% 40%);
+}
+.services_list_block button:hover {
+  background-color: hsl(175deg 80% 32%);
+  border: hsl(175deg 80% 32%);
 }
 
 .services_list_block .form-control,
@@ -1220,9 +1256,10 @@ input::-webkit-inner-spin-button {
 }
 
 .services_edit .rc-time-picker-input {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: unset;
   font-weight: 400;
+  background: transparent;
+  font-size: 14px;
 }
 
 .services_block {
@@ -1291,6 +1328,18 @@ input::-webkit-inner-spin-button {
 .table_services_price {
   min-width: 86px;
 }
+
+.services_status {
+  margin-bottom: 8px;
+}
+
+.services_status img {
+  display: inline;
+  width: 24px;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+
 /* update services css code ends here */
 
 /* order details page css starts here */
@@ -1444,18 +1493,13 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 5px #ddd;
   padding: 33px;
 }
-.orders_details_block {
-  background: #fff;
-  border-radius: 13px;
-  box-shadow: 0 0 5px #ddd;
-  padding: 24px;
-}
+
 .orders_conversation_block {
   background: #fff;
   border-radius: 13px;
   box-shadow: 0 0 5px #ddd;
   padding: 24px;
-  margin-top: 34px;
+  margin-top: 22px;
 }
 .custom_progress {
   height: 4px !important;
@@ -1510,8 +1554,12 @@ input::-webkit-inner-spin-button {
   margin-bottom: 23px;
 }
 .orders_details_block .first p {
-  color: #868686;
   margin-bottom: 18px;
+  font-weight: 400;
+  overflow: scroll;
+}
+.orders_details_block .first p::-webkit-scrollbar {
+  display: none;
 }
 .orders_details_block .second {
   padding: 0px 14px;
@@ -1522,9 +1570,6 @@ input::-webkit-inner-spin-button {
 .conversation_block {
   margin-top: 22px;
 }
-.conversation_media h6 {
-  margin: 7px 0px;
-}
 
 .conversation_media p {
   color: #8c919a;
@@ -1534,6 +1579,7 @@ input::-webkit-inner-spin-button {
 .conversation_time {
   color: #8c919a;
   font-size: 12px;
+  font-style: italic;
 }
 .conversation_send {
   padding: 7px 10px;
@@ -1567,7 +1613,7 @@ input::-webkit-inner-spin-button {
 }
 
 .order_progress_status {
-  margin-top: -28px;
+  margin-top: -27px;
 }
 
 .order_progress_status li {
@@ -1579,7 +1625,8 @@ input::-webkit-inner-spin-button {
 
 .order_progress_status li img {
   margin: 0 auto;
-  /* width: 25px; */
+  width: 25px;
+  margin-top: 1px;
 }
 
 .order_progress_status li p {
@@ -1756,6 +1803,11 @@ input::-webkit-inner-spin-button {
 .pending .vertical-timeline-element-icon .badge-dot-xl {
   background-color: #c4c4c4;
 }
+
+/* .order_details .panel-table .table tbody tr td {
+  padding: 15px 0px !important;
+} */
+
 /* new order page css ends here */
 
 /**** Dashboard Page CSS starts here ****/
@@ -2046,6 +2098,11 @@ input::-webkit-inner-spin-button {
   margin-top: 30px;
   width: 96%;
 }
+.modal_cancel_img {
+  margin: auto;
+  width: 60px;
+  margin-bottom: 22px;
+}
 /* success platform creation modal css code ends here */
 
 /* notification page css starts here */
@@ -2178,7 +2235,8 @@ input::-webkit-inner-spin-button {
 /* publisher order list  css code starts here */
 
 .orders_filter_row {
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 .orders_filters_row_ul {
@@ -2342,7 +2400,7 @@ input::-webkit-inner-spin-button {
 }
 
 .order_values {
-  color: #000 !important;
+  color: #8181a5 !important;
   font-weight: 400 !important;
 }
 .pending_hire_dot {
@@ -2430,42 +2488,42 @@ input::-webkit-inner-spin-button {
   background: #fafafa;
   margin: 0px 35px;
 }
-.campaign_services {
-  background: #fff;
-  box-shadow: 0 0 5px #ddd;
-  border-radius: 13px;
-  padding: 24px;
-}
+
 .campaign_services_block h5 {
-  font-weight: 300;
-  color: #939393;
+  font-weight: 400;
+  color: #000;
   letter-spacing: 0.2px;
-  margin: 27px 0px 34px 0px;
+  margin: 27px 0px 10px 0px;
+  font-size: 18px;
 }
 .campaign_services img {
   min-width: 0px;
   max-width: none;
 }
 .create_campaign_form .leave_agent_block h5 {
-  font-weight: 300;
-  color: #6b6b6b;
+  font-weight: 400;
+  color: #000;
   letter-spacing: 0.2px;
-  margin: 27px 0px 34px 0px;
+  margin: 27px 0px 15px 0px;
+  font-size: 18px;
 }
 
 .add_new_campaign button {
-  margin-top: 25px;
-  height: 40px;
-  min-width: unset;
-}
-
-.add_new_campaign {
   color: #074cb4;
   font-weight: 400;
+  margin-top: 37px;
+  font-size: 16px;
 }
 
 .add_new_campaign i {
-  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.services_form .platform_field_label {
+  color: #333;
+}
+.campaign_services {
+  box-shadow: 0 0 15px #eee !important;
 }
 
 /* advertiser panel create campaign css code ends here */
@@ -2611,9 +2669,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 30px;
   padding-top: 10px;
 }
-.ad_dash {
-  border-radius: 51px;
-}
+
 .ad_dash .wallet_btn p {
   padding: 25px 0 10px;
   margin-top: 25px;
@@ -2877,15 +2933,9 @@ input::-webkit-inner-spin-button {
 .hire_people_second_row {
   margin-top: 43px;
 }
-.hire_people_left_block {
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ddd;
-  padding: 24px;
-  background: #fff;
-}
 
 .hire_people_count {
-  padding: 24px 24px 0px 24px;
+  padding: 11px 24px 0px 24px;
   border-radius: 13px;
   border: 1px solid #ddd;
   margin-bottom: 33px;
@@ -2898,27 +2948,8 @@ input::-webkit-inner-spin-button {
   margin-bottom: 16px;
 }
 .hire_people_left_block .left_title p {
-  margin-top: 15px;
+  margin-top: 4px;
   color: #3b4554;
-}
-.hire_search .input-group {
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  color: #b9b9b9;
-  padding: 1px;
-}
-
-.hire_search .form-control {
-  border: 0px;
-}
-
-.hire_search .input-group-text {
-  background: #fff;
-  border: 0px;
-}
-.hire_search img {
-  width: 19px;
 }
 
 .hire_people_estimated_price {
@@ -2938,9 +2969,7 @@ input::-webkit-inner-spin-button {
 .hire_people_estimated_price .estimated_link a {
   color: #a9a9a9;
 }
-.hire_values {
-  float: right;
-}
+
 .view_publisher .modal-content {
   background-color: hsl(0deg 0% 100%);
   border-radius: 13px;
@@ -2997,6 +3026,12 @@ input::-webkit-inner-spin-button {
 /* advertiser panel hire people page css code ends here */
 
 /* new advertiser panel design for order details page starts here */
+.panel {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 0 5px #ddd;
+  padding: 24px;
+}
 .orders_waiting {
   margin: 44px 0px;
 }
@@ -3010,13 +3045,9 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   font-size: 19px;
 }
-.orders_waiting_left_block {
-  background: #fff;
-  border-radius: 13px;
-  box-shadow: 0 0 5px #ddd;
-  padding: 24px;
-}
+
 .orders_waiting_approval .orders_progress {
+  margin-top: 22px;
   margin-bottom: 36px;
 }
 
@@ -3026,13 +3057,19 @@ input::-webkit-inner-spin-button {
 .orders_waiting_left_block .order_details h5 {
   color: hsl(216deg 53% 52%);
   font-weight: 500;
-  margin: 30px 0px;
 }
 .orders_waiting_left_block .order_details p {
   color: #838993;
-  margin: 39px 0px;
   letter-spacing: 0.3px;
   font-weight: 300;
+}
+.order_details_about_campaign {
+  margin-bottom: 10px !important;
+}
+
+.order_details_services_required {
+  margin-top: 22px !important;
+  margin-bottom: 10px;
 }
 .orders_waiting_left_block .show_more {
   color: #3970c3;
@@ -3049,29 +3086,35 @@ input::-webkit-inner-spin-button {
   color: #fff;
   border-radius: 8px;
   background: #ffb13d;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.waiting_approval_btn button:hover {
+  background: #eca943;
+  border: #eca943;
 }
 .estimated_price {
   background-color: hsl(32deg 100% 60%);
   border-radius: 13px;
-
   margin-top: 22px;
 }
 
 .estimated_title {
-  color: hsl(33deg 75% 46%);
+  color: #fff;
   padding: 15px 0px;
+  font-weight: 500;
 }
-.estimated_link {
+/* .estimated_link {
   color: hsl(32deg 76% 45%);
-}
+} */
 .estimated_price h3 {
   color: #fff;
   font-weight: 600;
   margin-bottom: 16px;
 }
 .estimated_link a {
-  color: hsl(32deg 74% 48%);
+  color: #fff;
+  font-weight: 400;
 }
 
 .estimated_link {
@@ -3207,12 +3250,17 @@ input::-webkit-inner-spin-button {
   height: 44px;
 }
 
+.crypto_img {
+  height: 20px;
+}
+
 /* Profile Page css ends here */
 
 /* new modal design code code starts here */
 .pr_modal .modal-content {
   border-radius: 13px;
   padding: 16px;
+  border: 1px solid #fff;
 }
 
 .pr_modal h4 {
@@ -3221,7 +3269,6 @@ input::-webkit-inner-spin-button {
 .pr_modal p {
   color: #333;
   font-weight: 300;
-  justify-content: center;
   text-align: center;
   margin-top: 8px;
   font-size: 13px;
@@ -3229,6 +3276,7 @@ input::-webkit-inner-spin-button {
 .modal_disable {
   min-width: unset;
   margin-top: 0px;
+  height: 40px;
 }
 .modal_action_buttons {
   margin-top: 15px;
@@ -3277,6 +3325,101 @@ input::-webkit-inner-spin-button {
 .order_rejected_modal .modal-body {
   padding: 0px;
 }
+.close_modal {
+  background: #eff2fe;
+  color: #3a61de;
+  height: 40px;
+}
+
+.close_modal:hover {
+  background: #d7dffd;
+  color: #212259;
+  border: #d7dffd;
+}
+.reject_platform_modal .modal-body {
+  padding: 0px;
+}
+
+.modal_order_label {
+  font-weight: 400 !important;
+  color: #000 !important;
+  text-align: left !important;
+}
+.modal_order_values {
+  font-weight: 400 !important;
+  color: #8181a5 !important;
+  text-align: left !important;
+}
+
+.rejected_popup_text {
+  color: #535b6a !important;
+  font-weight: 400 !important;
+}
+.rejected_popup_category {
+  color: #000 !important;
+  font-weight: 400 !important;
+  text-align: unset !important;
+  font-size: 16px !important;
+}
+.category_text {
+  text-align: unset !important;
+  font-size: 14px !important;
+}
+.rejected_popup_subtext {
+  font-size: 16px !important;
+  text-align: unset !important;
+}
+.rejected_modal .modal-body img {
+  margin: auto;
+  margin-top: 22px;
+}
+.rejected_modal .modal-header .close {
+  padding: 6px !important;
+  margin: 0px !important;
+  background: #f4f9fd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #f4f9fd;
+  float: right;
+}
+
+.rejected_modal .modal-header .row {
+  width: 100%;
+  margin-left: 0px;
+}
+.rejected_modal .modal-header h4 {
+  text-align: right !important;
+  font-size: 14px;
+  margin-top: 9px;
+  font-weight: 400;
+}
+
+.rejected_modal .modal-header {
+  padding: 0px;
+}
+
+.modal_textarea {
+  border-radius: 14px;
+  background: #fff;
+  padding: 9px 13px;
+  font-weight: 300;
+  border: 1px solid #efefef;
+  margin-top: 12px;
+  box-shadow: 0 0 20px #f4f9fd;
+  min-height: 126px;
+}
+.modal_textarea::placeholder {
+  color: #000;
+}
+
+.modal_label {
+  color: #5a6fc7;
+  font-weight: 400;
+  margin-top: 18px;
+}
+.modal_action {
+  text-align: center;
+  margin-top: 21px;
+}
 
 /* new modal design code code starts here */
 
@@ -3312,8 +3455,7 @@ input::-webkit-inner-spin-button {
   padding: 0 15px;
 }
 .welcome_steps ul {
-  display: inline-flex;
-  justify-content: center;
+  display: inline-block;
   width: 100%;
 }
 .welcome_steps ul li {
@@ -3406,6 +3548,10 @@ input::-webkit-inner-spin-button {
   margin-top: -224px;
 }
 
+.searchBox {
+  font-weight: 400;
+}
+
 /* background object css code ends here */
 
 /* media queries starts here */
@@ -3415,6 +3561,15 @@ input::-webkit-inner-spin-button {
     position: relative;
     top: 26px;
     margin-top: -30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile_top_menu {
+    display: none;
+  }
+  .logo_below_mobile_screen {
+    display: none;
   }
 }
 
@@ -3448,14 +3603,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (min-device-width: 991px) and (max-device-width: 1452px) {
-  .services_form .row .col-lg-10 .row .col-lg-4 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-  .services_form .row .col-lg-10 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
   .add_new_btn {
     margin: 0px;
     margin-bottom: 12px;
@@ -3500,6 +3647,9 @@ input::-webkit-inner-spin-button {
   }
   .pr_platform_website_share_block .form-check {
     margin-right: 14px;
+  }
+  .add_new_campaign button {
+    margin-top: 0px;
   }
 }
 
@@ -3549,16 +3699,26 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@media (min-width: 768px) {
-  .mobile_top_menu {
-    display: none;
+@media (min-width: 991px) and (max-width: 1156px) {
+  .add_new_campaing_block {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  .logo_below_mobile_screen {
-    display: none;
+  .orders_details_block {
+    padding: 14px;
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media (min-width: 991px) and (max-width: 1060px) {
+  .waiting_approval_btn button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .order_progress_status li img {
+    margin-top: 3px;
+  }
   .orders_estimated_block {
     margin-top: 22px;
   }
@@ -3569,7 +3729,8 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
   }
   .create_campaign_form {
-    margin: 0px;
+    margin: 20px 0px;
+    padding: 14px;
   }
   .orders_activity {
     margin-bottom: 10px;
@@ -3606,6 +3767,15 @@ input::-webkit-inner-spin-button {
   .orders_waiting_approval .orders_progress {
     margin-top: 22px;
     padding: 19px 10px 10px 10px;
+  }
+  .dashboard_banner {
+    margin-top: 22px;
+  }
+  .panel {
+    padding: 14px;
+  }
+  .hire_people_count {
+    padding: 6px 6px 0px 6px;
   }
 }
 
@@ -3689,6 +3859,20 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 768px) {
+  .orders_title h4 {
+    font-size: 14px;
+  }
+  .panel {
+    padding: 14px;
+  }
+  .add_new_campaign button {
+    font-size: 14px;
+  }
+  .close_modal {
+    height: 38px;
+    line-height: 36px;
+    font-size: 14px;
+  }
   .order_progress_status li p {
     font-size: 9px;
   }
@@ -3755,13 +3939,23 @@ input::-webkit-inner-spin-button {
     min-height: 23px;
   }
   .multiSelectContainer input {
-    margin-top: 0px !important;
+    font-weight: 300 !important;
+    margin-top: 0px;
   }
+
+  #search_input {
+    font-weight: 300;
+  }
+
   .platform_field_wrap input,
   .platform_field_wrap select {
     font-size: 12px !important;
     height: 39px;
     padding-left: 44px;
+  }
+
+  .multiSelectContainer .searchBox {
+    font-weight: unset;
   }
   .completed_detail_fields {
     font-size: 13px;
@@ -3896,9 +4090,22 @@ input::-webkit-inner-spin-button {
   .save_service {
     margin-top: 0px;
   }
-  .order_progress_status li img {
-    margin-top: 5px;
-    width: 22px;
+  .show_more img {
+    height: 8px;
+    margin-left: 5px;
+  }
+  .orders_waiting_left_block .show_more p {
+    font-size: 12px;
+  }
+  .order_details_about_campaign,
+  .order_details_services_required {
+    font-size: 14px;
+  }
+  .orders_waiting_left_block .order_details p {
+    font-size: 12px;
+  }
+  .orders_details_block .first p {
+    font-size: 12px;
   }
 }
 

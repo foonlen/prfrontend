@@ -351,7 +351,7 @@ class register extends Component {
 
                                   {
                                     this.state.firstStepLoader ?
-                                    <button className="btn btn-primary cp-primary-btn" type="button" > <div className="loader"></div> </button>
+                                    <button className="btn btn-primary cp-primary-btn" type="button" > <div className="loader"><span class="spinner-border spinner-border-md"></span></div> </button>
                                     :
                                     <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepOneReg() }} > Sign Up <i className="la la-arrow-right"></i></button>
                                   }
@@ -376,27 +376,51 @@ class register extends Component {
                                 </div>
                               </div>
 
-                            <div className="field auth__field">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <span className="input-group-text select_option_span"> 
-                                <select className="my_custom_select" name="country_row_id" onChange={(e)=>{this.setState({country_row_id: e.target.value})}} useref="country_row_id" >
-                                  {
-                                      this.state.countryList ?
-                                        this.state.countryList.map((item, i) =>
-                                          <option value={item.country_id} key={item.country_id} selected={this.state.country_row_id == item.country_id}>{item.country_code} &nbsp;&nbsp;&nbsp;&nbsp; ( {item.country_name} )</option>
-                                        )
-                                        : null
-                                    }
-                                </select>
-                                </span>
+                            {/* <div className="field auth__field">
+                              <div className="input-group">
+                                <div className="input-group-prepend">
+                                  <span className="input-group-text select_option_span"> 
+                                    <select className="my_custom_select" name="country_row_id" onChange={(e)=>{this.setState({country_row_id: e.target.value})}} useref="country_row_id" >
+                                      {
+                                          this.state.countryList ?
+                                            this.state.countryList.map((item, i) =>
+                                              <option value={item.country_id} key={item.country_id} selected={this.state.country_row_id == item.country_id}>{item.country_code} &nbsp;&nbsp;&nbsp;&nbsp; ( {item.country_name} )</option>
+                                            )
+                                            : null
+                                        }
+                                    </select>
+                                  </span>
+                                </div>
+                                <input className="form-control field__input" type="number" placeholder="Enter your mobile number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
                               </div>
-                              <input className="form-control field__input" type="number" placeholder="Enter your mobile number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
+                              <div className="error_reg">{this.state.error_mobile_number}</div>
+                            </div> */}
+
+
+
+
+                            <div className="field auth__field">
+                              <div className="input-group">
+                                <div className="input-group-prepend">
+                                  <span className="input-group-text select_option_span"> 
+                                    <select className="my_custom_select" name="country_row_id" onChange={(e)=>{this.setState({country_row_id: e.target.value})}} useref="country_row_id" >
+                                      {
+                                          this.state.countryList ?
+                                            this.state.countryList.map((item, i) =>
+                                              <option value={item.country_id} key={item.country_id} selected={this.state.country_row_id == item.country_id}>{item.country_code} &nbsp;&nbsp;&nbsp;&nbsp; ( {item.country_name} )</option>
+                                            )
+                                            : null
+                                        }
+                                    </select>
+                                  </span>
+                                </div>
+                                <input className="form-control field__input country_input_field" type="number" placeholder="Enter your mobile number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
+                              </div>
+                              <div className="error_reg">{this.state.error_mobile_number}</div>
                             </div>
-                            <div className="error_reg">
-                            {this.state.error_mobile_number}
-                            </div>
-                            </div>
+
+
+
                        
 
                               <div className="field auth__field">
@@ -409,7 +433,7 @@ class register extends Component {
 
                               {
                               this.state.loader ? 
-                                 <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} ><div className="loader"></div></button>
+                                 <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
                                : 
                                  <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} > Verify Account <i className="la la-arrow-right"></i></button>
                               }

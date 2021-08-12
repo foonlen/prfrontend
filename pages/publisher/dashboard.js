@@ -163,7 +163,7 @@ function dashboard({userAgent, data})
                   </div>
 
                   <div className="col-md-12 wallet_btn">
-                    <p><Link href="/publisher/wallet"><a>Go To Wallet</a></Link></p>
+                    <p><Link href="#"><a>Go To Wallet</a></Link></p>
                   </div>
 
                 </div>

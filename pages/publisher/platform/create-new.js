@@ -143,8 +143,8 @@ function addNewPlatform({userAgent, data, headers})
             <div className="container__body">
               {/* .............Create Platform Code Starts Here............. */}
                 <div className="row">
-                  <div className="col-lg-3"></div>
-                  <div className="col-lg-6">
+                  <div className="col-xl-4 col-lg-3"></div>
+                  <div className="col-xl-4 col-lg-6">
                     <div className="addNewPlatform">
                       <div className="panel_title_block">
                         <h2>Manage your Platforms</h2>
@@ -208,14 +208,6 @@ function addNewPlatform({userAgent, data, headers})
                             </div>
                             <div className="error_class" >{error_website_link}</div>
                           </div>
-                          {/* <div className="col-lg-1"></div> */}
-                        
-
-
-
-
-
-                        
                           
                           <div className="create_platform_fields">
                             <div className="field auth__field">
@@ -254,7 +246,7 @@ function addNewPlatform({userAgent, data, headers})
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-3"></div>
+                  <div className="col-xl-4 col-lg-3"></div>
                 </div>
 
                

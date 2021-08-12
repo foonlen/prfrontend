@@ -38,7 +38,7 @@ function sideMenuBar() {
             <div className="sidebar js-sidebar">
                 <div className="sidebar__nav">
                     <nav className="nav js-nav extended custom_nav pr_custom_nav">
-                        <Link href='#'>
+                        <Link href='/'>
                             <a className="nav__link nav__link_head custom_nav_logo">
                                 {/* <div className="nav__preview"><Image className="nav__pic" width='30px' height='30px' src="/assets/img/logo.svg" alt="Logo" /></div> */}
                                 <div className="nav__title  nav_logo_title"><img className='nav_logo' src="/assets/images/logo-white.png" alt="CoinPedia" /></div>

@@ -426,7 +426,7 @@ class new_order extends React.Component
                     </div>
 
                     <div className="col-lg-3">
-                        <div className="field auth__field select_platform">
+                        <div className="field select_platform">
                             <div className="field__label platform_field_label">Order End on <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <Datetime inputProps={ inputProps }  dateFormat="YYYY-MM-DD" timeFormat={false}  name="end_date_n_time" value={this.state.end_date_n_time} onChange={this.handleChange}/>
@@ -441,7 +441,7 @@ class new_order extends React.Component
             <div className="create_order_fields">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="field auth__field select_platform">
+                        <div className="field select_platform">
                             <div className="field__label platform_field_label">Order Description <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <textarea type="text"  className="field__textarea" placeholder="Order Description"  name="description" placeholder="Project Description" onChange={(e)=>{this.setState({description:e.target.value})}}  useref="description" />
@@ -534,8 +534,8 @@ class new_order extends React.Component
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-2">
-                        <div className="add_new_campaign"><button className="add_new_campaign" type="button" onClick={()=>{this.addNewRequest()}}>Add New <i className="la la-plus"></i></button></div>
+                    <div className="col-lg-2 add_new_campaing_block">
+                        <div className="add_new_campaign"><button type="button" onClick={()=>{this.addNewRequest()}}><i className="la la-plus"></i> Add New </button></div>
                     </div>
                 </div>
             </form>    
@@ -545,34 +545,37 @@ class new_order extends React.Component
                this.state.serviceList.length > 0 ?
             <div className="campaign_services_block">
                 <h5>Services Added</h5>
-                <div className="campaign_services">
+                <div className="panel campaign_services">
                     <div className="panel-table">
-                        <div classname="table-responsive">
-                            <table classname="table">
+                        {
+                        <div className="table-responsive">
+                            <table className="table">
                             <thead>
                                 <tr>
-                                    <th>Platform</th>
-                                    <th>Services</th>
-                                    <th>Publishers</th>
-                                    <th>Requirements</th>
-                                    <th></th>
+                                <th>Platform</th>
+                                <th>Services</th>
+                                <th>Publishers</th>
+                                <th>Requirements</th>
+                                <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {
-                                    this.state.serviceList.map((item, index) =>
-                                    <tr>
-                                        <td>{item.orderPlatformName}</td>
-                                        <td>{item.orderServiceName}</td>
-                                        <td>{item.no_of_people}</td>
-                                        <td>{item.requirement}</td>
-                                        <td><i className="la la-trash-alt red" onClick={()=>{this.handleRemoveClick(index)}}></i></td>
-                                    </tr> 
-                                    )
-                                }   
+                            {
+                                this.state.serviceList.map((item, index) =>
+                                <tr>
+                                    <td>{item.orderPlatformName}</td>
+                                    <td>{item.orderServiceName}</td>
+                                    <td>{item.no_of_people}</td>
+                                    <td>{item.requirement}</td>
+                                    <td><img src="/assets/images/delete.png" onClick={()=>{this.handleRemoveClick(index)}} /></td>
+                                </tr> 
+                                )
+                            }  
                             </tbody>
                             </table>
                         </div>
+                        
+                        }
                     </div>
                    
                 </div>

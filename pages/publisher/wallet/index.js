@@ -89,6 +89,7 @@ function wallet(props)
       const postData = slice.map((e, i) =>
       {
         return (<tr className='custom-table' key={i}>
+            <td>{i+1}</td>
             <td>{moment(e.date_n_time).format("DD MMM YYYY h:mma")}</td>
             <td>
               {
@@ -184,6 +185,7 @@ function wallet(props)
                         <table class="table">
                           <thead>
                             <tr>
+                              <th>Serial Number</th>
                               <th>Date</th>
                               <th>Amount</th>
                               <th>Order</th>
@@ -193,6 +195,7 @@ function wallet(props)
                           </thead>
                           <tbody>
                             <tr>
+                              <td className="">1</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -200,6 +203,7 @@ function wallet(props)
                               <td className="table_wallet_view"><Link href="#"><a className="btn cp-primary-btn view_reciept">View Reciept <img src="/assets/images/view_report.png" /></a></Link></td>
                             </tr>
                             <tr>
+                              <td className="">2</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -207,6 +211,7 @@ function wallet(props)
                               <td className="table_wallet_view"><Link href="#"><a className="btn cp-primary-btn view_reciept">View Reciept <img src="/assets/images/view_report.png" /></a></Link></td>
                             </tr>
                             <tr>
+                              <td className="">3</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -214,6 +219,7 @@ function wallet(props)
                               <td className="table_wallet_view"><Link href="#"><a className="btn cp-primary-btn view_reciept">View Reciept <img src="/assets/images/view_report.png" /></a></Link></td>
                             </tr>
                             <tr>
+                              <td className="">4</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -221,6 +227,7 @@ function wallet(props)
                               <td className="table_wallet_view"><Link href="#"><a className="btn cp-primary-btn view_reciept">View Reciept <img src="/assets/images/view_report.png" /></a></Link></td>
                             </tr>
                             <tr>
+                              <td className="">5</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -228,6 +235,7 @@ function wallet(props)
                               <td className="table_wallet_view"><Link href="#"><a className="btn cp-primary-btn view_reciept">View Reciept <img src="/assets/images/view_report.png" /></a></Link></td>
                             </tr>
                             <tr>
+                              <td className="">6</td>
                               <td className="table_wallet_date">12 Jul 2021 02:44 AM</td>
                               <td className="table_wallet_Amount">$ 320.00</td>
                               <td className="table_wallet_order_name">Quick Tips About Facebook</td>
@@ -255,6 +263,7 @@ function wallet(props)
                           <table className="table custom-table">
                             <thead>
                               <tr>
+                                <th>Serial Number</th>
                                 <th>Date</th>
                                 <th>Amount</th>
                                 <th>Txns Type</th>
@@ -273,7 +282,7 @@ function wallet(props)
                           Sorry, No Releated data found.
                         </div>
                         :
-                        <TableContentLoader row="4" col="4" />
+                        <TableContentLoader row="4" col="5" />
                       }
                     </div>
 

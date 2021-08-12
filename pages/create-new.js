@@ -368,7 +368,7 @@ class new_order extends React.Component
 
 
 {/* new design starts here */}
-<div className="create_campaign_form">
+        <div className="create_campaign_form">
             <div className="create_order_fields campaign_details">
                 <div className="row">
                     <div className="col-lg-3">
@@ -558,7 +558,7 @@ class new_order extends React.Component
                                         <td>{item.orderServiceName}</td>
                                         <td>{item.no_of_people}</td>
                                         <td>{item.requirement}</td>
-                                        <td><i className="la la-trash-alt red" onClick={()=>{this.handleRemoveClick(index)}}></i></td>
+                                        <td><img src="/assets/images/delete.png" onClick={()=>{this.handleRemoveClick(index)}} /></td>
                                     </tr> 
                                     )
                                 }   

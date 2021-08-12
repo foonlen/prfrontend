@@ -123,9 +123,12 @@ export default function TopMenuBar({ title, full_name }) {
                         <div className="col-md-12">
                             <ul className="dashboard_top_menu_right">
                                 <li>
-                                    <div className="new__items list_platform">
+                                    {/* <div className="new__items list_platform">
                                         <img src="/assets/images/create_campaign.png"/>
                                         <p><Link href="/user/orders/create-new"><a>Create New Order</a></Link></p>
+                                    </div> */}
+                                    <div className="new__items list_platform">
+                                        <p><img className="create_campaign_img" src="/assets/images/create_campaign.png"/><Link href="/user/orders/create-new"><a>Create New Order</a></Link></p>
                                     </div>
                                 </li>
 

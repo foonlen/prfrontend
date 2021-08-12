@@ -43,33 +43,33 @@ const pbLogout = () => {
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
                     <a className="nav-link" href="/">
-                      <div className='nav_images'><img src="/assets/images/Home.png"/> Home</div>
+                      <div className='nav_images'><img src="/assets/images/home.png"/> Home</div>
                     </a>
                   </li>
                   {
                     login_user_type == 1 ?
                       <li className="nav-item">
                         <a className="nav-link" onClick={() => {pbLogout()}}>
-                          <div className='nav_images text-capitalize' ><img src="/assets/images/Login.png" />Logout</div>
+                          <div className='nav_images text-capitalize' ><img src="/assets/images/login.png" />Logout</div>
                         </a>
                       </li>
                     :
                     login_user_type == 2 ?
                       <li className="nav-item">
                         <a className="nav-link" onClick={() => {adLogout()}} >
-                          <div className='nav_images text-capitalize'><img src="/assets/images/Login.png" />Logout</div>
+                          <div className='nav_images text-capitalize'><img src="/assets/images/login.png" />Logout</div>
                         </a>
                       </li>
                     :
                     <>
                       <li className="nav-item">
-                        <a className="nav-link" href="/user/r"><div className='nav_images'><img src="/assets/images/Advertiser.png" />Advertiser</div></a>
+                        <a className="nav-link" href="/user/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/Publisher.png" />Publiser</div></a>
+                        <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/publisher.png" />Publiser</div></a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/Login.png" />Login</div></a>
+                        <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/login.png" />Login</div></a>
                       </li>
                     </>
                   }
@@ -87,13 +87,13 @@ const pbLogout = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/advertiser/r"><div className='nav_images'><img src="/assets/images/Advertiser.png" />Advertiser</div></a>
+                        <a className="nav-link" href="/advertiser/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/Publisher.png" />Publiser</div></a>
+                        <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/publisher.png" />Publiser</div></a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/Login.png" />Login</div></a>
+                        <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/login.png" />Login</div></a>
                       </li>
                     </ul>
                   </div>

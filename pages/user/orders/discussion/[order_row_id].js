@@ -70,10 +70,15 @@ return (
         <div className="container-dash">
         <TopMenuBar full_name={this.state.advertiser_full_name} />
           <div className="container__body">
-            <div className="panel_title_block text-center orders_waiting">
+            {/* <div className="panel_title_block text-center orders_waiting">
               <h2>Campaign Details <span> ( BrandsNeed Launch ) </span></h2>
               <p>Track your campaign here with the help of our dedicated Agent.</p>
-            </div>
+            </div> */}
+
+          <div className="panel_title_block text-center">
+            <h2>Campaign Details <span> ( BrandsNeed Launch ) </span></h2>
+            <p>Track your campaign here with the help of our dedicated Agent.</p>
+          </div>
 
 
             {/* new advertiser panel image code starts here */}
@@ -111,93 +116,96 @@ return (
                 
                 <div className="row">
                   <div className="col-lg-8">
-                    <div className="orders_waiting_left_block">
+                    <div className="panel orders_waiting_left_block">
                       <div className="orders_title">
                         <div className='row'>
-                          <div className='col-lg-8'><h4>BrandsNeed Launch</h4></div>
-                          <div className='col-lg-4'><div className="show_more"><p>Show More</p><img src="/assets/images/down_arrow.png" /></div></div>
+                          <div className='col-lg-8 col-md-8 col-sm-8 col-7'><h4>BrandsNeed Launch</h4></div>
+                          <div className='col-lg-4 col-md-4 col-sm-4 col-5'><div className="show_more"><p>Show More</p><img src="/assets/images/down_arrow.png" /></div></div>
                         </div>
                       </div>
                       
                       <div className="order_details">
-                        <h5>About Campaign</h5>
+                        <h5 className="order_details_about_campaign">About Campaign</h5>
                         <p>{orderData.description}</p>
-                        <h5>Service Required</h5>
-                          <div className="panel-table">
-                          <div classname="table-responsive">          
-                            <table classname="table">
-                              <thead>
-                                <tr>
-                                  <th>Platform</th>
-                                  <th>Services</th>
-                                  <th>No of Publishers</th>
-                                  <th>Requirements</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                               {   
+                        <h5 className="order_details_services_required">Service Required</h5>
+                        <div className="panel-table">
+                          {
+                            <div className="table-responsive">
+                              <table className="table">
+                                <thead>
+                                  <tr>
+                                    <th className="table_platform_name">Platform</th>
+                                    <th className="table_service">Services</th>
+                                    <th>No of Publishers</th>
+                                    <th>Requirements</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                {   
                                   orderData.service_data ?
                                   orderData.service_data.map((item, index) => 
                                       <tr key={index}>
                                         <td>{item.platform_name}</td>
                                         <td>{item.service_name}</td>
                                         <td>{item.num_of_peoples}</td>
-                                        <td><button onClick={() => {this.servAddMore(item)}}><i class="la la-eye"></i></button></td>
+                                        <td><button onClick={() => {this.servAddMore(item)}}><img className="ad_orders_view" src="/assets/images/eye.png" /></button></td>
                                       </tr>
                                   )
                                   :
                                   null
-                                }
-                              </tbody>
-                            </table>
+                                  }
+                                </tbody>
+                              </table>
                             </div>
-                          </div>
+                            
+                          }
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="col-lg-4">
-                    <div className='orders_details_block'>
+                    <div className='panel orders_details_block'>
                       <div className='first'>
                         <div className='row'>
-                          <div className='col-lg-5'><p>Order ID</p></div>
-                          <div className='col-lg-1'>:</div>
-                          <div className='col-lg-5'>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order ID</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'>
                             <p className="order_values">
                               {orderData.order_id}
                             </p>
                           </div>
                         </div>
                         <div className='row'>
-                          <div className='col-lg-5'><p>Order Title</p></div>
-                          <div className='col-lg-1'>:</div>
-                          <div className='col-lg-5'><p className="order_values">{orderData.title}</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Title</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.title}</p></div>
                         </div>
                         
                         <div className='row'>
-                          <div className='col-lg-5'><p>Order Budget</p></div>
-                          <div className='col-lg-1'>:</div>
-                          <div className='col-lg-5'><p className="order_values">{parseFloat(orderData.min_price)} - {parseFloat(orderData.max_price)} USD</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Budget</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{parseFloat(orderData.min_price)} - {parseFloat(orderData.max_price)} USD</p></div>
                         </div>
                             
                         <div className='row'>
-                          <div className='col-lg-5'><p>Website</p></div>
-                          <div className='col-lg-1'>:</div>
-                          <div className='col-lg-5'><p className="order_values">{orderData.website_link}</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Website</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.website_link}</p></div>
                         </div>
 
                         <div className='row'>
-                          <div className='col-lg-5'><p>Order Created On</p></div>
-                          <div className='col-lg-1'>:</div>
-                          <div className='col-lg-5'><p className="order_values">{orderData.date_n_time}</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Created On</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.date_n_time}</p></div>
                         </div>
                             
                         {
                           orderData.order_status == 2 ?
                           <div className='row'>
-                            <div className='col-lg-5'><p>Rejected Reason</p></div>
-                            <div className='col-lg-1'>:</div>
-                            <div className='col-lg-5'><p className="order_values">{orderData.reason}</p></div>
+                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Rejected Reason</p></div>
+                            <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.reason}</p></div>
                           </div>
                           :
                           null
@@ -239,10 +247,6 @@ return (
                         :
                         null
                       }
-
-                      
-                      
-
                     </div>
 
                     <div className='orders_conversation_block'>
@@ -297,9 +301,674 @@ return (
                   </div>
                 </div>
               </div>
+
               
-              
-              
+
+              {/* ......hire people page table code starts here................... */}
+                  <h2 className="mt-2 mb-2">hire people page design</h2>
+                  <div className="hire_people_second_row">
+                    <div className="row">
+                      <div className="col-lg-8">
+                        <div className="panel hire_people_left_block">
+                          <div className="hire_people_count">
+                            <div className="panel-table progress_table">
+                              <div className="table-responsive">
+                                <table className="table">
+                                <thead>
+                                  <tr>
+                                      <th>Employee Selected</th>
+                                      <th>Accepted By You</th>
+                                      <th>Employee Pitched</th>
+                                      <th>Publisher Accepted</th>
+                                      <th>Publisher Submitted</th>
+                                      <th>Modify Platforms</th>
+                                      <th>Platforms Completed</th>
+                                  </tr>
+                                </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><p>05</p></td>
+                                      <td><p>05</p></td>
+                                      <td><p>05</p></td>
+                                      <td><p>05</p></td>
+                                      <td><p>05</p></td>
+                                      <td><p>05</p></td>
+                                      <td><p>07/02</p></td>
+                                    </tr>
+                                  </tbody>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div className="left_title">
+                            <div className="row">
+                                <div className="col-lg-8 col-md-8 col-sm-6 col-12 ">
+                                    <h6>Publisher List</h6>
+                                    <p>Here you will find the details of orders, it is amazing if got great practice, Thank You.</p>
+                                </div>
+                                <div className="col-lg-4 col-md-4 col-sm-6">
+                                  <div className="orders_filters_search">
+                                    <div class="order_search">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" name="search" placeholder="Search" />
+                                        <div class="input-group-append">
+                                          <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div className="hire_people_table">
+                              <div className="panel-table">
+                                <div className="table-responsive">
+                                  <table className="table">
+                                        <thead>
+                                          <tr>
+                                            <th>Platform</th>
+                                            <th className="table_service">Services</th>
+                                            <th>Web/Blog Link</th>
+                                            <th>Page Views</th>
+                                            <th className="table_status">Status</th>
+                                            <th className="table_action">Action</th>
+                                            <th>Comment</th>
+                                            <th>View</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Youtube</td>
+                                            <td>Mixed Sponser Ads</td>
+                                            <td>Youtube</td>
+                                            <td>10000</td>
+                                            <td>
+                                              {/* <div className="order_status_dashboard">
+                                                <div className="dot pending_hire_dot"></div>
+                                                <span className="pending_hire_status">Admin Pitched</span>
+                                              </div> */}
+                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                            </td>
+                                            <td>
+                                              <span className="hire_people_btn">Hire</span>
+                                              <span className="reject_people_btn">Reject</span>
+                                            </td>
+                                            <td><img src="/assets/images/chat.png" /></td>
+                                            <td><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Youtube</td>
+                                            <td>Mixed Sponser Ads</td>
+                                            <td>Youtube</td>
+                                            <td>10000</td>
+                                            <td>
+                                              {/* <div className="order_status_dashboard">
+                                                <div className="dot approved_hire_dot"></div>
+                                                <span className="completed_hire_status">Completed</span>
+                                              </div> */}
+                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                            </td>
+                                            <td>
+                                              <span className="waiting_people_btn">Waiting for work</span>
+                                            </td>
+                                            <td><img src="/assets/images/chat.png" /></td>
+                                            <td><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>Youtube</td>
+                                            <td>Mixed Sponser Ads</td>
+                                            <td>Youtube</td>
+                                            <td>10000</td>
+                                            <td>
+                                                
+                                              {/* <div className="order_status_dashboard">
+                                                <div className="dot pending_hire_dot"></div>
+                                                <span className="pending_hire_status">Admin Pitched</span>
+                                              </div> */}
+                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                            </td>
+                                            <td>
+                                                <span className="hire_people_btn">Hire</span>
+                                                <span className="reject_people_btn">Reject</span>
+                                            </td>
+                                            <td><img src="/assets/images/chat.png" /></td>
+                                            <td><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Youtube</td>
+                                            <td>Mixed Sponser Ads</td>
+                                            <td>Youtube</td>
+                                            <td>10000</td>
+                                            <td>
+                                              {/* <div className="order_status_dashboard">
+                                                <div className="dot pending_hire_dot"></div>
+                                                <span className="pending_hire_status">Admin Pitched</span>
+                                              </div> */}
+                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                            </td>
+                                            <td>
+                                              <span className="hire_people_btn">Hire</span>
+                                              <span className="reject_people_btn">Reject</span>
+                                            </td>
+                                            <td><img src="/assets/images/chat.png" /></td>
+                                            <td><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-4">
+                          <div className='panel orders_details_block'>
+                            <div className='first'>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign Budget</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">$ 100 - 300 </p></div>
+                              </div>
+                                
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Website Link</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">https://cp.org</p></div>
+                              </div>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign End On</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">22 May 2021</p></div>
+                              </div>
+                            </div>
+                            <div className="hire_people_estimated_price text-center">
+                              <p className="estimated_title">Coinpedia Estimate Price</p>
+                              <h3>$800.00</h3>
+                              <p className="estimated_link"><Link href="#"><a>Paid @ 22 May 2022 11:30 PM</a></Link></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              {/* .......................hire people page table ends here .......................... */}
+
+
+              {/* ................completed page table starts here..................... */}
+                <h2 className="mt-2 ">completed page table below</h2>
+                    <div className="hire_people_second_row">
+                      <div className="row">
+                          <div className="col-lg-8">
+                              <div className="panel hire_people_left_block">
+                                  <div className="hire_people_count">
+                                      <div className="panel-table progress_table">
+                                          <div className="table-responsive">
+                                              <table className="table">
+                                              <thead>
+                                                  <tr>
+                                                      <th>Total Publisher Required</th>
+                                                      <th>Admin Pitched</th>
+                                                      <th>You Accepted</th>
+                                                      <th>Publisher Accepted</th>
+                                                      <th>Publisher Submitted</th>
+                                                      <th>Platforms Completed</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td><p>05</p></td>
+                                                      <td><p>05</p></td>
+                                                      <td><p>05</p></td>
+                                                      <td><p>05</p></td>
+                                                      <td><p>05</p></td>
+                                                      <td><p>07/02</p></td>
+                                                  </tr>
+                                              </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="left_title">
+                                      <div className="row">
+                                          <div className="col-lg-8 col-md-8 col-sm-6 col-12 ">
+                                              <h6>Publisher List</h6>
+                                              <p>Here you will find the details of orders, it is amazing if got great practice, Thank You.</p>
+                                          </div>
+                                          <div className="col-lg-4 col-md-4 col-sm-6">
+                                            <div className="orders_filters_search">
+                                              <div class="order_search">
+                                                <div class="input-group">
+                                                  <input type="text" class="form-control" name="search" placeholder="Search" />
+                                                  <div class="input-group-append">
+                                                    <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="hire_people_table">
+                                      <div className="panel-table">
+                                          <div className="table-responsive">
+                                              <table className="table">
+                                                  <thead>
+                                                      <tr>
+                                                        <th>Platform</th>
+                                                        <th className="table_service">Services</th>
+                                                        <th>Web/Blog Link</th>
+                                                        <th>Page Views</th>
+                                                        <th className="table_status">Status</th>
+                                                        <th className="table_action">Action</th>
+                                                        <th>Comment</th>
+                                                        <th>View</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      <tr>
+                                                        <td>Youtube</td>
+                                                        <td>Mixed Sponser Ads</td>
+                                                        <td>Youtube</td>
+                                                        <td>10000</td>
+                                                        <td>
+                                                            {/* <div className="order_status_dashboard">
+                                                              <div className="dot completed_order_dot"></div>
+                                                              <span className="completed_order_status">Completed</span>
+                                                            </div> */}
+                                                            <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                        </td>
+                                                        <td>
+                                                            <span className="completed_people_btn">Completed</span>
+                                                        </td>
+                                                        <td><img src="/assets/images/chat.png" /></td>
+                                                        <td data-toggle="modal" data-target="#rejected_popup"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                      </tr>
+
+                                                      <tr>
+                                                          <td>Youtube</td>
+                                                          <td>Mixed Sponser Ads</td>
+                                                          <td>Youtube</td>
+                                                          <td>10000</td>
+                                                          <td>
+                                                              {/* <div className="order_status_dashboard">
+                                                                  <div className="dot completed_order_dot"></div>
+                                                                  <span className="completed_order_status">Completed</span>
+                                                              </div> */}
+                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                          </td>
+                                                          <td>
+                                                            <span className="completed_people_btn">Completed</span>
+                                                          </td>
+                                                          <td><img src="/assets/images/chat.png" /></td>
+                                                          <td data-toggle="modal" data-target="#rejected_popup"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                      </tr>
+
+                                                      <tr>
+                                                          <td>Youtube</td>
+                                                          <td>Mixed Sponser Ads</td>
+                                                          <td>Youtube</td>
+                                                          <td>10000</td>
+                                                          <td>
+                                                              {/* <div className="order_status_dashboard">
+                                                                  <div className="dot completed_order_dot"></div>
+                                                                  <span className="completed_order_status">Completed</span>
+                                                              </div> */}
+                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                          </td>
+                                                          <td>
+                                                              <span className="completed_people_btn">Completed</span>
+                                                          </td>
+                                                          <td><img src="/assets/images/chat.png" /></td>
+                                                          <td data-toggle="modal" data-target="#rejected_popup"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                      </tr>
+
+
+                                                      <tr>
+                                                          <td>Youtube</td>
+                                                          <td>Mixed Sponser Ads</td>
+                                                          <td>Youtube</td>
+                                                          <td>10000</td>
+                                                          <td>
+                                                              {/* <div className="order_status_dashboard">
+                                                                  <div className="dot completed_order_dot"></div>
+                                                                  <span className="completed_order_status">Completed</span>
+                                                              </div> */}
+                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                          </td>
+                                                          <td>
+                                                              <span className="completed_people_btn">Completed</span>
+                                                          </td>
+                                                          <td><img src="/assets/images/chat.png" /></td>
+                                                          <td data-toggle="modal" data-target="#rejected_popup"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div className="col-lg-4">
+                              <div className='panel orders_details_block'>
+                                  <div className='first'>
+                                      <div className='row'>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign Budget</p></div>
+                                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">$ 100 - 300 </p></div>
+                                      </div>
+                                      <div className='row'>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Website Link</p></div>
+                                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">https://cp.org</p></div>
+                                      </div>
+                                      <div className='row'>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign End On</p></div>
+                                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">22 May 2021</p></div>
+                                      </div>
+                                  </div>
+                                  <div className="hire_people_estimated_price text-center">
+                                      <p className="estimated_title">Coinpedia Estimate Price</p>
+                                      <h3>$800.00</h3>
+                                      <p className="estimated_link"><Link href="#"><a>Paid @ 22 May 2022 11:30 PM</a></Link></p>
+                                  </div>
+                              </div>
+                            </div>
+                      </div>
+                  </div>
+
+              {/* ................completed page table ends here..................... */}
+
+
+
+              {/* ......................work process page table starts here................. */}
+                      <h2 className="mt-2 mb-2">work process page table below</h2>
+                      <div className="hire_people_second_row">
+                        <div className="row">
+                            <div className="col-lg-8">
+                                <div className="panel hire_people_left_block">
+                                    <div className="hire_people_count">
+                                        <div className="panel-table progress_table">
+                                            <div className="table-responsive">
+                                                <table className="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Total Publisher Required</th>
+                                                        <th >Admin Pitched</th>
+                                                        <th>You Accepted</th>
+                                                        <th>Publisher Accepted</th>
+                                                        <th>Publisher Submitted</th>
+                                                        <th>Platforms Completed</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><p>05</p></td>
+                                                        <td><p>05</p></td>
+                                                        <td><p>05</p></td>
+                                                        <td><p>05</p></td>
+                                                        <td><p>05</p></td>
+                                                        <td><p>07/02</p></td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="left_title">
+                                        <div className="row">
+                                            <div className="col-lg-8 col-md-8 col-sm-12 col-12 ">
+                                                <h6>Publisher List</h6>
+                                                <p>Here you will find the details of orders, it is amazing if got great practice, Thank You.</p>
+                                            </div>
+                                            <div className="col-lg-4 col-md-4 col-sm-12 col-12">
+                                              <div className="orders_filters_search">
+                                                <div class="order_search">
+                                                  <div class="input-group">
+                                                    <input type="text" class="form-control" name="search" placeholder="Search" />
+                                                    <div class="input-group-append">
+                                                      <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="hire_people_table">
+                                        <div className="panel-table">
+                                            <div className="table-responsive">
+                                                <table className="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Platform</th>
+                                                            <th className="table_service">Services</th>
+                                                            <th>Web/Blog Link</th>
+                                                            <th>Page Views</th>
+                                                            <th className="table_status">Status</th>
+                                                            <th  className="table_action">Action</th>
+                                                            <th>Comment</th>
+                                                            <th>View</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Youtube</td>
+                                                            <td>Mixed Sponser Ads</td>
+                                                            <td>Youtube</td>
+                                                            <td>10000</td>
+                                                            <td>
+                                                                {/* <span className="dot pending_hire_dot"></span>
+                                                                <span className="pending_hire_status">Admin Pitched</span> */}
+                                                                {/* <div className="order_status_dashboard">
+                                                                    <div className="dot pending_hire_dot"></div>
+                                                                    <span className="pending_hire_status">Admin Pitched</span>
+                                                                </div> */}
+                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                            </td>
+                                                            <td>
+                                                                <span className="waiting_for_work">Waiting for Work</span>
+                                                            </td>
+                                                            <td><img src="/assets/images/chat.png" /></td>
+                                                            <td data-toggle="modal" data-target="#view"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Youtube</td>
+                                                            <td>Mixed Sponser Ads</td>
+                                                            <td>Youtube</td>
+                                                            <td>10000</td>
+                                                            <td>
+                                                                {/* <span className="dot approved_hire_dot"></span>
+                                                                <span className="completed_hire_status">You Accepted Pitch</span> */}
+                                                                {/* <div className="order_status_dashboard">
+                                                                    <div className="dot approved_hire_dot"></div>
+                                                                    <span className="completed_hire_status">You Accepted Pitch</span>
+                                                                </div> */}
+                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                            </td>
+                                                            <td>
+                                                                <span className="waiting_for_work">Waiting for work</span>
+                                                            </td>
+                                                            <td><img src="/assets/images/chat.png" /></td>
+                                                            <td data-toggle="modal" data-target="#view"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Youtube</td>
+                                                            <td>Mixed Sponser Ads</td>
+                                                            <td>Youtube</td>
+                                                            <td>10000</td>
+                                                            <td>
+                                                                {/* <span className="dot pending_order_dot"></span>
+                                                                <span className="pending_order_status">Admin Pitched</span> */}
+                                                                {/* <div className="order_status_dashboard">
+                                                                    <div className="dot pending_hire_dot"></div>
+                                                                    <span className="pending_hire_status">Admin Pitched</span>
+                                                                </div> */}
+                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                            </td>
+                                                            <td>
+                                                                <span className="waiting_for_work">Waiting for Work</span>
+                                                            </td>
+                                                            <td><img src="/assets/images/chat.png" /></td>
+                                                            <td data-toggle="modal" data-target="#view"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td>Youtube</td>
+                                                            <td>Mixed Sponser Ads</td>
+                                                            <td>Youtube</td>
+                                                            <td>10000</td>
+                                                            <td>
+                                                                {/* <span className="dot pending_order_dot"></span>
+                                                                <span className="pending_order_status">Work Submitted</span> */}
+                                                                {/* <div className="order_status_dashboard">
+                                                                  <div className="dot pending_hire_dot"></div>
+                                                                  <span className="pending_hire_status">Work Submitted</span>
+                                                                </div> */}
+                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                            </td>
+                                                            <td>
+                                                                <span className="completed_people_btn">Approve this Work</span>
+                                                                
+                                                            </td>
+                                                            <td><img src="/assets/images/chat.png" /></td>
+                                                            <td data-toggle="modal" data-target="#view"><Link href="#"><a><img className="ad_orders_view" src="/assets/images/eye.png" /></a></Link></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4">
+                                <div className='panel orders_details_block'>
+                                    <div className='first'>
+                                        <div className='row'>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign Budget</p></div>
+                                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">$ 100 - 300 </p></div>
+                                        </div>
+                                        
+                                        <div className='row'>
+                                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Website Link</p></div>
+                                            <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">https://cp.org</p></div>
+                                        </div>
+                                        <div className='row'>
+                                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">Campaign End On</p></div>
+                                            <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="hire_values">22 May 2021</p></div>
+                                        </div>
+                                    </div>
+                                    <div className="hire_people_estimated_price text-center">
+                                        <p className="estimated_title">Coinpedia Estimate Price</p>
+                                        <h3>$800.00</h3>
+                                        <p className="estimated_link"><Link href="#"><a>Paid @ 22 May 2022 11:30 PM</a></Link></p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                {/* ......................work process page table ends here................. */}
+
+
+
+
+
+                {/* ....................rejected popup modal design starts here..................... */}
+                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#new_rejected">
+                    Rejected Popup
+                  </button>
+
+                  <div className="pr_modal ">
+                    <div className="rejected_modal">
+                      <div class="modal" id="new_rejected">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div className="row">
+                                <div className="col-lg-9 col-md-10 col-sm-10 col-10">
+                                  <h4 class="modal-title">Your Request Rejected :(</h4>
+                                </div>
+                                <div className="col-lg-3 col-md-2 col-sm-2 col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                              </div>
+                              
+                            </div>
+                            <div class="modal-body">
+                              <img src="/assets/images/rejected_popup.png" />
+                              <p className="rejected_popup_text rejected_popup_subtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <p className="rejected_popup_category mt-4">Category</p>
+                              <p className="rejected_popup_text category_text">Spam Message</p>
+                              <p className="rejected_popup_category mt-4">Description</p>
+                              <p className="rejected_popup_text category_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                {/* .....................rejected popup modal design ends here........................ */}
+
+
+
+                {/* ....................Approce modal design starts here..................... */}
+                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#approve_work">
+                    Approve Work Modal
+                  </button>
+
+                  <div className="pr_modal approve_work_modal">
+                    <div class="modal" id="approve_work">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Publisher Name</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal_fields">
+                              <div class="modal_label">Work Titles</div>
+                              <textarea class="modal_textarea" placeholder="Work Details in Brief" required></textarea>
+                            </div>
+                            <div className="">
+                              <div className="row">
+                                <div className="col-lg-6"><button className="btn btn-danger btn-block">Reject</button></div>
+                                <div className="col-lg-6"><button className="btn cp-primary-btn btn-block">Approve</button></div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                {/* .....................Approve modal design ends here........................ */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {/* new advertiser panel image code ends here */}
             
             <br></br>
@@ -312,7 +981,7 @@ return (
 
 
             {/* code from publisher panel starts here */}
-              <div className='row'>
+              {/* <div className='row'>
                 <div className='col-lg-8'>
                     <div className="orders_progress">
                         <ProgressBar order_status={orderData.order_status}  orders_counts={orderData.orders_counts}  order_row_id={order_row_id}/>
@@ -469,41 +1138,52 @@ return (
                         </div>
                       </div>
                       </div>
-                    </div>
+                    </div> */}
                 {/* code from publisher panel ends here */}
             
        
-     
-<div className={"modal "+(this.state.servModalStatus ? "show":"")} tabIndex="-1" role="dialog" style={this.state.servModalStatus ? {display:"block"} : {display:"none"}}>
-    <div className="modal-dialog modal-lg">
-        <div className="modal-content" style={{padding:'24px', borderRadius:'13px'}}>
-            <div className="modal-header">
-            Service Details
-                <button type="button" className="close"  onClick={()=>{this.setState({servModalStatus:false})}} >&times;</button>
-            </div>
-            <div className="modal-body">
-              {
-                servIndividualDetails ?
-                <div>
-                  <h6>Platform Name</h6>
-                  <p>{servIndividualDetails.platform_name}</p>
 
-                  <h6>Service Name</h6>
-                  <p>{servIndividualDetails.service_name}</p>
-
-                  <h6>No of Publishers</h6>
-                  <p>{servIndividualDetails.num_of_peoples}</p>
-
-                  <h6>Requirement Details</h6>
-                  <p>{servIndividualDetails.requirement_details}</p>
+                <div className="pr_modal">
+                  <div className={"modal "+(this.state.servModalStatus ? "show":"")} tabIndex="-1" role="dialog" style={this.state.servModalStatus ? {display:"block"} : {display:"none"}}>
+                    <div className="modal-dialog modal-md">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                        <h4 class="modal-title">Services Details</h4>
+                          <button type="button" className="close"  onClick={()=>{this.setState({servModalStatus:false})}} >&times;</button>
+                        </div>
+                        <div className="modal-body">
+                          {
+                            servIndividualDetails ?
+                            <div>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_label">Platform Name</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_values">{servIndividualDetails.platform_name}</p></div>
+                              </div>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_label">Service Name</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_values">{servIndividualDetails.service_name}</p></div>
+                              </div>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_label">No of Publishers</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_values">{servIndividualDetails.num_of_peoples}</p></div>
+                              </div>
+                              <div className='row'>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_label">Requirement Details</p></div>
+                                <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                                <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="modal_order_values">{servIndividualDetails.requirement_details}</p></div>
+                              </div>
+                            </div>
+                            :
+                            null
+                          }
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                :
-                null
-              }
-            </div>
-        </div>
-    </div>
-</div>
             
             
             

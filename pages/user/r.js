@@ -375,7 +375,7 @@ class register extends Component {
                   </p>
 
                   {this.state.loader ? (
-                      <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} ><div className="loader"></div></button>
+                      <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
                     ) : (
                       <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} > Sign Up <i className="la la-arrow-right"></i></button>
                     )

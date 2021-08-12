@@ -50,11 +50,11 @@ export default function TopMenuBar({ title, full_name }) {
                                         <a className="nav-link" href="#"><img src="/assets/images/menu-dashboard.png" /> Dashboard</a>
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link href="/publisher/orders">
                                         <a className="nav-link" href="#"><img src="/assets/images/menu-myorder.png" /> My Orders</a>
                                     </Link>
-                                </li>
+                                </li> */}
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -76,9 +76,9 @@ export default function TopMenuBar({ title, full_name }) {
                                     </div>
                                 </li>
 
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="/publisher/wallet"><img src="/assets/images/menu-wallet.png" /> Wallet</a>
-                                </li>
+                                </li> */}
 
                                 <li className="nav-item">
                                     <a className="nav-link" href="/publisher/profile"><img src="/assets/images/mobile_profile.png" /> Profile</a>
@@ -101,9 +101,12 @@ export default function TopMenuBar({ title, full_name }) {
                         <div className="col-md-12">
                             <ul className="dashboard_top_menu_right">
                                 <li>
-                                    <div className="new__items list_platform">
+                                    {/* <div className="new__items list_platform">
                                         <img src="/assets/images/list_new_platform.png"/>
                                         <p><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
+                                    </div> */}
+                                    <div className="new__items list_platform">
+                                        <p><img src="/assets/images/list_new_platform.png"/><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
                                     </div>
                                 </li>
                                 <li>

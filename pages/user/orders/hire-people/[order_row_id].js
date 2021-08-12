@@ -267,7 +267,7 @@ return (
                     <div className="hire_people_second_row">
                         <div className="row">
                             <div className="col-lg-8">
-                                <div className="hire_people_left_block">
+                                <div className="panel hire_people_left_block">
                                     <div className="hire_people_count">
                                         <div className="panel-table progress_table">
                                             <div className="table-responsive">

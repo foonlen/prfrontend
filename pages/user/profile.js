@@ -60,6 +60,8 @@ class profile extends React.Component
             error_people_range: "",
             modal_data:{title: "", image_name: "", description: ""} 
         }
+        
+
     }
 
     dashboard_me() {
@@ -500,13 +502,13 @@ class profile extends React.Component
 
                                             <div className="panel__group">
                                                 <div className="panel__title title">Main Info</div>
-                                                <div >
-
+                                                <div>
                                                     <div className="profile_col">
                                                         <div className="field form__field">
                                                             <div className="field__label">Username</div>
                                                             <div className="field__wrap">
                                                                 <input type="text" className="field__input" placeholder="Username" defaultValue={this.state.username} name="username" disabled />
+                                                                <div className="field__icon"><img src="/assets/images/login.png" /></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -517,6 +519,7 @@ class profile extends React.Component
                                                             <div className="field__label">Full name</div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Username" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" ref="full_name" />
+                                                                <div className="field__icon"><img src="/assets/images/user.png" /></div>
                                                             </div>
                                                             <div className="error_class">
                                                                 {this.state.error_full_name}
@@ -529,6 +532,7 @@ class profile extends React.Component
                                                             <div className="field__label">Email ID</div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Email ID" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
+                                                                <div className="field__icon"><img src="/assets/images/email.png" /></div>
                                                             </div>
                                                             <div className="error_class">
                                                                 {this.state.error_email_id}
@@ -564,7 +568,7 @@ class profile extends React.Component
                                                                             : null
                                                                     }
                                                                 </select>
-                                                                <div className="field__icon"><i className="la la-angle-down "></i></div>
+                                                                <div className="field__icon"><img src="/assets/images/down_arrow_grey.png " /></div>
                                                             </div>
                                                             <div className="error_class">
                                                                 {this.state.error_country_row_id}
@@ -577,6 +581,7 @@ class profile extends React.Component
                                                             <div className="field__label">Mobile Number</div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Mobile Number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
+                                                                <div className="field__icon"><img src="/assets/images/mobile.png" /></div>
                                                             </div>
                                                             <div className="error_class">
                                                                 {this.state.error_mobile_number}
@@ -601,7 +606,7 @@ class profile extends React.Component
                                                 <TabList>
                                                     <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-user"></i> Profile Info</Tab>
                                                     <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-key "></i> Security</Tab>
-                                                    <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-wallet"></i> Wallet</Tab>
+                                                    {/* <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-wallet"></i> Wallet</Tab> */}
                                                 </TabList>
                                                 <TabPanel>
                                                     <div className="panel__tab js-panel-tab" >
@@ -690,7 +695,7 @@ class profile extends React.Component
                                                                     <div className="field auth__field">
                                                                         <div className="field__label">Old Password</div>
                                                                         <div className="field__wrap">
-                                                                            <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                            <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" className="field__input" type="password" value={this.state.current_password} onChange={(e) => { this.setState({ current_password: e.target.value }) }} name="current_password" useref="current_password" />
                                                                         </div>
                                                                         <div className="error_class">
@@ -700,7 +705,7 @@ class profile extends React.Component
                                                                     <div className="field auth__field">
                                                                         <div className="field__label">New Password</div>
                                                                         <div className="field__wrap">
-                                                                            <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                            <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" type="password" className="field__input" value={this.state.new_password} onChange={(e) => { this.setState({ new_password: e.target.value }) }} name="new_password" useref="new_password" />
                                                                         </div>
                                                                         <div className="error_class">
@@ -710,7 +715,7 @@ class profile extends React.Component
                                                                     <div className="field auth__field">
                                                                         <div className="field__label">Confirm Password</div>
                                                                         <div className="field__wrap">
-                                                                            <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                            <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" className="field__input" type="password" value={this.state.confirm_new_password} onChange={(e) => { this.setState({ confirm_new_password: e.target.value }) }} name="confirm_new_password" useref="confirm_new_password" />
                                                                         </div>
                                                                         <div className="error_class">
@@ -735,7 +740,7 @@ class profile extends React.Component
 
 
 
-                                                <TabPanel>
+                                                {/* <TabPanel>
                                                     <div className="panel__tab js-panel-tab">
 
                                                         <div className="panel__body">
@@ -789,7 +794,7 @@ class profile extends React.Component
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </TabPanel>
+                                                </TabPanel> */}
                                             </Tabs>
                                         </div>
                                     </div>
@@ -908,7 +913,7 @@ class profile extends React.Component
                                                     <div className='profile_textarea_block'>
                                                         <p>About</p>
                                                         <textarea value={this.state.about_advertiser} onChange={(e) => { this.setState({ about_advertiser: e.target.value }) }} name="about_advertiser" ref="about_advertiser"></textarea>
-                                                        <div className="error">
+                                                        <div className="error_class">
                                                             {this.state.error_about_advertiser}
                                                         </div>
                                                     </div>
@@ -942,7 +947,7 @@ class profile extends React.Component
                                                                     <div className="field__icon"><i className="la la-angle-down "></i></div>
                                                                 </div>
                                                             </div>
-                                                            <div className="error">
+                                                            <div className="error_class">
                                                                 {this.state.error_people_range}
                                                             </div>
                                                         </div>
@@ -963,7 +968,7 @@ class profile extends React.Component
                                                                     <input type="text" className="form-control" placeholder="Web Meeting Id" value={this.state.web_meeting_id} onChange={(e) => { this.setState({ web_meeting_id: e.target.value }) }} name="web_meeting_id" ref="web_meeting_id" />
 
                                                                 </div>
-                                                                <div className="error">
+                                                                <div className="error_class">
                                                                     {this.state.error_web_meeting_id}
                                                                 </div>
 
@@ -1029,7 +1034,7 @@ class profile extends React.Component
                                                             <input autoComplete="off" className="field__input" value={this.state.current_password} type="password" onChange={(e) => { this.setState({ current_password: e.target.value }) }} name="current_password" useref="current_password" />
                                                             <div className="field__icon"><i className="la la-key "></i> </div>
                                                         </div>
-                                                        <div className="error">
+                                                        <div className="error_class">
                                                             {this.state.error_current_password}
                                                         </div>
                                                     </div>
@@ -1039,7 +1044,7 @@ class profile extends React.Component
                                                             <input autoComplete="off" type="password" className="field__input" value={this.state.new_password} onChange={(e) => { this.setState({ new_password: e.target.value }) }} name="new_password" useref="new_password" />
                                                             <div className="field__icon"><i className="la la-key "></i> </div>
                                                         </div>
-                                                        <div className="error">
+                                                        <div className="error_class">
                                                             {this.state.error_new_password}
                                                         </div>
                                                     </div>
@@ -1049,7 +1054,7 @@ class profile extends React.Component
                                                             <input autoComplete="off" className="field__input" type="password" value={this.state.confirm_new_password} onChange={(e) => { this.setState({ confirm_new_password: e.target.value }) }} name="confirm_new_password" useref="confirm_new_password" />
                                                             <div className="field__icon"><i className="la la-key "></i> </div>
                                                         </div>
-                                                        <div className="error">
+                                                        <div className="error_class">
                                                             {this.state.error_confirm_new_password}
                                                         </div>
                                                     </div>

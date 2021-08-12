@@ -222,6 +222,7 @@ function platform({ userAgent }) {
                 <table className="table">
                   <thead>
                     <tr>
+                      <th className="table_platform">Serial Number</th>
                       <th className="table_platform">Platform</th>
                       <th className="table_platform_name">Platform Name</th>
                       <th className="table_service">Services</th>
@@ -238,6 +239,7 @@ function platform({ userAgent }) {
                     {
                       platform_list.map((e, i) => {
                         return <tr id={e.id} key={i}>
+                          <td>{i+1}</td>
                           <td className="text-capitalize">
                             {e.platform_type_name}
                            </td>
@@ -328,7 +330,7 @@ function platform({ userAgent }) {
                     
                     </tr> 
                       :
-                      <TableContentLoader row="5" col="6" />
+                      <TableContentLoader row="5" col="7" />
                     } 
                   </tbody>
                 </table>

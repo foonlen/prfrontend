@@ -153,8 +153,8 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
             <div className="container__body">
               {/* .............Create Platform Code Starts Here............. */}
                 <div className="row">
-                  <div className="col-lg-3"></div>
-                  <div className="col-lg-6">
+                  <div className="col-xl-4 col-lg-3"></div>
+                  <div className="col-xl-4 col-lg-6">
                     <div className="addNewPlatform">
                       <div className="panel_title_block">
                         <h2>Update Platforms Details</h2>
@@ -262,12 +262,12 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                         <div className="error_class" >{error_views_per_month}</div>
                       </div>
                       <div className="text-center">
-                        <Link  href={"/publisher/platform/service/"+platform_row_id}><a className="btn btn-secondary custom_secondary_button mr-1"> Go Back </a></Link>
+                        <Link  href={"/publisher/platform/service/"+platform_row_id}><a className="btn go_back_btn"> Go Back </a></Link>
                         <button className="btn cp-primary-btn" onClick={updatePlatformDetails}>Update Platform <i className="la la-arrow-right"></i></button>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-3"></div>
+                  <div className="col-xl-4 col-lg-3"></div>
                 </div>
               
             </div>

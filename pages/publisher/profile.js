@@ -526,21 +526,21 @@ updateWalletTokenAddress()
                                             <div className="panel__title title">Main Info</div>
                                             <div >
 
-                                                <div className="profile_col">
+                                                {/* <div className="profile_col">
                                                     <div className="field form__field">
                                                         <div className="field__label">Username</div>
                                                         <div className="field__wrap">
                                                             <input type="text" className="field__input" placeholder="Username" defaultValue={this.state.username} name="username" disabled />
+                                                            <img src="/assets/images/username.png" />
                                                         </div>
                                                     </div>
-                                                </div>
-
-
+                                                </div> 
                                                 <div className="profile_col">
                                                     <div className="field form__field">
                                                         <div className="field__label">Full name</div>
                                                         <div className="field__wrap">
                                                             <input autoComplete="off" type="text" className="field__input" placeholder="Username" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" ref="full_name" />
+                                                            <img src="/assets/images/login.png" />
                                                         </div>
                                                         <div style={{ color: "red" }}>
                                                             {this.state.error_full_name}
@@ -553,6 +553,7 @@ updateWalletTokenAddress()
                                                         <div className="field__label">Email ID</div>
                                                         <div className="field__wrap">
                                                             <input autoComplete="off" type="text" className="field__input" placeholder="Email ID" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
+                                                            <img src="/assets/images/email.png" />
                                                         </div>
                                                         <div style={{ color: "red" }}>
                                                             {this.state.error_email_id}
@@ -588,7 +589,7 @@ updateWalletTokenAddress()
                                                                         : null
                                                                 }
                                                             </select>
-                                                            <div className="field__icon"><i className="la la-angle-down "></i></div>
+                                                            <div className="field__icon"><img src="/assets/images/down_arrow_grey.png" /></div>
                                                         </div>
                                                         <div style={{ color: "red" }}>
                                                             {this.state.error_country_row_id}
@@ -601,13 +602,101 @@ updateWalletTokenAddress()
                                                         <div className="field__label">Mobile Number</div>
                                                         <div className="field__wrap">
                                                             <input autoComplete="off" type="text" className="field__input" placeholder="Mobile Number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
+                                                            <img src="/assets/images/mobile.png" />
                                                         </div>
                                                         <div style={{ color: "red" }}>
                                                             {this.state.error_mobile_number}
                                                         </div>
                                                     </div>
+                                                </div> */}
+
+
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Username</div>
+                                                        <div className="field__wrap">
+                                                            <input type="text" className="field__input" placeholder="Username" defaultValue={this.state.username} name="username" disabled />
+                                                            <div className="field__icon"><img src="/assets/images/login.png" /></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Full name</div>
+                                                        <div className="field__wrap">
+                                                            <input autoComplete="off" type="text" className="field__input" placeholder="Username" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" ref="full_name" />
+                                                            <div className="field__icon"><img src="/assets/images/user.png" /></div>
+                                                        </div>
+                                                        <div className="error_class">
+                                                            {this.state.error_full_name}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Email ID</div>
+                                                        <div className="field__wrap">
+                                                            <input autoComplete="off" type="text" className="field__input" placeholder="Email ID" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
+                                                            <div className="field__icon"><img src="/assets/images/email.png" /></div>
+                                                        </div>
+                                                        <div className="error_class">
+                                                            {this.state.error_email_id}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Location</div>
+                                                        <div className="field__wrap">
+                                                            <input autoComplete="off" type="text" className="field__input" placeholder="Location" value={this.state.location} onChange={(e) => { this.setState({ location: e.target.value }) }} name="location" ref="location" />
+                                                            <div className="field__icon"><i className="la la-map-marker"></i></div>
+                                                        </div>
+                                                        <div className="error_class">
+                                                            {this.state.error_location}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Select Country</div>
+                                                        <div className="field__wrap">
+                                                            <select className="field__select" name="country_row_id" onChange={(e) => { this.setState({ country_row_id: e.target.value }) }} useref="country_row_id" >
+                                                                <option value="">Select Country</option>
+                                                                {
+                                                                    this.state.countryList ?
+                                                                    this.state.countryList.map((item, i) =>
+                                                                        <option value={item.country_id} key={item.country_id} selected={this.state.country_row_id == item.country_id}> {item.country_name} ({item.country_code} )</option>
+                                                                    )
+                                                                    : null
+                                                                }
+                                                            </select>
+                                                            <div className="field__icon"><img src="/assets/images/down_arrow_grey.png " /></div>
+                                                        </div>
+                                                        <div className="error_class">
+                                                            {this.state.error_country_row_id}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="profile_col">
+                                                    <div className="field form__field">
+                                                        <div className="field__label">Mobile Number</div>
+                                                        <div className="field__wrap">
+                                                            <input autoComplete="off" type="text" className="field__input" placeholder="Mobile Number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
+                                                            <div className="field__icon"><img src="/assets/images/mobile.png" /></div>
+                                                        </div>
+                                                        <div className="error_class">
+                                                            {this.state.error_mobile_number}
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div className="field auth__field">
                                                     <button className="btn cp-primary-btn" type="submit" name="update_password" onClick={() => { this.updatePersonalData() }}>
                                                         {this.state.loader ? (
@@ -638,7 +727,7 @@ updateWalletTokenAddress()
                                                                     <div className='profile_textarea_block'>
                                                                         <div className="field__label">About</div>
                                                                         <textarea value={this.state.about_publisher} onChange={(e) => { this.setState({ about_publisher: e.target.value }) }} name="about_publisher" ref="about_publisher"></textarea>
-                                                                        <div className="error">
+                                                                        <div className="error_class">
                                                                             {this.state.error_about_publisher}
                                                                         </div>
 
@@ -661,7 +750,7 @@ updateWalletTokenAddress()
                                                                                     <input type="text" className="form-control web_meet_id" placeholder="Web Meeting Id" value={this.state.web_meeting_id} onChange={(e) => { this.setState({ web_meeting_id: e.target.value }) }} name="web_meeting_id" ref="web_meeting_id" />
 
                                                                                 </div>
-                                                                                <div className="error">
+                                                                                <div className="error_class">
                                                                                     {this.state.error_web_meeting_id}
                                                                                 </div>
                                                                             </div>
@@ -681,7 +770,7 @@ updateWalletTokenAddress()
                                                                                         </select>
                                                                                         <div className="field__icon"><i className="la la-angle-down "></i></div>
                                                                                     </div>
-                                                                                    <div className="error">
+                                                                                    <div className="error_class">
                                                                                         {this.state.error_people_range_id}
                                                                                     </div>
                                                                                 </div>
@@ -714,30 +803,30 @@ updateWalletTokenAddress()
                                                                 <div className="field auth__field">
                                                                     <div className="field__label">Old Password</div>
                                                                     <div className="field__wrap">
-                                                                        <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                        <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                         <input autoComplete="off" className="field__input" type="password" value={this.state.current_password} onChange={(e) => { this.setState({ current_password: e.target.value }) }} name="current_password" useref="current_password" />
                                                                     </div>
-                                                                    <div className="error">
+                                                                    <div className="error_class">
                                                                         {this.state.error_current_password}
                                                                     </div>
                                                                 </div>
                                                                 <div className="field auth__field">
                                                                     <div className="field__label">New Password</div>
                                                                     <div className="field__wrap">
-                                                                        <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                        <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                         <input autoComplete="off" type="password" className="field__input" value={this.state.new_password} onChange={(e) => { this.setState({ new_password: e.target.value }) }} name="new_password" useref="new_password" />
                                                                     </div>
-                                                                    <div className="error">
+                                                                    <div className="error_class">
                                                                         {this.state.error_new_password}
                                                                     </div>
                                                                 </div>
                                                                 <div className="field auth__field">
                                                                     <div className="field__label">Confirm Password</div>
                                                                     <div className="field__wrap">
-                                                                        <div className="field__icon"><i className="la la-key "></i> </div>
+                                                                        <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                         <input autoComplete="off" className="field__input" type="password" value={this.state.confirm_new_password} onChange={(e) => { this.setState({ confirm_new_password: e.target.value }) }} name="confirm_new_password" useref="confirm_new_password" />
                                                                     </div>
-                                                                    <div className="error">
+                                                                    <div className="error_class">
                                                                         {this.state.error_confirm_new_password}
                                                                     </div>
                                                                 </div>
@@ -773,9 +862,9 @@ updateWalletTokenAddress()
                                                                         <div className="field__label">BTC Address</div>
                                                                         <div className="field__wrap">
                                                                             <input autoComplete="off" className="field__input" type="text" value={this.state.btc_address} onChange={(e) => { this.setState({ btc_address: e.target.value }) }} name="btc_address" useref="btc_address" />
-                                                                            <div className="field__icon"><i className="la la-border-all " /></div>
+                                                                            <div className="field__icon"><img className="crypto_img" src="/assets/images/btc.png" /></div>
                                                                         </div>
-                                                                        <div className="error">
+                                                                        <div className="error_class">
                                                                             {this.state.error_btc_address}
                                                                         </div>
                                                                     </div>
@@ -783,9 +872,9 @@ updateWalletTokenAddress()
                                                                         <div className="field__label">ETH Address</div>
                                                                         <div className="field__wrap">
                                                                             <input autoComplete="off" className="field__input" type="text" value={this.state.eth_address} onChange={(e) => { this.setState({ eth_address: e.target.value }) }} name="eth_address" useref="eth_address" />
-                                                                            <div className="field__icon"><i className="la la-border-all " /></div>
+                                                                            <div className="field__icon"><img className="crypto_img" src="/assets/images/eth.png" /></div>
                                                                         </div>
-                                                                        <div className="error">
+                                                                        <div className="error_class">
                                                                             {this.state.error_eth_address}
                                                                         </div>
                                                                     </div>
@@ -793,9 +882,9 @@ updateWalletTokenAddress()
                                                                         <div className="field__label">BNB Address</div>
                                                                         <div className="field__wrap">
                                                                             <input autoComplete="off" className="field__input" type="text" value={this.state.bnb_address} onChange={(e) => { this.setState({ bnb_address: e.target.value }) }} name="bnb_address" useref="bnb_address" />
-                                                                            <div className="field__icon"><i className="la la-border-all " /></div>
+                                                                            <div className="field__icon"><img className="crypto_img" src="/assets/images/bnb.png" /></div>
                                                                         </div>
-                                                                        <div className="error">
+                                                                        <div className="error_class">
                                                                             {this.state.error_bnb_address}
                                                                         </div>
                                                                     </div>

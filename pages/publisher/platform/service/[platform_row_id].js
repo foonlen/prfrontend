@@ -321,7 +321,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                         <div className="field form__field active">
                         <div className="field__label">Platform Name</div>
                         <div className="field__wrap update_wrap">
-                            <div className="field__icon"><img src="/assets/images/channel_name.png" width="22px" /></div>
+                            <div className="field__icon"><img src="/assets/images/platform_new.png" width="22px" /></div>
                             <input className="field__input" type="text" value={platform_name}  />
                         </div>
                         </div>
@@ -352,13 +352,13 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                            <div className="mt-3">
                            {
                              parseInt(data.approval_status) === 0 ?
-                             <>In Verification</>
+                             <><p className="services_status"><img src="/assets/images/work_process.png" />In Verification</p></>
                              :
                              parseInt(data.approval_status) === 1 ?
-                             <>Platform Approved</>
+                             <><p className="services_status"><img src="/assets/images/ok_green.png" />Platform Approved</p></>
                              :
                              parseInt(data.approval_status) === 2 ?
-                             <>Platform Rejected</>
+                             <><p className="services_status"><img src="/assets/images/rejected.png" />Platform Rejected</p></>
                              :
                              null
                            }
@@ -460,67 +460,33 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                               </div>
                             </div> 
                         </div>
-                     
-                        </div>
+                      </div>
                                 
 
-                   <div className="col-md-5 add_new_services services_edit">
-                  <div className="row">
-                    <div className="col-lg-5 col-md-4 col-sm-6 col-12">
-                      <div className="form-group">
-                        <label htmlFor="email">Also Share With</label>
-                        <div className="pr_platform_website_share_block">
-                          <div className="form-check"  >
-                            <input className="form-check-input" type="checkbox" value="1" onChange={e => addToAlsoShare(e)} readOnly/>
-                            <label className="form-check-label">
-                              Social Media
-                            </label>
+                    <div className="col-md-5 add_new_services services_edit">
+                      <div className="row">
+                        {
+                            parseInt(data.platform_type) === 2 ?
+                            <div className="col-lg-4 ">
+                            <div className="form-group">
+                                <label htmlFor="email">Video Duration</label>
+                                <TimePicker className="form-control"
+                                    placeholder="HH:MM:SS"
+                                    value={video_duration}
+                                    showSecond={true}
+                                    defaultValue={0} 
+                                    onChange={onChange}
+                                  />  
+                            </div>
+                            <div className="error_class">
+                              {err_video_duration}
+                            </div>
                           </div>
+                            :
+                          null
+                        }
                         
-
-                          {
-                            parseInt(data.platform_type) === 1 ?
-                            <div className=''>
-                              <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="2" onChange={e => addToAlsoShare(e)} readOnly/>
-                                <label className="form-check-label">
-                                  Newsletter
-                                </label>
-                              </div>
-                            </div>
-                              :
-                              null
-                          }
-                          
-                        </div>
-                      </div> 
-                        <div className="error_class">
-                          {err_also_share_with}
-                        </div>     
-                    </div> 
-                          
-          
-                          {
-                              parseInt(data.platform_type) === 2 ?
-                              <div className="col-lg-4 ">
-                              <div className="form-group">
-                                  <label htmlFor="email">Video Duration</label>
-                                  <TimePicker
-                                      placeholder="HH:MM:SS"
-                                      value={video_duration}
-                                      showSecond={true}
-                                      defaultValue={0} 
-                                      onChange={onChange}
-                                    />  
-                              </div>
-                              <div className="error_class">
-                                {err_video_duration}
-                              </div>
-                            </div>
-                              :
-                            null
-                            }
-                           {
+                        {
                              parseInt(data.platform_type) === 1 ?
                             <div className="col-lg-4 col-md-4 col-sm-6 col-12">
                               <div className="field form__field follow_unfollow_block">
@@ -541,6 +507,43 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                             :
                             null
                            }
+
+                          <div className="col-lg-5 col-md-4 col-sm-6 col-12">
+                            <div className="form-group">
+                              <label htmlFor="email">Also Share With</label>
+                              <div className="pr_platform_website_share_block">
+                                <div className="form-check"  >
+                                  <input className="form-check-input" type="checkbox" value="1" onChange={e => addToAlsoShare(e)} readOnly/>
+                                  <label className="form-check-label">
+                                    Social Media
+                                  </label>
+                                </div>
+                              
+
+                                {
+                                  parseInt(data.platform_type) === 1 ?
+                                  <div className=''>
+                                    <div className="form-check">
+                                      <input className="form-check-input" type="checkbox" value="2" onChange={e => addToAlsoShare(e)} readOnly/>
+                                      <label className="form-check-label">
+                                        Newsletter
+                                      </label>
+                                    </div>
+                                  </div>
+                                    :
+                                    null
+                                }
+                                
+                              </div>
+                            </div> 
+                              <div className="error_class">
+                                {err_also_share_with}
+                              </div>     
+                          </div> 
+
+
+
+
                             <div className="col-lg-3 col-md-4 col-sm-12 col-6 save_service">
                             <div className="form-group ">
                                 <button className="btn btn-success" onClick={saveService}>Save</button>
@@ -651,9 +654,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                                       {
                                         parseInt(data.approval_status) !== 2 ?
                                         <td>
-                                          <button onClick={() => {setDeleteService(item2.id)}} type="button" title="Delete">
-                                            <img src="/assets/images/delete.png" />
-                                          </button>
+                                          <img title="Delete" onClick={() => {setDeleteService(item2.id)}} src="/assets/images/delete.png" />
                                         </td>
                                         :
                                         <td></td>
@@ -688,19 +689,26 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
             null
         }
 
-
-        <div className={"modal "+(servDelModal ? " show" : "")} tabIndex="-1" role="dialog">
+        <div className="pr_modal reject_platform_modal">
+          <div className={"modal "+(servDelModal ? " show" : "")} tabIndex="-1" role="dialog">
             <div className="modal-dialog modal-sm"  role="document">
-                <div className="modal-content">
-                    <div className="modal-body text-center"> 
-                        <h5 className="modal-description mb-2">Delete Service</h5>
+                <div className="modal-content ">
+                    <div className="modal-body text-center">
+                      <img className="modal_cancel_img" src="/assets/images/cancel.png" /> 
+                      <h5 className="modal-description mb-2">Delete Service !</h5>
                       <p className="modal-description mb-2">Do You Really Want to Delete This Service?</p>
-                        <button type="button" className="btn btn-primary btn-sm mr-2"  onClick={() => setServDelModal(false)}>Close</button>
-                        <button type="button" className="btn btn-success btn-sm "  onClick={delService}>Confirm</button>
+                        {/* <button type="button" className="btn close_modal"  onClick={() => setServDelModal(false)}>Close</button>
+                        <button type="button" className="btn cp-primary-btn"  onClick={delService}>Confirm</button> */}
+                      <div className="confim_action_btn">
+                        <button className="btn close_modal order_accept_modal_btn" data-dismiss="modal" onClick={() => setServDelModal(false)}>Reject</button>
+                        <button className="btn cp-primary-btn modal_disable " onClick={delService}>Confirm</button>
+                      </div>
                     </div>
                 </div>
             </div> 
+          </div>
         </div>
+        
       </>
     ) 
 }
