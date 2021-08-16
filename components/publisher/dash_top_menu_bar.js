@@ -109,11 +109,11 @@ export default function TopMenuBar({ title, full_name }) {
                                         <p><img src="/assets/images/list_new_platform.png"/><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
                                     </div>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <div className="new__items">
                                         <img src="/assets/images/menu_bar_notification.png" height='22px' />
                                     </div>
-                                </li>
+                                </li> */}
                                 <li>
                                     <div className="new__items">
                                         <div className="new js-new">

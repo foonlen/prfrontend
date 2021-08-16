@@ -269,7 +269,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                 <h2>Update your Services</h2>
               }
                   
-                  <p>provide your services in detail for better findings</p>
+                  <p>Provide your services in detail for better findings.</p>
             </div>
 
 
@@ -352,7 +352,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                            <div className="mt-3">
                            {
                              parseInt(data.approval_status) === 0 ?
-                             <><p className="services_status"><img src="/assets/images/work_process.png" />In Verification</p></>
+                             <><p className="services_status"><img src="/assets/images/platform_status.png" />In Verification</p></>
                              :
                              parseInt(data.approval_status) === 1 ?
                              <><p className="services_status"><img src="/assets/images/ok_green.png" />Platform Approved</p></>
@@ -373,6 +373,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                           <div className="field form__field active">
                           <div className="field__label">Rejected Reason</div>
                           <div className="field__wrap update_wrap">
+                            <div className="field__icon"><img src="/assets/images/rejected.png" /></div>
                             <div className="mt-3">
                               {data.reason_for_reject}
                             </div>
@@ -696,7 +697,7 @@ function addNewPlatform({userAgent, preData, headers, platform_row_id})
                     <div className="modal-body text-center">
                       <img className="modal_cancel_img" src="/assets/images/cancel.png" /> 
                       <h5 className="modal-description mb-2">Delete Service !</h5>
-                      <p className="modal-description mb-2">Do You Really Want to Delete This Service?</p>
+                      <p className="modal-description mb-2">Do you really want to delete this service?</p>
                         {/* <button type="button" className="btn close_modal"  onClick={() => setServDelModal(false)}>Close</button>
                         <button type="button" className="btn cp-primary-btn"  onClick={delService}>Confirm</button> */}
                       <div className="confim_action_btn">

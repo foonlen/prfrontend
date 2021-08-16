@@ -142,9 +142,13 @@ class forgotPassword extends React.Component {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
+                            <div className="verify_back">
+                                <Link href="/login"><a><i className="la la-arrow-left"></i></a></Link>
+                            </div>
                           <div className="auth__head">
                             <div className="auth__title title ">
-                              <h1 className="title_xl">Forgot Your Password</h1>
+                              <h1 className="title_xl">Forgot password ?</h1>
+                              <p>Verify your email OTP to get new password.</p>
                             </div>
                           </div>
 

@@ -107,7 +107,7 @@ class new_order extends React.Component
         if(this.state.platform_row_id === '') 
         {
             this.setState({
-                error_platform_row_id:"Platform ID field is required."
+                error_platform_row_id:"*Required."
             });
             formIsValid = false;
         }
@@ -121,7 +121,7 @@ class new_order extends React.Component
         if(this.state.service_row_id === '') 
         {
             this.setState({
-                error_service_row_id:"Service field is required."
+                error_service_row_id:"*Required."
             })
             formIsValid = false
         }
@@ -135,7 +135,7 @@ class new_order extends React.Component
         if(this.state.no_of_people === '') 
         {
             this.setState({
-                error_no_of_people:"No of peoples field is required."
+                error_no_of_people:"*Required."
             });
             formIsValid = false;
         }
@@ -149,7 +149,7 @@ class new_order extends React.Component
         if(this.state.requirement === '') 
         {
             this.setState({
-                error_requirement:"Requirement field is required."
+                error_requirement:"*Required."
             });
             formIsValid = false;
         }
@@ -213,7 +213,7 @@ class new_order extends React.Component
         if(this.state.order_title === '') 
         {
             this.setState({
-                error_order_title:"The order title field is required."
+                error_order_title:"*Required."
             });
             formIsValid = false;
         }
@@ -227,7 +227,7 @@ class new_order extends React.Component
         if(this.state.price_range_id === '') 
         {
             this.setState({
-                error_price_range_id:"The price range field is required."
+                error_price_range_id:"*Required."
             });
             formIsValid = false;
         }
@@ -241,7 +241,7 @@ class new_order extends React.Component
         if(this.state.end_date_n_time === '') 
         {
             this.setState({
-                error_end_date_n_time:"The deadline time field is required."
+                error_end_date_n_time:"*Required."
             });
             formIsValid = false;
         }
@@ -256,7 +256,7 @@ class new_order extends React.Component
         if(this.state.website_link === '') 
         {
             this.setState({
-                error_website_link:"The website link field is required."
+                error_website_link:"*Required."
             });
             formIsValid = false;
         }
@@ -272,7 +272,7 @@ class new_order extends React.Component
         if(this.state.description === '') 
         {
             this.setState({
-                error_description:"The description field is required."
+                error_description:"*Required."
             });
             formIsValid = false;
         }
@@ -525,7 +525,7 @@ class new_order extends React.Component
                                 <div className="field auth__field select_platform">
                                     <div className="field__label platform_field_label">Requirements <img src="/assets/images/info.png" /></div>
                                     <div className="field__wrap platform_field_wrap">
-                                        <input className="field__input" type="text" placeholder="Requirements"    name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}}  useref="requirement"/>
+                                        <input className="field__input" type="text" placeholder="Requirements" name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}}  useref="requirement" />
                                     </div>
                                     <div className="error_class">
                                         {this.state.error_requirement}

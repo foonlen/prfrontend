@@ -89,11 +89,11 @@ return(
 
   <div className="container__body">
     <div className='panel_title_block'>
-      <h2>Manage My Orders</h2>
-      <p>Add, Edit or Remove your platforms from the tool </p>
+      <h2>My Orders</h2>
+      <p>Manage all your orders here.</p>
     </div>
 
-    <Advertiser_filters />
+    {/* <Advertiser_filters /> */}
 
       <div className="panel-table">
         {
@@ -111,7 +111,7 @@ return(
                     <th>Price Range</th>
                     <th>Created On</th>
                     <th>Orders Ends On</th>
-                    <th>Platform</th>
+                    {/* <th>Platform</th> */}
                     <th>No Of Publishers</th>
                     <th>Status</th>
                     <th>View</th>
@@ -128,11 +128,13 @@ return(
                     </td>
                     <td className="table_ad_order_id">{item.order_id}</td>
                     <td className="table_ad_order_title">{item.title.length > 20 ? (item.title).slice(0, 15)+"..." : item.title}</td>
-                    <td></td>
+                    <td>
+                      ${item.min_price} - ${item.max_price}
+                    </td>
                     <td className="table_order_ends_on">{moment(item.date_n_time).format("DD MMM YYYY")}</td>
                     <td className="table_order_ends_on">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
-                    <td></td>
-                    <td></td>
+                    {/* <td></td> */}
+                    <td>{item.no_of_publisher}</td>
                     <td className="table_status">
                       {
                           parseInt(item.order_status)  === 0 

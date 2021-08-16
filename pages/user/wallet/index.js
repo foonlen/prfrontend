@@ -160,181 +160,322 @@ export default function addFunds({userAgent}) {
                 <div className="container-dash">
                     <TopMenuBar  full_name={advertiser_full_name}/>
                     <div className="container__body">
-                        <div className="panel_title_block text-center">
+                        <div className="panel_title_block">
                             <h2>My Wallet</h2>
                             <p>Recieve Withdraw and Track Your Earnings</p>
                         </div>
 
-                        {/* .......... */}
-
-                        <div className="wallet_blocks">
-                            <div className="row">
-                                <div className="col-lg-3">
-                                    <div classname="wallet_details_block ad_wallets_left_block">
-                                    <img src="/assets/images/wallet.png" classname="wallet_img" />
-                                    <img src="/assets/images/wallet-line.png" classname="wallet_line" />
-                                    <h2><span>$</span> 5062</h2>
-                                    <h4>Available Balance</h4>
-                                    <div classname="row">
-                                        <div classname="col-md-6 col-sm-6 col-6">
-                                        <h5>$ {main_balance}</h5>
-                                        <h6>Go to Wallet Transaction</h6>
-                                        </div>
-                                        <div classname="col-md-6 col-sm-6 col-6">
-                                        <h5>$ {funds_transfer}</h5>
-                                        <h6>Transferred For Order</h6>
-                                        </div>
-                                    </div>
-                                    <div classname="col-md-12 wallet_btn"><p><Link href="/user/wallet/funds"><a>Add Funds</a></Link></p></div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-9">
-                                    <div className='wallet_filters'>
-                                    <div className="row">
-                                        <div className="col-lg-12 col-md-12 col-12 col-sm-12">
-                                        <h4>Wallet Payment History</h4>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6 col-6 col-sm-6">
-                                        <div className="row">
-                                            <div className="col-lg-4"></div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div className="panel-table">
-                                    {
-                                        dataLoaderStatus === false ?
-                                        data.length > 0
-                                        ?
-                                        <>
-                                        <div className="table-responsive">
-                                        <table className="table custom-table">
-                                            <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Amount</th>
-                                                <th>Txns Type</th>
-                                                <th>Description</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            {data}
-                                            </tbody>
-                                        </table>
-                                        </div>
-                                        
-                                        </>
-                                        :
-                                        <div className="data__item text-center">
-                                        Sorry, No Releated data found.
-                                        </div>
-                                        :
-                                        <TableContentLoader row="4" col="4" />
-                                    }
-                                    </div>
-                                    {
-                                        funds_list.length > 10 
-                                        ?
-                                        <div className="panel__foot new_panel_footer">
-                                            <div className="pager new_pager">
-                                                <div className="pager__list pagination_element"> 
-                                                    <ReactPaginate 
-                                                        breakLabel={"..."}
-                                                        breakClassName={"break-me"}
-                                                        pageCount={pageCount}
-                                                        marginPagesDisplayed={2} 
-                                                        onPageChange={handlePageClick}
-                                                        containerClassName={"pagination"}
-                                                        subContainerClassName={"pages pagination"}
-                                                        activeClassName={"active"}
-                                                    />
+                        {/* .................new static dummy design, use this design code to integrate the functionalities for this page.......starts here.......... */}
+                            <div className="wallet_top_block">
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <div className="add_funds_block">
+                                            <p className="wallet_add_funds"><Link href="#"><a><i className="la la-plus"></i>Add Fund</a></Link></p>
+                                            <p className="add_funds_estimated">PR4578AD Estimated Amount</p>
+                                            <div className="wallet_estimated_amount">
+                                                <div className="row">
+                                                    <div className="col-lg-8"><h3>$ 1200.00</h3></div>
+                                                    <div className="col-lg-4"><p>Pay Now</p></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        :
-                                        null
-
-                                    }
-                                
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="wallet_details_block locked_block">
+                                            <h6>Total Balance</h6>
+                                            <h3>$ 3600.30</h3>
+                                            <div class="locked_amount_nav">
+                                                <ul class="nav  nav-pills" id="pills-tab" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Locked Amount</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Locked Amount</a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <p className="withdraw_funds"><Link href="#"><a>Withdraw my Funds <i className="la la-angle-down"></i></a></Link></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {/* .................. */}
 
-                        {/* <div className="panel js-panel">
-                            <div className="panel__body">
-                                <div className="panel__tab js-panel-tab">
-                                    <div className="data data_list addFundsData">
-                                        <div className="data__container"> 
-                                            <div className="data__body">
-                                                {
-                                                    dataLoaderStatus === false ?
-                                                    data.length > 0
-                                                    ?
-                                                    <>
-                                                    <table className="table">
-                                                        <thead>
-                                                        <tr className='custom-table'>
-                                                            <th>Transaction Date</th>
-                                                            <th>Transaction Type</th>
-                                                            <th>Amount</th>
-                                                            <th>Description</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>{data}</tbody>
-                                                    </table>
-                                                    
-                                                    </>
-                                                    :
-                                                    <div className="data__item text-center">
-                                                        <strong>Sorry, No Releated data found.</strong>
+                            <div className="wallet_second_block">
+                                {/* .........advertiser wallet page page title and filter starts here.......... */}
+                                <div className="wallet_filters">
+                                    <div className="row">
+                                        <div className="col-xl-9 col-lg-6 col-md-8 col-sm-8 col-12"> 
+                                            <div className="">
+                                                <h4>Wallet Payment History</h4>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-6 col-md-4 col-sm-8 col-12">
+                                            <div className="row">
+                                                <div className="col-lg-6 col-md-6 col-sm-6 col-6 ">
+                                                    <div className="wallet_view_all">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="View" />
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><img src="/assets/images/down_arrow_grey.png"  /></span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    :
-                                                    <TableContentLoader row="4" col="4" />
-                                                } 
+                                                </div>
+                                                <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div className="wallet_search">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Search" />
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><img src="/assets/images/search.png"  /></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            {
-                                funds_list.length > 10 
-                                ?
-                                <div className="panel__foot">
-                                    <div className="pager new_pager">
-                                        {
-                                        selected_page === 0
-                                        ?
-                                        <span className="pager__arrow action new_action action_icon_before" ><i className="la la-angle-left "></i>Prev</span>
-                                        :
-                                        <span onClick={()=> handleprevious(selected_page)} className="pager__arrow action new_action action_icon_before" ><i className="la la-angle-left "></i>Prev</span>
-                                        }
-                                        <div className="pager__list pagination_element"> 
-                                            <ReactPaginate 
-                                                breakLabel={"..."}
-                                                breakClassName={"break-me"}
-                                                pageCount={pageCount}
-                                                marginPagesDisplayed={2} 
-                                                onPageChange={handlePageClick}
-                                                containerClassName={"pagination"}
-                                                subContainerClassName={"pages pagination"}
-                                                activeClassName={"active"}
-                                            />
-                                        </div>
-                                        {
-                                            selected_page+1 === pageCount
-                                            ?
-                                            <span className="pager__arrow new_action action action_icon_after">Next<i className="la la-angle-right "></i></span>
-                                            :
-                                            <span onClick={()=> handlenext(selected_page)} className="pager__arrow new_action action action_icon_after">Next<i className="la la-angle-right "></i></span>
-                                        } 
+                                {/* .........advertiser wallet page page title and filter ends here.......... */}
+                                
+                                <div className="panel-table">
+                                    <div class="table-responsive">          
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Serial Number</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Transaction Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>07 Jul 2021</td>
+                                                    <td>$ 350</td>
+                                                    <td>BTC</td>
+                                                    <td>Lorem Ipsum...</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>10 Aug 2020</td>
+                                                    <td>$ 100</td>
+                                                    <td>ETH</td>
+                                                    <td>Lorem Ipsum...</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>15 Jan 2018</td>
+                                                    <td>$ 200</td>
+                                                    <td>BNB</td>
+                                                    <td>Lorem Ipsum...</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>07 Jul 2021</td>
+                                                    <td>$ 350</td>
+                                                    <td>BTC</td>
+                                                    <td>Lorem Ipsum...</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                :
-                                null
+                            </div>
 
-                            }
-                        </div> */}
+
+
+
+
+
+
+                        {/* .................new static dummy design, use this design code to integrate the functionalities for this page.........ends here........ */}
+
+
+
+
+                        {/* ....original integrated page starts here...... */}
+
+                            <div className="wallet_blocks">
+                                <div className="row">
+                                    <div className="col-lg-3">
+                                        <div classname="wallet_details_block ad_wallets_left_block">
+                                        <img src="/assets/images/wallet.png" classname="wallet_img" />
+                                        <img src="/assets/images/wallet-line.png" classname="wallet_line" />
+                                        <h2><span>$</span> 5062</h2>
+                                        <h4>Available Balance</h4>
+                                        <div classname="row">
+                                            <div classname="col-md-6 col-sm-6 col-6">
+                                            <h5>$ {main_balance}</h5>
+                                            <h6>Go to Wallet Transaction</h6>
+                                            </div>
+                                            <div classname="col-md-6 col-sm-6 col-6">
+                                            <h5>$ {funds_transfer}</h5>
+                                            <h6>Transferred For Order</h6>
+                                            </div>
+                                        </div>
+                                        <div classname="col-md-12 wallet_btn"><p><Link href="/user/wallet/funds"><a>Add Funds</a></Link></p></div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-9">
+                                        <div className='wallet_filters'>
+                                        <div className="row">
+                                            <div className="col-lg-12 col-md-12 col-12 col-sm-12">
+                                            <h4>Wallet Payment History</h4>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-6 col-sm-6">
+                                            <div className="row">
+                                                <div className="col-lg-4"></div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="panel-table">
+                                        {
+                                            dataLoaderStatus === false ?
+                                            data.length > 0
+                                            ?
+                                            <>
+                                            <div className="table-responsive">
+                                            <table className="table custom-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Txns Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {data}
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                            
+                                            </>
+                                            :
+                                            <div className="data__item text-center">
+                                                Sorry, No Releated data found.
+                                            </div>
+                                            :
+                                            <TableContentLoader row="4" col="4" />
+                                        }
+                                        </div>
+                                        {
+                                            funds_list.length > 10 
+                                            ?
+                                            <div className="panel__foot new_panel_footer">
+                                                <div className="pager new_pager">
+                                                    <div className="pager__list pagination_element"> 
+                                                        <ReactPaginate 
+                                                            breakLabel={"..."}
+                                                            breakClassName={"break-me"}
+                                                            pageCount={pageCount}
+                                                            marginPagesDisplayed={2} 
+                                                            onPageChange={handlePageClick}
+                                                            containerClassName={"pagination"}
+                                                            subContainerClassName={"pages pagination"}
+                                                            activeClassName={"active"}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            :
+                                            null
+
+                                        }
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        {/* ........original integrated code ends here .......... */}
+
+                        
+                        
+                        
+                        
+                        
+                        {/* ...................old wallet design after successfull integration of the wallet functionalities
+                                            this code should be removed........................ */}
+                                            {/* <div className="panel js-panel">
+                                                <div className="panel__body">
+                                                    <div className="panel__tab js-panel-tab">
+                                                        <div className="data data_list addFundsData">
+                                                            <div className="data__container"> 
+                                                                <div className="data__body">
+                                                                    {
+                                                                        dataLoaderStatus === false ?
+                                                                        data.length > 0
+                                                                        ?
+                                                                        <>
+                                                                        <table className="table">
+                                                                            <thead>
+                                                                            <tr className='custom-table'>
+                                                                                <th>Transaction Date</th>
+                                                                                <th>Transaction Type</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Description</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>{data}</tbody>
+                                                                        </table>
+                                                                        
+                                                                        </>
+                                                                        :
+                                                                        <div className="data__item text-center">
+                                                                            <strong>Sorry, No Releated data found.</strong>
+                                                                        </div>
+                                                                        :
+                                                                        <TableContentLoader row="4" col="4" />
+                                                                    } 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {
+                                                    funds_list.length > 10 
+                                                    ?
+                                                    <div className="panel__foot">
+                                                        <div className="pager new_pager">
+                                                            {
+                                                            selected_page === 0
+                                                            ?
+                                                            <span className="pager__arrow action new_action action_icon_before" ><i className="la la-angle-left "></i>Prev</span>
+                                                            :
+                                                            <span onClick={()=> handleprevious(selected_page)} className="pager__arrow action new_action action_icon_before" ><i className="la la-angle-left "></i>Prev</span>
+                                                            }
+                                                            <div className="pager__list pagination_element"> 
+                                                                <ReactPaginate 
+                                                                    breakLabel={"..."}
+                                                                    breakClassName={"break-me"}
+                                                                    pageCount={pageCount}
+                                                                    marginPagesDisplayed={2} 
+                                                                    onPageChange={handlePageClick}
+                                                                    containerClassName={"pagination"}
+                                                                    subContainerClassName={"pages pagination"}
+                                                                    activeClassName={"active"}
+                                                                />
+                                                            </div>
+                                                            {
+                                                                selected_page+1 === pageCount
+                                                                ?
+                                                                <span className="pager__arrow new_action action action_icon_after">Next<i className="la la-angle-right "></i></span>
+                                                                :
+                                                                <span onClick={()=> handlenext(selected_page)} className="pager__arrow new_action action action_icon_after">Next<i className="la la-angle-right "></i></span>
+                                                            } 
+                                                        </div>
+                                                    </div>
+                                                    :
+                                                    null
+
+                                                }
+                                            </div> */}
+                        {/* ...................old wallet design after successfull integration of the wallet functionalities
+                        this code should be removed........................ */}
                     </div>
                 </div> 
                 <div className="modal fade" id="myModal">

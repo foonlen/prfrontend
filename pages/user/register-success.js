@@ -27,7 +27,8 @@ export default function welcome_screen()
                 <div className="row">
                     <div className="col-lg-1"></div>
                     <div className="col-lg-10">
-                        <div className="welcome_steps">
+                        <p className="welcome_text">Get started with your Advertiser tool (beta v1.0). Place your orders and connect with our agents for delicated support.</p>
+                        {/* <div className="welcome_steps">
                             <ul>
                                 <li>
                                     <img src="/assets/images/step1.png" />
@@ -55,10 +56,10 @@ export default function welcome_screen()
                                     <p className="welcome_step_title">Job Done !</p>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className="welcome_action">
                             <p><Link href="/user/orders/create-new"><a className="btn cp-primary-btn start_campaign">Start With New Order</a></Link></p>
-                            <p className="load_wallet_first"><Link href="#"><a className="">Or Load Wallet First</a></Link></p>
+                            {/* <p className="load_wallet_first"><Link href="#"><a className="">Or Load Wallet First</a></Link></p> */}
                         </div>
                     </div>
                     <div className="col-lg-1"></div>

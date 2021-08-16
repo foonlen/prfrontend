@@ -214,7 +214,7 @@ function platform({ userAgent }) {
               <p> Add, Edit or Remove your platforms from the tool</p>
             </div>
 
-            <Publisher_filters />
+            {/* <Publisher_filters /> */}
               
             <div className="panel-table">
               

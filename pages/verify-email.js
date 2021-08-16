@@ -34,12 +34,12 @@ export default function verifyEmail({userAgent, headers})
       let formIsValid = true
       if(otp_number === '') 
       {
-        setErrOtpNumber('The OTP field is required.')
+        setErrOtpNumber('*Required.')
         formIsValid = false
       }
       else if(otp_number.length < 6) 
       {
-        setErrOtpNumber("The OTP field must be at exactly 6 characters in length.")
+        setErrOtpNumber("Invalid OTP.")
         formIsValid = false
       }
 
@@ -109,11 +109,11 @@ export default function verifyEmail({userAgent, headers})
                           <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Get Continued Business Queries</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance</li>
-                            <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                            <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
+                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
                           </ul>
                           </div>
                       </div>
@@ -123,6 +123,9 @@ export default function verifyEmail({userAgent, headers})
                   <div className="row">
                       <div className="col-md-12">
                           <div className="auth__inner">
+                              <div className="verify_back">
+                                <Link href="/user/r"><a><i className="la la-arrow-left"></i></a></Link>
+                              </div>
                               
                               <div className="auth__head">
                                 <div className="auth__title title ">
@@ -134,23 +137,37 @@ export default function verifyEmail({userAgent, headers})
                                 <div className="col-md-9">
                                     <div className="field auth__field otp_auth_field">
                                       <div className="field__wrap">
-                                          <OtpInput className="otp-form-control" numInputs={6}  name="otp_number" value={otp_number} onChange={handleChange} />
+                                        <OtpInput isInputNum className="otp-form-control" numInputs={6}  name="otp_number" value={otp_number} onChange={handleChange} />
                                       </div>
                                       <div className="error_class">{err_otp_number}</div>
                                     </div>
                                     
-                                    <div>
-                                    <button className="resend_otp" onClick={()=>{reSendOTP()}}>Resend OTP</button>
-                                    </div>
-                                    
-                                    
-                                    <button className="btn btn-primary cp-primary-btn" type="button" onClick={()=>{submitVerifyEmail()}}>
+                                    {
+                                      otp_number.length > 5 
+                                      ?
+
+                                      <button className="btn btn-primary cp-primary-btn" type="button" onClick={()=>{submitVerifyEmail()}}>
                                         {loader ? (
                                             <span className="spinner-border spinner-border-sm mr-1"></span>
                                         ) : (
                                             <>Verify Account <i className="la la-arrow-right"></i></>
                                         )}
-                                    </button>
+                                      </button>
+                                      :
+                                      <button className="btn btn-primary cp-primary-btn" style={{opacity:"0.5"}} type="button" onClick={()=>{submitVerifyEmail()}}>
+                                        {loader ? (
+                                            <span className="spinner-border spinner-border-sm mr-1"></span>
+                                        ) : (
+                                            <>Verify Account <i className="la la-arrow-right"></i></>
+                                        )}
+                                      </button>
+
+                                          
+                                    }
+                                    
+                                    <div>
+                                      <button className="resend_otp" onClick={()=>{reSendOTP()}}>Resend OTP</button>
+                                    </div>
                                 </div>
                               </div>
                           </div>

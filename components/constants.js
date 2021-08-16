@@ -1,8 +1,8 @@
 
 // import cookie from "cookie"
 
-export const API_BASE_URL = 'https://icoclap.com/prcoin/'
-// export const API_BASE_URL = 'http://192.168.1.100:81/prcoin/'
+// export const API_BASE_URL = 'https://icoclap.com/prcoin/'
+export const API_BASE_URL = 'http://192.168.1.100:81/prcoin/'
 export const X_API_KEY = '123123'
 export const eth_recieving_address = 'ETH0x0222cc047dFA662d1AEA4Ea3bb4a7261491ce645'
 export const bnb_recieving_address = 'BNB0x0222cc047dFA662d1AEA4Ea3bb4a7261491ce645'

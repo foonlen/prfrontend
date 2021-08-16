@@ -42,13 +42,13 @@ class login extends React.Component {
     let formIsValid = true;
     if (!this.state.password) {
       this.setState({
-        error_password: "The Password field is required."
+        error_password: "*Required."
       });
       formIsValid = false;
     }
     else if (this.state.password.length < 5) {
       this.setState({
-        error_password: "The Password field must be at least 6 characters in length."
+        error_password: "Invalid password."
       });
       formIsValid = false;
     }
@@ -60,7 +60,7 @@ class login extends React.Component {
 
     if (!this.state.login_id) {
       this.setState({
-        error_login_id: "The Login ID field is required."
+        error_login_id: "*Required."
       });
       formIsValid = false;
     }
@@ -215,11 +215,11 @@ class login extends React.Component {
                         <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Get continued business queries</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance</li>
-                            <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                            <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
+                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
                           </ul>
                         </div>
                       </div>
@@ -232,8 +232,8 @@ class login extends React.Component {
                         <div className="auth__inner">
                           <div className="auth__head">
                             <div className="auth__title title ">
-                              <h1 className="title_xl">Login into Your Account</h1>
-                              <p>Login here and start earning</p>
+                              <h1 className="title_xl">Login into your account</h1>
+                              <p>Access your tool hassle free.</p>
                             </div>
                           </div>
 
@@ -264,7 +264,7 @@ class login extends React.Component {
                                 {this.state.loader ? (
                                   <div className="loader"><span class="spinner-border spinner-border-md"></span></div>
                                 ) : (
-                                  <>Take Me In <i className="la la-arrow-right"></i></>
+                                  <>Take me in <i className="la la-arrow-right"></i></>
                                 )}
                               </button>
 

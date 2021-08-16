@@ -37,6 +37,8 @@ class orderDetails extends React.Component
       this.setState({servIndividualDetails:service, servModalStatus:true}) 
     }
 
+    
+
     componentDidMount()
     {
       this.getWalletBal()
@@ -57,8 +59,7 @@ class orderDetails extends React.Component
 
 render()
 {
-    var { main_balance, orderData, order_row_id, servIndividualDetails }  = this.state
-    
+    var { main_balance, orderData, order_row_id, servIndividualDetails }  = this.state;
 return (
   <div>
     <Head>
@@ -70,20 +71,20 @@ return (
         <div className="container-dash">
         <TopMenuBar full_name={this.state.advertiser_full_name} />
           <div className="container__body">
-            {/* <div className="panel_title_block text-center orders_waiting">
-              <h2>Campaign Details <span> ( BrandsNeed Launch ) </span></h2>
-              <p>Track your campaign here with the help of our dedicated Agent.</p>
-            </div> */}
-
-          <div className="panel_title_block text-center">
-            <h2>Campaign Details <span> ( BrandsNeed Launch ) </span></h2>
-            <p>Track your campaign here with the help of our dedicated Agent.</p>
-          </div>
-
-
+              <div className="row">
+                <div className="col-lg-10">
+                  <div className="panel_title_block text-center">
+                    <h2>Order Details <span> ( {orderData.title} ) </span></h2>
+                    <p>Track your campaign here with the help of our dedicated Agent.</p>
+                  </div>
+                </div>
+                <div className="col-lg-2">
+                  <p className="panel_title_go_back"><Link href="/user/orders"><a ><i className="la la-arrow-left"></i>Go Back</a></Link></p>
+                </div>
+              </div>
             {/* new advertiser panel image code starts here */}
               <div className="orders_waiting_approval">
-                <div className="orders_progress">
+                {/* <div className="orders_progress">
                   <div className="overview__progress progress custom_progress">
                     <div className="progress__value bg-green-raw" style={{ width: '25%' }} />
                   </div>
@@ -110,7 +111,7 @@ return (
                           <p>Completed</p>
                       </li>
                   </ul> 
-                </div>
+                </div> */}
 
 
                 
@@ -120,12 +121,12 @@ return (
                       <div className="orders_title">
                         <div className='row'>
                           <div className='col-lg-8 col-md-8 col-sm-8 col-7'><h4>BrandsNeed Launch</h4></div>
-                          <div className='col-lg-4 col-md-4 col-sm-4 col-5'><div className="show_more"><p>Show More</p><img src="/assets/images/down_arrow.png" /></div></div>
+                          {/* <div className='col-lg-4 col-md-4 col-sm-4 col-5'><div className="show_more"><p>Show More</p><img src="/assets/images/down_arrow.png" /></div></div> */}
                         </div>
                       </div>
                       
                       <div className="order_details">
-                        <h5 className="order_details_about_campaign">About Campaign</h5>
+                        <h5 className="order_details_about_campaign">Order Description</h5>
                         <p>{orderData.description}</p>
                         <h5 className="order_details_services_required">Service Required</h5>
                         <div className="panel-table">
@@ -199,6 +200,11 @@ return (
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.date_n_time}</p></div>
                         </div>
+                        <div className='row'>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Ends On</p></div>
+                          <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.end_date_n_time}</p></div>
+                        </div>
                             
                         {
                           orderData.order_status == 2 ?
@@ -222,7 +228,7 @@ return (
                         null
                       }
 
-                      {
+                      {/* {
                        orderData.min_price > main_balance ?
                         <div className="estimated_price text-center">
                           <p className="estimated_title">Order Estimate Price</p>
@@ -233,7 +239,7 @@ return (
                         </div>
                         :
                         null
-                      }
+                      } */}
                       
                       {
                          main_balance >=  orderData.min_price?
@@ -305,7 +311,7 @@ return (
               
 
               {/* ......hire people page table code starts here................... */}
-                  <h2 className="mt-2 mb-2">hire people page design</h2>
+                  {/* <h2 className="mt-2 mb-2">hire people page design</h2>
                   <div className="hire_people_second_row">
                     <div className="row">
                       <div className="col-lg-8">
@@ -385,10 +391,7 @@ return (
                                             <td>Youtube</td>
                                             <td>10000</td>
                                             <td>
-                                              {/* <div className="order_status_dashboard">
-                                                <div className="dot pending_hire_dot"></div>
-                                                <span className="pending_hire_status">Admin Pitched</span>
-                                              </div> */}
+                                              
                                               <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                             </td>
                                             <td>
@@ -404,10 +407,7 @@ return (
                                             <td>Youtube</td>
                                             <td>10000</td>
                                             <td>
-                                              {/* <div className="order_status_dashboard">
-                                                <div className="dot approved_hire_dot"></div>
-                                                <span className="completed_hire_status">Completed</span>
-                                              </div> */}
+                                              
                                               <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
                                             </td>
                                             <td>
@@ -423,11 +423,6 @@ return (
                                             <td>Youtube</td>
                                             <td>10000</td>
                                             <td>
-                                                
-                                              {/* <div className="order_status_dashboard">
-                                                <div className="dot pending_hire_dot"></div>
-                                                <span className="pending_hire_status">Admin Pitched</span>
-                                              </div> */}
                                               <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                             </td>
                                             <td>
@@ -443,10 +438,6 @@ return (
                                             <td>Youtube</td>
                                             <td>10000</td>
                                             <td>
-                                              {/* <div className="order_status_dashboard">
-                                                <div className="dot pending_hire_dot"></div>
-                                                <span className="pending_hire_status">Admin Pitched</span>
-                                              </div> */}
                                               <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                             </td>
                                             <td>
@@ -491,12 +482,12 @@ return (
                           </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
               {/* .......................hire people page table ends here .......................... */}
 
 
               {/* ................completed page table starts here..................... */}
-                <h2 className="mt-2 ">completed page table below</h2>
+                {/* <h2 className="mt-2 ">completed page table below</h2>
                     <div className="hire_people_second_row">
                       <div className="row">
                           <div className="col-lg-8">
@@ -572,11 +563,7 @@ return (
                                                         <td>Youtube</td>
                                                         <td>10000</td>
                                                         <td>
-                                                            {/* <div className="order_status_dashboard">
-                                                              <div className="dot completed_order_dot"></div>
-                                                              <span className="completed_order_status">Completed</span>
-                                                            </div> */}
-                                                            <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                          <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
                                                         </td>
                                                         <td>
                                                             <span className="completed_people_btn">Completed</span>
@@ -591,11 +578,7 @@ return (
                                                           <td>Youtube</td>
                                                           <td>10000</td>
                                                           <td>
-                                                              {/* <div className="order_status_dashboard">
-                                                                  <div className="dot completed_order_dot"></div>
-                                                                  <span className="completed_order_status">Completed</span>
-                                                              </div> */}
-                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                            <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
                                                           </td>
                                                           <td>
                                                             <span className="completed_people_btn">Completed</span>
@@ -610,11 +593,7 @@ return (
                                                           <td>Youtube</td>
                                                           <td>10000</td>
                                                           <td>
-                                                              {/* <div className="order_status_dashboard">
-                                                                  <div className="dot completed_order_dot"></div>
-                                                                  <span className="completed_order_status">Completed</span>
-                                                              </div> */}
-                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                            <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
                                                           </td>
                                                           <td>
                                                               <span className="completed_people_btn">Completed</span>
@@ -630,11 +609,7 @@ return (
                                                           <td>Youtube</td>
                                                           <td>10000</td>
                                                           <td>
-                                                              {/* <div className="order_status_dashboard">
-                                                                  <div className="dot completed_order_dot"></div>
-                                                                  <span className="completed_order_status">Completed</span>
-                                                              </div> */}
-                                                              <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
+                                                            <><span className="span_status_two status_accepted"></span><span className="span_status status_accepted_text">Completed</span></>
                                                           </td>
                                                           <td>
                                                               <span className="completed_people_btn">Completed</span>
@@ -676,14 +651,14 @@ return (
                               </div>
                             </div>
                       </div>
-                  </div>
+                  </div> */}
 
               {/* ................completed page table ends here..................... */}
 
 
 
               {/* ......................work process page table starts here................. */}
-                      <h2 className="mt-2 mb-2">work process page table below</h2>
+                      {/* <h2 className="mt-2 mb-2">work process page table below</h2>
                       <div className="hire_people_second_row">
                         <div className="row">
                             <div className="col-lg-8">
@@ -762,13 +737,7 @@ return (
                                                             <td>Youtube</td>
                                                             <td>10000</td>
                                                             <td>
-                                                                {/* <span className="dot pending_hire_dot"></span>
-                                                                <span className="pending_hire_status">Admin Pitched</span> */}
-                                                                {/* <div className="order_status_dashboard">
-                                                                    <div className="dot pending_hire_dot"></div>
-                                                                    <span className="pending_hire_status">Admin Pitched</span>
-                                                                </div> */}
-                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                                             </td>
                                                             <td>
                                                                 <span className="waiting_for_work">Waiting for Work</span>
@@ -783,13 +752,7 @@ return (
                                                             <td>Youtube</td>
                                                             <td>10000</td>
                                                             <td>
-                                                                {/* <span className="dot approved_hire_dot"></span>
-                                                                <span className="completed_hire_status">You Accepted Pitch</span> */}
-                                                                {/* <div className="order_status_dashboard">
-                                                                    <div className="dot approved_hire_dot"></div>
-                                                                    <span className="completed_hire_status">You Accepted Pitch</span>
-                                                                </div> */}
-                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                                             </td>
                                                             <td>
                                                                 <span className="waiting_for_work">Waiting for work</span>
@@ -804,13 +767,7 @@ return (
                                                             <td>Youtube</td>
                                                             <td>10000</td>
                                                             <td>
-                                                                {/* <span className="dot pending_order_dot"></span>
-                                                                <span className="pending_order_status">Admin Pitched</span> */}
-                                                                {/* <div className="order_status_dashboard">
-                                                                    <div className="dot pending_hire_dot"></div>
-                                                                    <span className="pending_hire_status">Admin Pitched</span>
-                                                                </div> */}
-                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                                             </td>
                                                             <td>
                                                                 <span className="waiting_for_work">Waiting for Work</span>
@@ -826,13 +783,7 @@ return (
                                                             <td>Youtube</td>
                                                             <td>10000</td>
                                                             <td>
-                                                                {/* <span className="dot pending_order_dot"></span>
-                                                                <span className="pending_order_status">Work Submitted</span> */}
-                                                                {/* <div className="order_status_dashboard">
-                                                                  <div className="dot pending_hire_dot"></div>
-                                                                  <span className="pending_hire_status">Work Submitted</span>
-                                                                </div> */}
-                                                                <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
+                                                              <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Admin Pitched</span></>
                                                             </td>
                                                             <td>
                                                                 <span className="completed_people_btn">Approve this Work</span>
@@ -876,7 +827,7 @@ return (
                                 </div>
                               </div>
                             </div>
-                    </div>
+                    </div> */}
                 {/* ......................work process page table ends here................. */}
 
 
@@ -884,7 +835,7 @@ return (
 
 
                 {/* ....................rejected popup modal design starts here..................... */}
-                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#new_rejected">
+                  {/* <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#new_rejected">
                     Rejected Popup
                   </button>
 
@@ -915,14 +866,14 @@ return (
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 {/* .....................rejected popup modal design ends here........................ */}
 
 
 
-                {/* ....................Approce modal design starts here..................... */}
-                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#approve_work">
+                {/* ....................Approve modal design starts here..................... */}
+                  {/* <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#approve_work">
                     Approve Work Modal
                   </button>
 
@@ -950,7 +901,7 @@ return (
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 {/* .....................Approve modal design ends here........................ */}
 
@@ -1148,7 +1099,7 @@ return (
                     <div className="modal-dialog modal-md">
                       <div className="modal-content">
                         <div className="modal-header">
-                        <h4 class="modal-title">Services Details</h4>
+                        <h4 class="modal-title">Service Details</h4>
                           <button type="button" className="close"  onClick={()=>{this.setState({servModalStatus:false})}} >&times;</button>
                         </div>
                         <div className="modal-body">

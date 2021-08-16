@@ -147,8 +147,8 @@ function addNewPlatform({userAgent, data, headers})
                   <div className="col-xl-4 col-lg-6">
                     <div className="addNewPlatform">
                       <div className="panel_title_block">
-                        <h2>Manage your Platforms</h2>
-                        <p> Add Custom Orders, approve, decline, Submit and track everythin smooth.</p>
+                        <h2>Add new platform</h2>
+                        <p>Create, verify and list your platform, open for opportunities.</p>
                       </div>
 
                       <div className="fields_block">
@@ -156,14 +156,14 @@ function addNewPlatform({userAgent, data, headers})
                           
                           <div className=" create_platform_fields">
                             <div className="field auth__field select_platform">
-                              <div className="field__label platform_field_label ">Select Platform</div>
+                              <div className="field__label platform_field_label ">Select platform</div>
                               <div className="field__wrap platform_field_wrap create_platform_select">
                                 <div className="field__icon"><img src="/assets/images/youtube.png" width="22px" /></div>
                                 <div className="field__icon custom_dropdown_icon">
                                   {/* <img className="create_platform_img" src="/assets/images/verified.png" />  */}
                                 <i className="la la-angle-down"></i></div>
                                 <select className="field__select" value={platform_type} onChange={(e) => setPlatformType(e.target.value)} name='platform_type'>
-                                  <option disabled="" selected="">Select Platform</option>
+                                  <option disabled="" selected="">Select your platform</option>
                                   {
                                     orderPlatforms ?
                                     orderPlatforms.map((item, i) =>
@@ -187,7 +187,7 @@ function addNewPlatform({userAgent, data, headers})
                                     ?
                                     <div className="platform_field_label">Name of channel or account *</div>
                                     :
-                                    <div className="platform_field_label">Platform Name*</div>
+                                    <div className="platform_field_label">Platform name*</div>
                                 }
                               </div>
                               <div className="field__wrap platform_field_wrap">
@@ -200,7 +200,9 @@ function addNewPlatform({userAgent, data, headers})
 
                           <div className="create_platform_fields">
                             <div className="field auth__field">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Channel link*" : platform_type == 3 ? "Social Media link*" : "Webiste/Blog link*"}</div>
+                              {/* <div className="field__label platform_field_label">{platform_type == 2 ? "Channel link*" : platform_type == 3 ? "Social Media link*" : "Link*"}</div> */}
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Youtube channel link*" :  platform_type==3 ? "Twitter account link*" : platform_type==4 ? "Facebook account link*" : platform_type==5 ? "Telegram account link*" : platform_type== 6 ? "Instragram account Link"  : "Link*"}</div>
+                              
                               <div className="field__wrap platform_field_wrap">
                                 <div className="field__icon"><img src="/assets/images/channel_link.png" width="22px" /></div>
                                 <input autoComplete="off" className="field__input" type="email" placeholder="Eg: www.demo.com" name='website_link' value={website_link} onChange={(e) => {setWebsiteLink(e.target.value)}} />
@@ -229,7 +231,7 @@ function addNewPlatform({userAgent, data, headers})
                           </div>
                           <div className="create_platform_fields">
                             <div className="field auth__field ">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Followers*" : platform_type == 3 ? "Followers*" : "Views per Month*"}</div>
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Followers*" : platform_type == 3 ? "Followers*" : "Views per month*"}</div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon"><img src="/assets/images/follower_count.png"  /></div>
                                 <input autoComplete="off" min="0" className="field__input" type="number" placeholder={100} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />
@@ -242,7 +244,7 @@ function addNewPlatform({userAgent, data, headers})
 
                       </div>
                       <div className="create_platform">
-                        <button className="btn cp-primary-btn" onClick={() => {savePlatformDetails() }}>Create Platform <i className="la la-arrow-right"></i></button>
+                        <button className="btn cp-primary-btn" onClick={() => {savePlatformDetails() }}>Create platform <i className="la la-arrow-right"></i></button>
                       </div>
                     </div>
                   </div>
@@ -263,11 +265,11 @@ function addNewPlatform({userAgent, data, headers})
                 <div class="modal-content">
                   <div class="modal-body">
                     <h3>That's Great !</h3>
-                    <p className="platform_create_status">Your Platform has been submitted for Verification.</p>
-                    <p className="platform_create_notice">You Will recieve an email within 24 hours <br></br>about the review, Okay !</p>
+                    <p className="platform_create_status">Your platform has been submitted for verification.</p>
+                    <p className="platform_create_notice">You will recieve an email within 24 hours <br></br>about the review.</p>
                     <div className="guide_block">
-                      <Link href={redirect_service_link}><a  className="btn cp-primary-btn mr-1">Add New Services</a></Link>
-                      <Link href="/publisher/platform"><a  className="btn cp-primary-btn mr-1">Close</a></Link>
+                      <Link href={redirect_service_link}><a  className="btn cp-primary-btn mr-1">Add services</a></Link>
+                      <Link href="/publisher/platform"><a  className="btn custom_secondary_button">Close</a></Link>
                     </div>
                     <img src="/assets/images/thats_great.png" />
                   </div>

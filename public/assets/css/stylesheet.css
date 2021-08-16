@@ -57,6 +57,12 @@ a:hover {
   margin-left: 11px;
   border-radius: 8px;
   height: 46px;
+  background-color: #6c757d;
+  color: #fff;
+}
+.custom_secondary_button:hover {
+  color: #fff;
+  background-color: #5a6268;
 }
 
 .cp-primary-btn i {
@@ -129,6 +135,11 @@ a:hover {
   margin-left: -5px;
   border-radius: 0px 8px 8px 0px !important;
   padding-left: 10px !important;
+  font-size: 14px;
+}
+
+.country_input_field::placeholder {
+  color: #9598b7;
 }
 .my_custom_select {
   background: #fff;
@@ -153,7 +164,7 @@ a:hover {
 }
 
 .auth_page .auth__inner .auth__title p {
-  color: #b3b3b3;
+  color: #252525;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0.5px;
@@ -282,7 +293,7 @@ a:hover {
 }
 
 .otp_auth_field {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .otp_auth_field input {
@@ -329,17 +340,33 @@ input::-webkit-inner-spin-button {
 .resend_otp {
   color: #3b89fe;
   margin: 10px 0px 0px 0px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .sub_text_verify_email span {
-  color: #606060;
+  color: #0a4eb5;
 }
 .select_option_span {
   border-right: 0px;
   border-radius: 8px;
   background: #fff;
+}
+.have_an_ac {
+  color: #3a3a3a;
+}
+.verify_back i {
+  font-size: 33px;
+  color: #0a4eb5;
+  margin-bottom: 16px;
+}
+
+.error_reg {
+  font-size: 12px;
+}
+
+.nav-link .active .nav_images {
+  color: #5e81f4;
 }
 
 /*End Auth Pages*/
@@ -550,7 +577,8 @@ input::-webkit-inner-spin-button {
   text-align: center;
   color: #fff;
   margin: 0 15px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-top: 206%;
 }
 .invite_block img {
   margin: 0 auto;
@@ -559,8 +587,9 @@ input::-webkit-inner-spin-button {
 }
 .invite_block h3 {
   font-weight: 500;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   font-size: 16px;
+  margin-bottom: 21px;
 }
 .invite_block h4 {
   margin-bottom: 20px;
@@ -898,12 +927,18 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   margin-top: 0;
   font-weight: 300;
-  text-transform: capitalize;
 }
 
 .panel_title_block span {
   color: #666;
   font-size: 18px;
+}
+.panel_title_go_back {
+  float: right;
+  margin-top: 26px;
+}
+.panel_title_go_back i {
+  margin-right: 8px;
 }
 
 /* Panel Title ends here */
@@ -1599,9 +1634,6 @@ input::-webkit-inner-spin-button {
 
 .conversation_send img {
   float: right;
-  width: 35px;
-  height: 29px;
-  margin-top: 2px;
 }
 
 .conversation_send i {
@@ -1851,11 +1883,11 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
 }
 
-.wallet_details_block h6 {
+/* .wallet_details_block h6 {
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 0.2px;
-}
+} */
 
 .wallet_img {
   margin: 10px auto;
@@ -2059,6 +2091,108 @@ input::-webkit-inner-spin-button {
 .table_wallet_view {
   min-width: 164px;
 }
+
+.wallet_add_funds {
+  float: left;
+}
+.wallet_add_funds i {
+  margin-right: 4px;
+}
+.wallet_add_funds a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.add_funds_block {
+  padding: 24px;
+  background: url(/assets/images/bg.png);
+  background-size: cover;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(31 59 179 / 47%);
+}
+.add_funds_estimated {
+  margin-top: 120px;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin-bottom: 15px;
+}
+
+.wallet_estimated_amount h3 {
+  text-align: left;
+}
+.wallet_estimated_amount p {
+  text-align: right;
+  margin-top: 11px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.locked_block {
+  background: hsl(0deg 0% 95%);
+  box-shadow: 0 0 15px #ddd;
+  min-height: 243px;
+}
+
+.locked_block h6 {
+  color: #b1b0b0;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 10px;
+}
+
+.locked_block h3 {
+  font-weight: 800;
+  margin-bottom: 28px;
+  color: #000;
+  font-size: 30px;
+  letter-spacing: 1.3px;
+}
+.locked_amount_nav .nav {
+  flex-direction: unset !important;
+  width: unset;
+  justify-content: center;
+  border-bottom: unset;
+  background: hsl(0deg 0% 95%);
+}
+
+.locked_amount_nav .nav a {
+  color: #737373;
+  background: #e3e3e3;
+  border-radius: 25px;
+  padding: 14px 29px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.locked_amount_nav .nav-pills .nav-link.active,
+.locked_amount_nav .nav-pills .show > .nav-link {
+  background: #1f3bb3;
+  color: #fff;
+  border-radius: 25px;
+  padding: 14px 29px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.withdraw_funds {
+  margin-top: 22px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.withdraw_funds a {
+  color: #848282;
+}
+
+.wallet_view_all .input-group-text,
+.wallet_search .input-group-text {
+}
+
 /* wallet page css code ends here */
 
 /* success platform creation modal css code starts here */
@@ -3511,6 +3645,16 @@ input::-webkit-inner-spin-button {
   color: #fff;
 }
 
+.welcome_text {
+  text-align: center;
+  color: #8181a5;
+  font-size: 18px;
+  margin-top: 7%;
+}
+.pub_create_platform a {
+  color: #fff !important;
+}
+
 /* advertiser panel welcome screen page css code ends here */
 
 /* background object css code starts here */
@@ -3545,7 +3689,7 @@ input::-webkit-inner-spin-button {
   width: 300px;
   border-radius: 200px;
   margin-left: -203px;
-  margin-top: -224px;
+  margin-top: -339px;
 }
 
 .searchBox {

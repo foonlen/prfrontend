@@ -132,11 +132,11 @@ export default function TopMenuBar({ title, full_name }) {
                                     </div>
                                 </li>
 
-                                <li>
+                                {/* <li>
                                     <div className="new__items">
                                         <img src="/assets/images/menu_bar_notification.png" height='22px' />
                                     </div>
-                                </li>
+                                </li> */}
 
                                 <li>
                                     <div className="new__items">

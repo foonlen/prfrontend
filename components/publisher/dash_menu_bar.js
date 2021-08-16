@@ -12,7 +12,7 @@ function sideMenuBar() {
     const [publisher_username]= useState(JsCookie.get('publisher_username'))
     
     useEffect(()=>{ 
-            onchangePage((window.location.pathname).substring(11))
+        onchangePage((window.location.pathname).substring(11))
     },[sidebarMenu])
 
     const onchangePage =(id)=>{
@@ -135,7 +135,7 @@ function sideMenuBar() {
                                         </a></Link>
                                     </div>
                                 </div> */}
-                                <div className="nav__group grow_earnings_menu">
+                                {/* <div className="nav__group grow_earnings_menu">
                                     <p className='earnings_block'>Grow Your Earnings</p>
                                     <div className="main_block_menu">
                                         <Link href="#"><a className={sidebarMenu === "dashboard" ? "nav__link first-side-menu pr_nav_links" : "nav__link first-side-menu pr_nav_links"} title="Dashboard">
@@ -156,15 +156,14 @@ function sideMenuBar() {
                                             <div className="nav__title">Invite and Earn</div>
                                         </a></Link>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 {/* invite and earn block */}
                                 <div className='invite_block'>
-                                    <img src="/assets/images/sidemenu-invite.png" />
-                                    <h3 className='invite_link'>Invite and Earn</h3>
-                                    <h4 className='ten_off'>Up to 10% on every earning</h4>
-                                    {/* <button className='invite_link_btn'>Get Invite Link</button> */}
-                                    <Link href="#"><a className="invite_link_btn">Get Invite Link</a></Link>
+                                    {/* <img src="/assets/images/sidemenu-invite.png" /> */}
+                                    <h3 className='invite_link'>Beta version</h3>
+                                    {/* <h4 className='ten_off'>Up to 10% on every earning</h4> */}
+                                    <Link href="#"><a className="invite_link_btn">Read More</a></Link>
                                 </div>
 
                             </div>

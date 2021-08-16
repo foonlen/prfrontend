@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import JsCookie from "js-cookie"
 import { useRouter } from 'next/router'
 
@@ -7,6 +7,7 @@ function authNavbar()
   const router = useRouter()
   const [login_user_type] = useState(JsCookie.get('login_user_type'))
   const [menu_toggle, setMenu_toggle] = useState(false)
+  const [active,setActive] = useState('');
 
   const adLogout = () => {
     JsCookie.remove('advertiser_token')
@@ -29,6 +30,17 @@ const pbLogout = () => {
   JsCookie.remove('login_user_email_id')
   router.push('/login')
 }
+
+
+
+const setActiveClass=(id)=>{
+  if(id=='advertiser'){
+    setActive("advertiser")
+  }
+  
+}
+
+console.log(active)
 
       return (
       <>  
@@ -62,8 +74,8 @@ const pbLogout = () => {
                       </li>
                     :
                     <>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/user/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
+                      <li onClick={()=>setActiveClass('advertiser')} className="nav-item">
+                        <a className={active == "advertiser" ? "nav-link active"  :  "nav-link" } href="/user/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/publisher.png" />Publiser</div></a>

@@ -18,7 +18,7 @@ export default function welcome_popup()
                         <span className="navbar-toggler-icon"></span>
                       </button>
 
-                      <div className="collapse navbar-collapse" id="collapsibleNavbar">
+                      {/* <div className="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item">
                             <a className="nav-link" href="/">
@@ -35,7 +35,7 @@ export default function welcome_popup()
                             <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/login.png" />Login</div></a>
                           </li>
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </nav>
                 </div>
@@ -53,7 +53,7 @@ export default function welcome_popup()
                           <div className="col-lg-2"></div>
                         </div>
                         
-                        <button className='cp-primary-btn text-center'><Link href='/publisher/platform/create-new'><a>Create Platform</a></Link></button>
+                        <button className='btn cp-primary-btn text-center pub_create_platform'><Link href='/publisher/platform/create-new'><a>Create Platform</a></Link></button>
                         <p className="may_be_later"><Link href='/publisher/dashboard'><a className="may_be_later_link">May be later</a></Link></p>
                       </div>
                   </div>

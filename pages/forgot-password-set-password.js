@@ -33,13 +33,13 @@ class Set_Password extends React.Component {
 
         if (this.state.new_password == '') {
             this.setState({
-                error_new_password: "The New Password field is required."
+                error_new_password: "*Required."
             });
             formIsValid = false;
         }
         else if (this.state.new_password.length < 6) {
             this.setState({
-                error_new_password: "The New password field must be at least 6 characters in length."
+                error_new_password: "Use atleast 6 characters."
             });
             formIsValid = false;
         }
@@ -53,13 +53,13 @@ class Set_Password extends React.Component {
 
         if (this.state.confirm_new_password === '') {
             this.setState({
-                error_confirm_new_password: "The Confirm Password field is required."
+                error_confirm_new_password: "*Required."
             });
             formIsValid = false;
         }
         else if (this.state.confirm_new_password !== this.state.new_password) {
             this.setState({
-                error_confirm_new_password: "The Confirm password is not matching with New password."
+                error_confirm_new_password: "Confirm password does not match."
             });
             formIsValid = false;
         }
@@ -171,8 +171,8 @@ class Set_Password extends React.Component {
                                 <div className="auth__inner">
                                 <div className="auth__head">
                                     <div className="auth__title title ">
-                                    <h1 className="title_xl">Set New Password</h1>
-                                    <p>Your OTP has been verified, Set new password.</p>
+                                    <h1 className="title_xl">Set new password</h1>
+                                    <p>Your OTP has been verified, set new password.</p>
                                     </div>
                                 </div>
 

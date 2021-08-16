@@ -148,10 +148,13 @@ class forgotPassword extends React.Component {
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="auth__inner">
+                                        <div className="verify_back">
+                                            <Link href="/login"><a><i className="la la-arrow-left"></i></a></Link>
+                                        </div>
                                         <div className="auth__head">
                                             <div className="auth__title title ">
-                                                <h1 className="title_xl">Verify your Email ID</h1>
-                                                <p>Please Check your email and enter 6 digit OTP bellow box</p>
+                                                <h1 className="title_xl">Enter OTP</h1>
+                                                <p>Please check your email for OTP.</p>
                                                     {/* {
                                                         this.state.alert_message ?
                                                         <p>{this.state.alert_message}</p>
@@ -174,7 +177,7 @@ class forgotPassword extends React.Component {
                                                     {this.state.loader ? (
                                                         <span className="spinner-border spinner-border-sm mr-1"></span>
                                                     ) : (
-                                                        <>Verify Email <i className="la la-arrow-right"></i></>
+                                                        <>Set new password <i className="la la-arrow-right"></i></>
                                                     )}
                                                 </button>
                                             </div>

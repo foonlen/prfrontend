@@ -56,7 +56,7 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_full_name: "The Full Name field is required."
+        error_full_name: "*Required."
       });
       
     }
@@ -64,7 +64,7 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_full_name: "The Full Name field must be at least 4 characters in length."
+        error_full_name: "Use atleast 4 characters."
       })
     }
     
@@ -72,14 +72,14 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_email_id: "The Email ID field is required."
+        error_email_id: "*Required."
       })
     }
     else if (!this.state.email_id.includes('@')) 
     {
       flag = false
       this.setState({
-        error_email_id: "The Email ID field must be contain valid email."
+        error_email_id: "Invalid email format"
       })
     }
     
@@ -88,14 +88,14 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_password: "The Password field is required."
+        error_password: "*Required."
       })
     }
     else if (this.state.password.length < 6) 
     {
       flag = false
       this.setState({
-        error_password: "The Password field must be at least 6 characters in length."
+        error_password: "Use atleast 6 characters."
       }); 
     }
 
@@ -139,13 +139,13 @@ class register extends Component {
 
     if (this.state.username === '') {
       this.setState({
-        error_username: "The Username field is required."
+        error_username: "*Required."
       });
       formIsValid = false;
     }
     else if (this.state.username.length < 4) {
       this.setState({
-        error_username: "The Username field must be at least 4 characters in length."
+        error_username: "Atleast 4 characters."
       });
       formIsValid = false;
     }
@@ -153,13 +153,13 @@ class register extends Component {
 
     if (this.state.mobile_number === '') {
       this.setState({
-        error_mobile_number: "The Mobile Number field is required."
+        error_mobile_number: "*Required."
       });
       formIsValid = false;
     }
     else if (this.state.mobile_number.length < 5) {
       this.setState({
-        error_mobile_number: "The Mobile Number field must be at least 5 characters in length."
+        error_mobile_number: "Invalid Phone number format"
       });
       formIsValid = false;
     }
@@ -168,7 +168,7 @@ class register extends Component {
     if(this.state.country_row_id === '') 
     {
       this.setState({
-        error_country_row_id: "The Country ID field is required."
+        error_country_row_id: "*Required."
       })
       formIsValid = false;
     }
@@ -292,11 +292,11 @@ class register extends Component {
                         <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Get continued business queries</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance</li>
-                            <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                            <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
+                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
                           </ul>
                         </div>
                       </div>
@@ -313,8 +313,8 @@ class register extends Component {
                                 <div className={"reg_first_three_blocks " + (this.state.regStep ? " hide_register":null)}>
                                 <div className="auth__head">
                                   <div className="auth__title title ">
-                                    <h1 className="title_xl">Create Your Personal Account</h1>
-                                    <p>Get the tool to start earning and manage Campaigns Hassle Free</p>
+                                    <h1 className="title_xl">Create your publisher account</h1>
+                                    <p>A free tool to find and manage business queries.</p>
                                   </div>
                                 </div>
 
@@ -342,7 +342,7 @@ class register extends Component {
                                     <div className="field__label"> Password</div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/lock.png" /></div>
-                                      <input className="field__input" type="password" placeholder="Enter your password" ref="password" value={this.state.password} onChange={(e) => { this.setState({ password: e.target.value }) }} name="password" autoComplete="off" />
+                                      <input className="field__input" type="password" placeholder="Set password" ref="password" value={this.state.password} onChange={(e) => { this.setState({ password: e.target.value }) }} name="password" autoComplete="off" />
                                     </div>
                                     <div className="error_class">
                                       {this.state.error_password}
@@ -414,7 +414,7 @@ class register extends Component {
                                     </select>
                                   </span>
                                 </div>
-                                <input className="form-control field__input country_input_field" type="number" placeholder="Enter your mobile number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
+                                <input className="form-control field__input country_input_field" type="number" placeholder="Enter your phone number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
                               </div>
                               <div className="error_reg">{this.state.error_mobile_number}</div>
                             </div>
@@ -435,7 +435,7 @@ class register extends Component {
                               this.state.loader ? 
                                  <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
                                : 
-                                 <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} > Verify Account <i className="la la-arrow-right"></i></button>
+                                 <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} > Verify account <i className="la la-arrow-right"></i></button>
                               }
                             </div>
 
@@ -443,7 +443,7 @@ class register extends Component {
  
 
                                 <p className="reg_auth_link">
-                                  Have an Account ? <Link href="/login"><a className="auth__link">Login Here</a></Link>
+                                  Have an Account ? <Link href="/login"><a className="auth__link">Login here</a></Link>
                                 </p>
                                 
                               </div>

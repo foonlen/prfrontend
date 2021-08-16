@@ -157,8 +157,8 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                   <div className="col-xl-4 col-lg-6">
                     <div className="addNewPlatform">
                       <div className="panel_title_block">
-                        <h2>Update Platforms Details</h2>
-                        <p> Add Custom Orders, approve, decline, Submit and track everythin smooth.</p>
+                        <h2>Update platforms details</h2>
+                        <p>Create, verify and list your platform, open for opportunities.</p>
                       </div>
 
                       <div className="fields_block">

@@ -54,14 +54,14 @@ class register extends Component {
     if(this.state.company_name === '') 
     {
       this.setState({
-        error_company_name: "The Company Name field is required."
+        error_company_name: "*Required."
       })
       formIsValid = false
     }
     else if(this.state.company_name.length < 4) 
     {
       this.setState({
-        error_company_name: "The Company Name field must be at least 4 characters in length."
+        error_company_name: "The company name field must be at least 4 characters in length."
       })
       formIsValid = false
     }
@@ -69,21 +69,21 @@ class register extends Component {
     if(this.state.username === '') 
     {
       this.setState({
-        error_username: "The Username field is required."
+        error_username: "*Required."
       });
       formIsValid = false;
     }
     else if(this.state.username.length < 4) 
     {
       this.setState({
-        error_username: "The Username field must be at least 4 characters in length."
+        error_username: "The username field must be at least 4 characters in length."
       });
       formIsValid = false;
     }
     else  if (!(/^[a-z0-9\b]+$/).test(this.state.username)) 
     {
       this.setState({
-        error_username: "The Username field contains only alphabets and numbers."
+        error_username: "The username field contains only alphabets and numbers."
       })
       formIsValid = false;
     }
@@ -92,14 +92,14 @@ class register extends Component {
     if(this.state.email_id === '') 
     {
       this.setState({
-        error_email_id: "The Email ID field is required."
+        error_email_id: "*Required."
       })
       formIsValid = false
     }
     else if (!this.state.email_id.includes('@')) {
       formIsValid = false
       this.setState({
-        error_email_id: "The Email ID field must be contain valid email."
+        error_email_id: "The email id field must be contain valid email."
       });
       
     }
@@ -108,14 +108,14 @@ class register extends Component {
     if(this.state.mobile_number === '') 
     {
       this.setState({
-        error_mobile_number: "The Mobile Number field is required."
+        error_mobile_number: "*Required."
       });
       formIsValid = false;
     }
     else if (this.state.mobile_number.length < 5) 
     {
       this.setState({
-        error_mobile_number: "The Mobile Number field must be at least 5 characters in length."
+        error_mobile_number: "The mobile number field must be at least 5 characters in length."
       });
       formIsValid = false;
     }
@@ -126,14 +126,14 @@ class register extends Component {
     if(this.state.password === '') 
     {
       this.setState({
-        error_password: "The Password field is required."
+        error_password: "*Required."
       })
       formIsValid = false
     }
     else if (this.state.password.length < 6) 
     {
       this.setState({
-        error_password: "The Password field must be at least 6 characters in length."
+        error_password: "The password field must be at least 6 characters in length."
       })
       formIsValid = false
     }
@@ -273,11 +273,11 @@ class register extends Component {
                         <div className="plan_details">
                           <h2>Get the Job Done !</h2>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Run Multiple Campaigns</li>
-                            <li><img src="/assets/images/plan-points.png" /> Find Suitable Publishers & Influencers</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publish on Sites, Social Media and youtube.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Get Agent Support</li>
-                            <li><img src="/assets/images/plan-points.png" /> Secure and Fair Payment terms.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
                           </ul>
                         </div>
                       </div>
@@ -312,7 +312,7 @@ class register extends Component {
                 <div className="field__wrap">
                   <div className="field__icon"><img src="/assets/images/city.png" /></div>
                   {/* <div className="field__icon custom_dropdown_icon"><img src="/assets/images/ok_green.png" /></div> */}
-                  <input className="field__input" type="text  " placeholder="Company Name" ref="company_name" value={this.state.company_name} onChange={(e) => { this.setState({ company_name: e.target.value }) }} name="company_name" autoComplete="off" />
+                  <input className="field__input" type="text  " placeholder="Company name" ref="company_name" value={this.state.company_name} onChange={(e) => { this.setState({ company_name: e.target.value }) }} name="company_name" autoComplete="off" />
                 </div>
                 <div className="error_reg">
                 {this.state.error_company_name}
@@ -323,7 +323,7 @@ class register extends Component {
               <div className="field auth__field">
                 <div className="field__wrap">
                 <div className="field__icon"><img src="/assets/images/username.png" /></div>
-                  <input className="field__input" type="text" placeholder="Enter your username" ref="username" value={this.state.username} onChange={(e) => { this.setState({ username: (e.target.value).toLowerCase() }) }} name="username" autoComplete="off" />
+                  <input className="field__input" type="text" placeholder="Create your username" ref="username" value={this.state.username} onChange={(e) => { this.setState({ username: (e.target.value).toLowerCase() }) }} name="username" autoComplete="off" />
                 </div>
                 <div className="error_reg">
                   {this.state.error_username}
@@ -335,7 +335,7 @@ class register extends Component {
               <div className="field auth__field">
                 <div className="field__wrap">
                 <div className="field__icon"><img src="/assets/images/email.png" width="22px" /></div>
-                  <input className="field__input" type="text" placeholder="Email" ref="email_id" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" autoComplete="off" />
+                  <input className="field__input" type="text" placeholder="Enter email" ref="email_id" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" autoComplete="off" />
                 </div>
                 <div className="error_reg">
                   {this.state.error_email_id}
@@ -356,14 +356,14 @@ class register extends Component {
                     </select>
                     </span>
                   </div>
-                  <input className="form-control field__input country_input_field" type="number" placeholder="Enter your mobile number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
+                  <input className="form-control field__input country_input_field" type="number" placeholder="Enter your phone number" ref="mobile_number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" autoComplete="off" />
                 </div>
                 <div className="error_reg">{this.state.error_mobile_number} </div>
               </div>
                   <div className="field auth__field">
                     <div className="field__wrap">
                     <div className="field__icon"><img src="/assets/images/lock.png" /></div>
-                      <input className="field__input" type="password" placeholder="Enter your password" ref="password" value={this.state.password} onChange={(e) => { this.setState({ password: e.target.value }) }} name="password" autoComplete="off" />
+                      <input className="field__input" type="password" placeholder="Set a password" ref="password" value={this.state.password} onChange={(e) => { this.setState({ password: e.target.value }) }} name="password" autoComplete="off" />
                     </div>
                     <div className="error_reg">
                       {this.state.error_password}
@@ -371,13 +371,13 @@ class register extends Component {
                   </div>
 
                   <p className="reg_auth_link">
-                    Have an Account ? <Link href="/login"><a className="auth__link">Login Here</a></Link>
+                    <span className="have_an_ac">Have an Account ?</span> <Link href="/login"><a className="auth__link">Login Here</a></Link>
                   </p>
 
                   {this.state.loader ? (
                       <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
                     ) : (
-                      <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} > Sign Up <i className="la la-arrow-right"></i></button>
+                      <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} > Sign up <i className="la la-arrow-right"></i></button>
                     )
                   }
 
