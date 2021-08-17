@@ -204,7 +204,7 @@ class login extends React.Component {
           <meta name="msapplication-TileColor" content="#da532c" />
         </Head>
         
-          <div className="auth_page ad_reg">
+          <div className="auth_page ad_reg login_page">
             <Authnavbar/>
                 <div className="row auth_page_form">
                   <div className="col-md-6 col-lg-6 col-md-pull-8   auth_left">

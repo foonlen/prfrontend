@@ -109,7 +109,7 @@ function dashboard({userAgent, data})
 
         <div className="container__body">
           <div className="panel_title_block text-center">
-            <h2>One tool for all your Campaigns</h2>
+            <h2>One tool for all your Orders</h2>
             <p>Use coinpedia publisher tool to manage all your campaigns in the most effective way</p>
           </div>
           <div className="dashboard_banner">

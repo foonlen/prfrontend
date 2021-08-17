@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import cookie from "cookie"
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import MenuBar from '../../../../components/publisher/dash_menu_bar'
 import TopMenuBar from '../../../../components/publisher/dash_top_menu_bar'
 import * as constants from '../../../../components/constants'
@@ -19,13 +20,16 @@ const Multiselect = dynamic(
   }
 )
 
-function addNewPlatform({userAgent, preData, headers, platform_row_id})
+function addNewPlatform({userAgent, preData, headers})
 {
+  const router = useRouter()
   const [data, setData] = useState(preData)
   const publisher_full_name = userAgent.publisher_full_name
   const [API_BASE_URL] = useState(constants.API_BASE_URL)
   const [orderServices, setOrderServices] = useState([])
-  console.log('data:', data);
+  
+  const { platform_row_id } = router.query
+  console.log('datadsf:', platform_row_id);
   
   const [modalMessage, setModalMessage] = useState({ title: "", image_name: "", description: "" })
   const [platform_name, setPlatformName] = useState(data.platform_name)
@@ -761,7 +765,7 @@ export async function getServerSideProps({query, req})
     }
     else
     {
-      return {props: {platform_row_id:platform_row_id, userAgent:userAgent, headers:token_data, preData:query_run.message}}
+      return {props: {userAgent:userAgent, headers:token_data, preData:query_run.message}}
     }
   }
 }

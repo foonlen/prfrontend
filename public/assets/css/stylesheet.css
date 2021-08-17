@@ -392,7 +392,7 @@ input::-webkit-inner-spin-button {
 }
 
 .nav-link.active .nav_images {
-  color: #0a4eb5 !important;
+  color: #0a4eb5;
   border-bottom: 2px solid #797878;
   padding-bottom: 2px;
 }
@@ -4024,6 +4024,9 @@ input::-webkit-inner-spin-button {
   .order_description {
     margin-top: 20px;
   }
+  #search_input {
+    padding-left: 0px;
+  }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1087px) {
@@ -4109,6 +4112,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 768px) {
+  .login_page .navbar-nav {
+    padding: 10px 0px;
+  }
+  .nav-link.active .nav_images {
+    color: #22e8b1;
+    border-bottom: 2px solid #fff;
+  }
   .panel_title_go_back {
     margin-top: 10px;
   }

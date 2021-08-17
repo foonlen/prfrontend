@@ -297,17 +297,14 @@ function platform({ userAgent }) {
                           <td>
                             {
                               parseInt(e.approval_status) !== 2 ? 
-                              <Link href={"/publisher/platform/service/" + e.id}>
-                                <a>
+                                <a href={"/publisher/platform/service/" + e.id}>
                                   <button className="action_stroke table-primary-btn dashboard_table_btn" title='Edit'><i className="la la-edit" /></button>
                                 </a>
-                              </Link>  
+                             
                               :
-                              <Link href={"/publisher/platform/service/" + e.id}>
-                                <a>
+                                <a href={"/publisher/platform/service/" + e.id}>
                                   <button className="action_stroke table-primary-btn dashboard_table_btn" title='View'><i className="la la-eye" /></button>
                                 </a>
-                              </Link>
                             }
                             {
                               parseInt(e.approval_status) === 0 ? 

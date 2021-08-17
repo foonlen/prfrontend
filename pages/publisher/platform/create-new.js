@@ -189,7 +189,7 @@ function addNewPlatform({userAgent, data, headers})
                                   <div className="field__icon">
                                     {
                                       platform_type_image ?
-                                      <img src={platform_type_image} width="22px" />
+                                      <img src={platform_type_image} />
                                       :
                                       null
                                     }
@@ -203,7 +203,7 @@ function addNewPlatform({userAgent, data, headers})
                                   {
                                     orderPlatforms ?
                                     orderPlatforms.map((item, i) =>
-                                      <option value={item.id} key={item.id} > {item.platform_name} </option>
+                                      <option value={item.id} key={item.id}> {item.platform_name} </option>
                                     )
                                     : null
                                   }
@@ -270,7 +270,7 @@ function addNewPlatform({userAgent, data, headers})
                               <div className="field__label platform_field_label">{platform_type == 2 ? "Followers" : platform_type == 3 ? "Followers" : "Views per month"} <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon"><img src="/assets/images/follower_count.png"  /></div>
-                                <input autoComplete="off" min="0" className="field__input" type="number" placeholder={100} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />
+                                <input autoComplete="off" min="0" className="field__input" type="number" placeholder={platform_type == 1 ? " Enter visiters count"  : "Enter Followers count"} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />
                               </div>
                             </div>
                             <div className="error_class" >{error_views_per_month}</div>

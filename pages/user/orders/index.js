@@ -124,7 +124,7 @@ return(
                     {/* <th>Platform</th> */}
                     <th>Publishers</th>
                     <th>Status</th>
-                    <th>View</th>
+                    <th className="table_fields_hide">View</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -174,34 +174,34 @@ return(
 
                     {
                       parseInt(item.order_status)  === 0 ? 
-                      <td>
-                        <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
+                      <td className="table_fields_hide">
+                       <a title='view' href={'/user/orders/discussion/'+item.id}>
                           <img src="/assets/images/eye.png" class="ad_orders_view" />
-                        </a></Link>
+                        </a>
                       </td>
                       : parseInt(item.order_status) === 1 ? 
-                      <td>
+                      <td className="table_fields_hide">
                         <Link href={'/user/orders/hire-people/'+item.id}><a title='view'>
                           <img src="/assets/images/eye.png" class="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 2 ? 
-                      <td>
+                      <td className="table_fields_hide">
                         <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
                           <img src="/assets/images/eye.png" class="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 3 ? 
-                      <td>
+                      <td className="table_fields_hide">
                         <Link href={'/user/orders/work-process/'+item.id}><a title='view'>
                           <img src="/assets/images/eye.png" class="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 4 ? 
-                      <td>
+                      <td className="table_fields_hide">
                         <Link href={'/user/orders/completed/'+item.id}><a title='view'>
                           <img src="/assets/images/eye.png" class="ad_orders_view" />
                         </a></Link>
