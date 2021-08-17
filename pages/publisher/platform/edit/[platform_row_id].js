@@ -74,7 +74,7 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
     clearErr()
     if(platform_name === '') 
     {
-      setErrPlatformName('The Platform Name field is required.')
+      setErrPlatformName('Required.')
       formIsValid = false
     }
     else if(platform_name.length < 4) 
@@ -85,13 +85,13 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
 
     if(platform_type === '') 
     {
-      setErrPlatformType('The Platform Type field is required.')
+      setErrPlatformType('Required.')
       formIsValid = false
     }
 
     if (website_link === '') 
     {
-      setErrWebsiteLink('The Website Link field is required.')
+      setErrWebsiteLink('Required.')
       formIsValid = false
     }
     else if(website_link.length < 4) 
@@ -102,14 +102,14 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
 
     if(country_row_id.length === 0) 
     {
-      setErrCountryRowId('The Country field is required.')
+      setErrCountryRowId('Required.')
       formIsValid = false
     }
 
 
     if(views_per_month === '') 
     {
-      setErrViewsPerMonth('The Views or Followers field is required.')
+      setErrViewsPerMonth('Required.')
       formIsValid = false
     }
 
@@ -186,7 +186,7 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
 
                         <div className=" create_platform_fields">
                           <div className="field auth__field select_platform">
-                            <div className="field__label platform_field_label ">Select Platform</div>
+                            <div className="field__label platform_field_label ">Select Platform <span className="validation_asteris">*</span></div>
                             <div className="field__wrap platform_field_wrap create_platform_select">
                               <div className="field__icon"><img src="/assets/images/youtube.png" width="22px" /></div>
                               <div className="field__icon custom_dropdown_icon"><img className="create_platform_img" src="/assets/images/verified.png" /> <i className="la la-angle-down"></i></div>
@@ -212,9 +212,9 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                             {
                               platform_type === '2'
                                 ?
-                                <div className="platform_field_label">Name of channel or account *</div>
+                                <div className="platform_field_label">Name of channel or account <span className="validation_asteris">*</span></div>
                                 :
-                                <div className="platform_field_label">Platform Name*</div>
+                                <div className="platform_field_label">Platform Name <span className="validation_asteris">*</span></div>
                             }
                           </div>
                           <div className="field__wrap platform_field_wrap">
@@ -225,7 +225,8 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                         <div className="error_class" >{error_platform_name}</div>
                           
                         <div className="field auth__field">
-                          <div className="field__label platform_field_label">{platform_type == 2 ? "Channel link*" : platform_type == 3 ? "Social Media link*" : "Webiste/Blog link*"}</div>
+                          {/* <div className="field__label platform_field_label">{platform_type == 2 ? "Channel link" : platform_type == 3 ? "Social Media link" : "Webiste/Blog link"} <span className="validation_asteris">*</span></div> */}
+                          <div className="field__label platform_field_label">{platform_type == 2 ? "Youtube channel link " :  platform_type==3 ? "Twitter account link" : platform_type==4 ? "Facebook account link" : platform_type==5 ? "Telegram account link" : platform_type== 6 ? "Instragram account Link"  : "Link"} <span className="validation_asteris">*</span></div>
                           <div className="field__wrap platform_field_wrap">
                             <div className="field__icon"><img src="/assets/images/channel_link.png" width="22px" /></div>
                             <input autoComplete="off" className="field__input" type="email" placeholder="Eg: www.demo.com" name='website_link' value={website_link} onChange={(e) => {setWebsiteLink(e.target.value)}} />
@@ -234,7 +235,7 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                         <div className="error_class" >{error_website_link}</div>
                           
                         <div className="field auth__field">
-                          <div className="field__label platform_field_label">{platform_type == 2 ? "Select Major followers  from Countries*" : platform_type == 3 ? "Select Major followers  from Countries*" : "Major visitors  from Countries*"}</div>
+                          <div className="field__label platform_field_label">{platform_type == 2 ? "Select Major followers  from Countries" : platform_type == 3 ? "Select Major followers  from Countries" : "Major visitors  from Countries"} <span className="validation_asteris">*</span></div>
                           <div className="field__wrap platform_field_wrap">
                           <div className="field__icon "><img src="/assets/images/followers.png"  /></div>
                             <div className="pr_platform_country_list">
@@ -253,7 +254,7 @@ function addNewPlatform({userAgent, data, headers, platform_row_id})
                           
                           
                         <div className="field auth__field">
-                          <div className="field__label platform_field_label">{platform_type == 2 ? "Followers*" : platform_type == 3 ? "Followers*" : "Views per Month*"}</div>
+                          <div className="field__label platform_field_label">{platform_type == 2 ? "Followers" : platform_type == 3 ? "Followers" : "Views per Month"} <span className="validation_asteris">*</span></div>
                           <div className="field__wrap platform_field_wrap">
                           <div className="field__icon"><img src="/assets/images/follower_count.png"  /></div>
                             <input autoComplete="off" min="0" className="field__input" type="number" placeholder={100} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />

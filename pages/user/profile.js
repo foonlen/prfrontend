@@ -125,7 +125,7 @@ class profile extends React.Component
 
         if (this.state.full_name.length < 4) {
             this.setState({
-                error_full_name: "The Full_name field must be at least 4 characters in length."
+                error_full_name: "Use atleast 4 characters."
             });
             formIsValid = false;
         }
@@ -137,7 +137,7 @@ class profile extends React.Component
 
         if (!this.state.email_id.includes('@')) {
             this.setState({
-                error_email_id: "The Email ID field must be contain valid email."
+                error_email_id: "invalid email."
             });
             formIsValid = false;
         }
@@ -149,7 +149,7 @@ class profile extends React.Component
 
         if (this.state.mobile_number.length < 5) {
             this.setState({
-                error_mobile_number: "The Mobile Number field must be at least 5 characters in length."
+                error_mobile_number: "Use atleast 10 characters."
             });
             formIsValid = false;
         }
@@ -162,7 +162,7 @@ class profile extends React.Component
 
         if (this.state.country_row_id === '') {
             this.setState({
-                error_country_row_id: "The Country ID field is required."
+                error_country_row_id: "Required."
             });
             formIsValid = false;
         }
@@ -245,7 +245,7 @@ class profile extends React.Component
         this.clearMsg()
         if (this.state.current_password === '') {
             this.setState({
-                error_current_password: "The Old Password field is required."
+                error_current_password: "Required."
             });
             formIsValid = false
         }
@@ -257,13 +257,13 @@ class profile extends React.Component
 
         if (this.state.new_password === '') {
             this.setState({
-                error_new_password: "The New Password field is required."
+                error_new_password: "Required."
             });
             formIsValid = false;
         }
         else if (this.state.new_password.length < 6) {
             this.setState({
-                error_new_password: "The New password field must be at least 6 characters in length."
+                error_new_password: "Use atleast 6 characters."
             });
             formIsValid = false;
         }
@@ -276,13 +276,13 @@ class profile extends React.Component
 
         if (this.state.confirm_new_password === '') {
             this.setState({
-                error_confirm_new_password: "The Confirm Password field is required."
+                error_confirm_new_password: "Required."
             });
             formIsValid = false;
         }
         else if (this.state.confirm_new_password !== this.state.new_password) {
             this.setState({
-                error_confirm_new_password: "The Confirm password is not matching with New password."
+                error_confirm_new_password: "Invalid"
             });
             formIsValid = false;
         }
@@ -505,7 +505,7 @@ class profile extends React.Component
                                                 <div>
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Username</div>
+                                                            <div className="field__label">Username <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <input type="text" className="field__input" placeholder="Username" defaultValue={this.state.username} name="username" disabled />
                                                                 <div className="field__icon"><img src="/assets/images/login.png" /></div>
@@ -516,7 +516,7 @@ class profile extends React.Component
 
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Full name</div>
+                                                            <div className="field__label">Full name <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Username" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" ref="full_name" />
                                                                 <div className="field__icon"><img src="/assets/images/user.png" /></div>
@@ -529,7 +529,7 @@ class profile extends React.Component
 
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Email ID</div>
+                                                            <div className="field__label">Email id <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Email ID" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
                                                                 <div className="field__icon"><img src="/assets/images/email.png" /></div>
@@ -543,7 +543,7 @@ class profile extends React.Component
 
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Location</div>
+                                                            <div className="field__label">Location <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Location" value={this.state.location} onChange={(e) => { this.setState({ location: e.target.value }) }} name="location" ref="location" />
                                                                 <div className="field__icon"><i className="la la-map-marker"></i></div>
@@ -556,7 +556,7 @@ class profile extends React.Component
 
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Select Country</div>
+                                                            <div className="field__label">Select country <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <select className="field__select" name="country_row_id" onChange={(e) => { this.setState({ country_row_id: e.target.value }) }} useref="country_row_id" >
                                                                     <option value="">Select Country</option>
@@ -578,7 +578,7 @@ class profile extends React.Component
 
                                                     <div className="profile_col">
                                                         <div className="field form__field">
-                                                            <div className="field__label">Mobile Number</div>
+                                                            <div className="field__label">Mobile number <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
                                                                 <input autoComplete="off" type="text" className="field__input" placeholder="Mobile Number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
                                                                 <div className="field__icon"><img src="/assets/images/mobile.png" /></div>
@@ -594,7 +594,7 @@ class profile extends React.Component
                                                             {this.state.loader ? (
                                                                 <span className="spinner-border spinner-border-sm mr-1 text-light"></span>
                                                             ) : (
-                                                                <>Update Profile</>
+                                                                <>Update profile</>
                                                             )}
                                                         </button>
                                                     </div>
@@ -615,19 +615,22 @@ class profile extends React.Component
                                                             <div className="row">
                                                                 <div className="col-md-12 col-lg-10">
                                                                     <div className=" profile_auth">
-                                                                        <div className='container__title title profile_tab_titles'>Profile Info</div>
+                                                                        <div className='container__title title profile_tab_titles'>Profile info</div>
                                                                         <div className='profile_textarea_block'>
-                                                                            <div className="field__label">About</div>
-                                                                            <textarea value={this.state.about_advertiser} onChange={(e) => { this.setState({ about_advertiser: e.target.value }) }} name="about_publisher" ref="about_publisher"></textarea>
-                                                                            <div className="error_class">
-                                                                                {this.state.error_about_advertiser}
+                                                                            <div className="profile_text_area">
+                                                                                <div className="field__label">About <span className="validation_asteris">*</span></div>
+                                                                                <textarea value={this.state.about_advertiser} onChange={(e) => { this.setState({ about_advertiser: e.target.value }) }} name="about_publisher" ref="about_publisher"></textarea>
+                                                                                <div className="error_class">
+                                                                                    {this.state.error_about_advertiser}
+                                                                                </div>
                                                                             </div>
+                                                                           
 
                                                                             
 
                                                                             <div className="row">
                                                                                 <div className="col-md-6">
-                                                                                    <div className="field__label">Web Meeting Type</div>
+                                                                                    <div className="field__label">Web meeting type <span className="validation_asteris">*</span></div>
                                                                                     <div className="input-group mb-3">
                                                                                         <div className="input-group-prepend custom_input_group">
                                                                                             <span className="input-group-text">
@@ -648,10 +651,10 @@ class profile extends React.Component
                                                                                 </div>
                                                                                 <div className="col-md-6">
                                                                                     <div className="field form__field">
-                                                                                        <div className="field__label">People Range</div>
+                                                                                        <div className="field__label">People range <span className="validation_asteris">*</span></div>
                                                                                         <div className="field__wrap">
                                                                                             <select className="field__select people_range_select" name="people_range" onChange={(e) => { this.setState({ people_range: e.target.value }) }} useref="people_range">
-                                                                                                <option disabled="" selected="">People Range</option>
+                                                                                                <option disabled="" selected="">People range</option>
                                                                                                 {
                                                                                                     this.state.people_range_list ?
                                                                                                         this.state.people_range_list.map((item, i) =>
@@ -677,7 +680,7 @@ class profile extends React.Component
                                                                                 {this.state.loader ? (
                                                                                     <div className="loader"></div>
                                                                                 ) : (
-                                                                                    <>Update Details</>
+                                                                                    <>Update details</>
                                                                                 )}
                                                                             </button>
                                                                         </div>
@@ -693,7 +696,7 @@ class profile extends React.Component
                                                             <div className="col-md-10 col-lg-6">
                                                                 <div className='container__title title profile_tab_titles'>Security Details</div>
                                                                     <div className="field auth__field">
-                                                                        <div className="field__label">Old Password</div>
+                                                                        <div className="field__label">Old password <span className="validation_asteris">*</span></div>
                                                                         <div className="field__wrap">
                                                                             <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" className="field__input" type="password" value={this.state.current_password} onChange={(e) => { this.setState({ current_password: e.target.value }) }} name="current_password" useref="current_password" />
@@ -703,7 +706,7 @@ class profile extends React.Component
                                                                         </div>
                                                                     </div>
                                                                     <div className="field auth__field">
-                                                                        <div className="field__label">New Password</div>
+                                                                        <div className="field__label">New password <span className="validation_asteris">*</span></div>
                                                                         <div className="field__wrap">
                                                                             <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" type="password" className="field__input" value={this.state.new_password} onChange={(e) => { this.setState({ new_password: e.target.value }) }} name="new_password" useref="new_password" />
@@ -713,7 +716,7 @@ class profile extends React.Component
                                                                         </div>
                                                                     </div>
                                                                     <div className="field auth__field">
-                                                                        <div className="field__label">Confirm Password</div>
+                                                                        <div className="field__label">Confirm password <span className="validation_asteris">*</span></div>
                                                                         <div className="field__wrap">
                                                                             <div className="field__icon"><img src="/assets/images/lock.png" /> </div>
                                                                             <input autoComplete="off" className="field__input" type="password" value={this.state.confirm_new_password} onChange={(e) => { this.setState({ confirm_new_password: e.target.value }) }} name="confirm_new_password" useref="confirm_new_password" />
@@ -728,7 +731,7 @@ class profile extends React.Component
                                                                             {this.state.loader ? (
                                                                                 <div className="loader"></div>
                                                                             ) : (
-                                                                                <>Change Password</>
+                                                                                <>Change password</>
                                                                             )}
                                                                         </button>
                                                                     </div>

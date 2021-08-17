@@ -30,13 +30,13 @@ class forgotPassword extends React.Component {
 
         if (!this.state.forgot_otp) {
             this.setState({
-                error_forgot_otp: "The OTP field is required."
+                error_forgot_otp: "Required."
             });
             formIsValid = false;
         }
         else if (this.state.forgot_otp.length != 6) {
             this.setState({
-                error_forgot_otp: "The OTP field must be at exactly 6 characters in length."
+                error_forgot_otp: "Use atleast 6 characters."
             });
             formIsValid = false;
         }

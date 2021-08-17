@@ -54,7 +54,7 @@ class register extends Component {
     if(this.state.company_name === '') 
     {
       this.setState({
-        error_company_name: "*Required."
+        error_company_name: "Required."
       })
       formIsValid = false
     }
@@ -69,7 +69,7 @@ class register extends Component {
     if(this.state.username === '') 
     {
       this.setState({
-        error_username: "*Required."
+        error_username: "Required."
       });
       formIsValid = false;
     }
@@ -92,7 +92,7 @@ class register extends Component {
     if(this.state.email_id === '') 
     {
       this.setState({
-        error_email_id: "*Required."
+        error_email_id: "Required."
       })
       formIsValid = false
     }
@@ -108,7 +108,7 @@ class register extends Component {
     if(this.state.mobile_number === '') 
     {
       this.setState({
-        error_mobile_number: "*Required."
+        error_mobile_number: "Required."
       });
       formIsValid = false;
     }
@@ -126,7 +126,7 @@ class register extends Component {
     if(this.state.password === '') 
     {
       this.setState({
-        error_password: "*Required."
+        error_password: "Required."
       })
       formIsValid = false
     }
@@ -273,11 +273,11 @@ class register extends Component {
                         <div className="plan_details">
                           <h2>Get the Job Done !</h2>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
+                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription.</li>
+                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Continued business queries.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Fast payment system .</li>
                           </ul>
                         </div>
                       </div>
@@ -371,7 +371,7 @@ class register extends Component {
                   </div>
 
                   <p className="reg_auth_link">
-                    <span className="have_an_ac">Have an Account ?</span> <Link href="/login"><a className="auth__link">Login Here</a></Link>
+                    <span className="have_an_ac">Have an account ?</span> <Link href="/login"><a className="auth__link">Login here</a></Link>
                   </p>
 
                   {this.state.loader ? (

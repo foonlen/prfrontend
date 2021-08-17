@@ -31,16 +31,26 @@ const pbLogout = () => {
   router.push('/login')
 }
 
-
+useEffect(() => {
+  setActiveClass(window.location.pathname);
+}, [active])
 
 const setActiveClass=(id)=>{
-  if(id=='advertiser'){
+  if(id==='/user/r'){
     setActive("advertiser")
   }
-  
+  else if(id==='/publisher/r'){
+    setActive("publisher")
+  }
+  else if(id==='/login')
+  {
+    setActive('login')
+  }
+  else {
+    setActive('home')
+  }
 }
 
-console.log(active)
 
       return (
       <>  
@@ -75,13 +85,13 @@ console.log(active)
                     :
                     <>
                       <li onClick={()=>setActiveClass('advertiser')} className="nav-item">
-                        <a className={active == "advertiser" ? "nav-link active"  :  "nav-link" } href="/user/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
+                        <a className={active === "advertiser" ? "nav-link active"  :  "nav-link" } href="/user/r"><div className='nav_images'><img src="/assets/images/advertiser.png" />Advertiser</div></a>
                       </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/publisher/r"><div className='nav_images'><img src="/assets/images/publisher.png" />Publiser</div></a>
+                      <li onClick={()=>setActiveClass('publisher')} className="nav-item">
+                        <a className={active === "publisher" ? "nav-link active"  :  "nav-link" } href="/publisher/r"><div className='nav_images'><img src="/assets/images/publisher.png" />Publiser</div></a>
                       </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/login"><div className='nav_images'><img src="/assets/images/login.png" />Login</div></a>
+                      <li onClick={()=>setActiveClass('login')} className="nav-item">
+                        <a className={active === "login" ? "nav-link active"  :  "nav-link" } href="/login"><div className='nav_images'><img src="/assets/images/login.png" />Login</div></a>
                       </li>
                     </>
                   }
@@ -95,7 +105,7 @@ console.log(active)
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item">
                         <a className="nav-link" href="/">
-                          <div className='nav_images'><img src="/assets/images/Home.png"/> Home</div>
+                          <div className='nav_images'><img src="/assets/images/home.png"/> Home</div>
                         </a>
                       </li>
                       <li className="nav-item">

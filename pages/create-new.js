@@ -519,7 +519,7 @@ class new_order extends React.Component
                         <div className="field auth__field select_platform">
                             <div className="field__label platform_field_label">Requirements <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
-                                <input className="field__input" type="text" placeholder="Requirements"    name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}}  useref="requirement"/>
+                                <input className="field__input" autoComplete="off" type="text" placeholder="Requirements"    name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}}  useref="requirement"/>
                             </div>
                             <div className="error_class">
                                 {this.state.error_requirement}

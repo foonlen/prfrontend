@@ -33,7 +33,7 @@ class Set_Password extends React.Component {
 
         if (this.state.new_password == '') {
             this.setState({
-                error_new_password: "*Required."
+                error_new_password: "Required."
             });
             formIsValid = false;
         }
@@ -53,7 +53,7 @@ class Set_Password extends React.Component {
 
         if (this.state.confirm_new_password === '') {
             this.setState({
-                error_confirm_new_password: "*Required."
+                error_confirm_new_password: "Required."
             });
             formIsValid = false;
         }
@@ -179,7 +179,7 @@ class Set_Password extends React.Component {
                                 <div className="row">
                                     <div className="col-md-9">
                                     <div className="field auth__field">
-                                        <div className="field__label">New Password</div>
+                                        <div className="field__label">New password <span className="validation_asteris">*</span></div>
                                         <div className="field__wrap">
                                         <div className="field__icon"><img src="/assets/images/lock.png" /></div>
                                             <input className="field__input" placeholder="" type="password" value={this.state.new_password} onChange={(e) => { this.setState({ new_password: e.target.value }) }} name="new_password" />
@@ -189,7 +189,7 @@ class Set_Password extends React.Component {
                                         </div>
                                     </div>
                                     <div className="field auth__field">
-                                        <div className="field__label">Confirm New Password</div>
+                                        <div className="field__label">Confirm new password <span className="validation_asteris">*</span></div>
                                         <div className="field__wrap">
                                         <div className="field__icon"><img src="/assets/images/lock.png" /></div>
                                         <input className="field__input" placeholder="" type="password" value={this.state.confirm_new_password} onChange={(e) => { this.setState({ confirm_new_password: e.target.value }) }} name="confirm_new_password" />

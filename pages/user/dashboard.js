@@ -118,7 +118,7 @@ console.log(ordersList)
                 <div className="wallet_details_block dashboard_wallet_block ad_dash">
                   <h2 className="dash_available_balance"><span>$</span> 0</h2>
                   <h4>Total Balance</h4>
-                  <span className="dash_coming_soon">( Coming Soon )</span>
+                  {/* <span className="dash_coming_soon">( Coming Soon )</span> */}
                   <div className="amount_block new_amount_block">
                     <div className="row">
                       <div className="col-lg-6 col-md-6 col-sm-6">
@@ -132,6 +132,7 @@ console.log(ordersList)
                   <div className="col-md-12 wallet_btn">
                     <p><Link href="#"><a>Withdraw my Funds<i className="la la-angle-down"></i></a></Link></p>
                   </div>
+                  <p className="wallet_block_note">Note : The wallet feature will be updated in next version.</p>
                 </div>
               </div>
               <div className="col-lg-8 col-md-12">
@@ -157,21 +158,21 @@ console.log(ordersList)
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-total-orders.png" />
                       <h2>{total_campaigns ? total_campaigns:0}</h2>
-                      <p>Total Campaigns</p>
+                      <p>Total Orders</p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-completed-orders.png" />
                       <h2>{completedorder ? completedorder:0}</h2>
-                      <p>Completed Campaigns</p>
+                      <p>Completed Orders</p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-progress-order.png" />
                       <h2>{in_process ? in_process:0}</h2>
-                      <p>In Progress Campaigns</p>
+                      <p>In Progress Orders</p>
                     </div>
                   </div>
                 </div>

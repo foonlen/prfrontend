@@ -153,7 +153,7 @@ class new_order extends React.Component
             });
             formIsValid = false;
         }
-        if(this.state.requirement.length > 255) 
+        else if(this.state.requirement.length > 255) 
         {
             this.setState({
                 error_requirement:"Requirement field must be less than or equal to 255 characters in length."
@@ -441,7 +441,7 @@ class new_order extends React.Component
             <div className="create_order_fields">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="field select_platform">
+                        <div className="field select_platform order_description">
                             <div className="field__label platform_field_label">Order Description <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <textarea type="text"  className="field__textarea" placeholder="Order Description"  name="description" placeholder="Project Description" onChange={(e)=>{this.setState({description:e.target.value})}}  useref="description" />
@@ -525,7 +525,7 @@ class new_order extends React.Component
                                 <div className="field auth__field select_platform">
                                     <div className="field__label platform_field_label">Requirements <img src="/assets/images/info.png" /></div>
                                     <div className="field__wrap platform_field_wrap">
-                                        <input className="field__input" type="text" placeholder="Requirements" name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}}  useref="requirement" />
+                                        <input className="field__input" type="text" placeholder="Requirements" name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}} useref="requirement" />
                                     </div>
                                     <div className="error_class">
                                         {this.state.error_requirement}

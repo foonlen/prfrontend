@@ -52,7 +52,8 @@ function sideMenuBar() {
                                     <img src="/assets/img/default_men.png" alt="John Doe" className="mr-2 rounded-circle" />
                                     <div className="media-body">
                                         <h4 className="text-capitalize">{publisher_full_name}</h4>
-                                        <p>@{publisher_username}</p>
+                                        {/* <p>@{publisher_username}</p> */}
+                                        <p>Publisher</p>
                                     </div>
                                 </div>
                                 <div className="nav__group sidemenu_navbar">

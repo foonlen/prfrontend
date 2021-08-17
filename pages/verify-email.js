@@ -23,6 +23,9 @@ export default function verifyEmail({userAgent, headers})
   const [otp_number, setOtpNumber] = useState('')
   const [err_otp_number, setErrOtpNumber] = useState('')
   const [alert_message, setAlert_message]= useState('')
+
+
+
   
   
   
@@ -34,7 +37,7 @@ export default function verifyEmail({userAgent, headers})
       let formIsValid = true
       if(otp_number === '') 
       {
-        setErrOtpNumber('*Required.')
+        setErrOtpNumber('Required.')
         formIsValid = false
       }
       else if(otp_number.length < 6) 
@@ -124,7 +127,7 @@ export default function verifyEmail({userAgent, headers})
                       <div className="col-md-12">
                           <div className="auth__inner">
                               <div className="verify_back">
-                                <Link href="/user/r"><a><i className="la la-arrow-left"></i></a></Link>
+                                <i onClick={() => router.back()} className="la la-arrow-left"></i>
                               </div>
                               
                               <div className="auth__head">

@@ -101,13 +101,14 @@ export default function TopMenuBar({ title, full_name }) {
                         <div className="col-md-12">
                             <ul className="dashboard_top_menu_right">
                                 <li>
-                                    {/* <div className="new__items list_platform">
-                                        <img src="/assets/images/list_new_platform.png"/>
-                                        <p><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
-                                    </div> */}
-                                    <div className="new__items list_platform">
-                                        <p><img src="/assets/images/list_new_platform.png"/><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
+                                    <div className="new__items">
+                                        <p className="pub_name">@Foomaclen</p>
                                     </div>
+                                </li>
+                                <li>
+                                    {/* <div className="new__items list_platform">
+                                        <p><img src="/assets/images/list_new_platform.png"/><Link href="/publisher/platform/create-new"><a>List New Platform</a></Link></p>
+                                    </div> */}
                                 </li>
                                 {/* <li>
                                     <div className="new__items">
@@ -118,7 +119,8 @@ export default function TopMenuBar({ title, full_name }) {
                                     <div className="new__items">
                                         <div className="new js-new">
                                             <div className="new__action action js-new-open custom_action_button" onClick={() => setProfile_links(!profile_links)}>
-                                                <img className='user_dropdown_img' height="40px" width="40px" src='/assets/img/default_men.png' /><img className='user_dropdown_img' height="15px" width="15px" src='/assets/images/top-menu.png' />
+                                            
+                                                <img className='user_dropdown_img' height="40px" width="40px" src='/assets/img/default_men.png' /> <img className='user_dropdown_img' height="15px" width="15px" src='/assets/images/top-menu.png' />
                                                 
                                             </div>
                                             <div className="" style={profile_links == true ? { display: 'block' } : { display: 'none' }}>

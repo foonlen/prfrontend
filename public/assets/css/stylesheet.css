@@ -35,6 +35,10 @@ a:hover {
   font-size: 12px;
 }
 
+.validation_asteris {
+  color: #ff808b;
+}
+
 .cp-primary-btn {
   background: #074cb4;
   height: 46px;
@@ -65,6 +69,20 @@ a:hover {
   background-color: #5a6268;
 }
 
+.custom_danger_btn {
+  background: #ff7575;
+  height: 46px;
+  font-weight: 400;
+  padding: 0 15px;
+  color: #fff;
+  border-radius: 7px;
+}
+
+.custom_danger_btn:hover {
+  background: #f74949;
+  border-color: #f74949;
+}
+
 .cp-primary-btn i {
   float: right;
   position: relative;
@@ -78,9 +96,16 @@ a:hover {
   padding: 10px;
 }
 
-.btn:focus,
-.btn.focus {
-  box-shadow: none;
+.btn:focus {
+  box-shadow: 0 0 0px #fff;
+}
+
+.cp-primary-btn:focus {
+  box-shadow: 0 0 0 0.3rem rgb(0 123 255 / 25%);
+}
+
+.table-primary-btn:focus {
+  box-shadow: 0 0 0 0.3rem rgb(0 123 255 / 25%);
 }
 
 .custom_badge_success {
@@ -171,7 +196,8 @@ a:hover {
 }
 
 .auth_page .auth_left {
-  background: url(/assets/images/auth_main_img.png);
+  /* background: url(/assets/images/auth_main_img.png); */
+  background: url(/assets/images/ad_reg_bg_img.png);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -365,8 +391,10 @@ input::-webkit-inner-spin-button {
   font-size: 12px;
 }
 
-.nav-link .active .nav_images {
-  color: #5e81f4;
+.nav-link.active .nav_images {
+  color: #0a4eb5 !important;
+  border-bottom: 2px solid #797878;
+  padding-bottom: 2px;
 }
 
 /*End Auth Pages*/
@@ -645,6 +673,22 @@ input::-webkit-inner-spin-button {
 .dashboard_top_menu_right li p {
   margin-top: 1px;
 }
+
+.pub_name {
+  font-size: 16px;
+  color: #8181a5;
+}
+
+.pub_name span {
+  width: 12px;
+  height: 12px;
+  background: #50b247;
+
+  border-radius: 50px;
+  display: inline-flex;
+  margin-right: 6px;
+}
+
 /* .dash_menu_bar .new__items {
   display: flex;
 } */
@@ -684,7 +728,7 @@ input::-webkit-inner-spin-button {
 .dashboard_top_menu_right li {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 4px;
 }
 
 .dashboard_top_menu_right .action {
@@ -899,11 +943,22 @@ input::-webkit-inner-spin-button {
 .table_ad_order_title {
   min-width: 144px;
 }
+
+.table_ad_order_title {
+  min-width: 135px;
+}
+
 .table_ad_order_id {
   min-width: 71px;
 }
 .table_action {
   min-width: 159px;
+}
+.table_no_publisher {
+  min-width: 133px;
+}
+.active_table_tr:hover {
+  box-shadow: 0 0 20px #7c8696 !important;
 }
 
 /* Panel table css ends here */
@@ -998,12 +1053,15 @@ input::-webkit-inner-spin-button {
 }
 
 .addNewPlatform .auth__field {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .addNewPlatform .panel_title_block {
   text-align: center;
   margin: 0;
+}
+.addNewPlatform .error_class {
+  margin-bottom: 20px;
 }
 .create_platform {
   display: flex;
@@ -1226,6 +1284,19 @@ input::-webkit-inner-spin-button {
 
 .platform_update .la-trash-o {
   color: red;
+}
+
+.platform_rejected_reason {
+  margin-top: 18px;
+  margin-left: 34px;
+}
+.platform_service_display {
+  margin-top: 18px;
+  margin-left: 31px;
+  margin-bottom: 9px;
+}
+.services_img {
+  margin-top: -8px;
 }
 
 /* update new platform ends here */
@@ -1874,7 +1945,7 @@ input::-webkit-inner-spin-button {
 .wallet_details_block h4 {
   font-size: 20px;
   padding-bottom: 5px;
-  /* margin-bottom: 15px; */
+  margin-bottom: 15px;
 }
 
 .wallet_details_block h5 {
@@ -2364,6 +2435,12 @@ input::-webkit-inner-spin-button {
   text-transform: capitalize;
   font-size: 13px;
 }
+
+.one_plus_more {
+  font-weight: 500;
+  margin-left: 10px;
+  color: #076aff;
+}
 /* platform list page css code ends here */
 
 /* publisher order list  css code starts here */
@@ -2608,15 +2685,18 @@ input::-webkit-inner-spin-button {
   height: 40px;
 }
 
+.create_order_fields .platform_field_wrap input:focus,
+.create_order_fields .platform_field_wrap select:focus {
+  border-color: #ddd;
+}
+
 .create_order_fields .field__textarea {
   border: 1px solid #d8dade;
   background: #fff;
   color: #949494;
   font-weight: 400;
 }
-/* .campaign_details {
-  margin-top: 37px;
-} */
+
 .create_campaign_form {
   padding: 24px;
   background: #fafafa;
@@ -2790,6 +2870,14 @@ input::-webkit-inner-spin-button {
   background-color: hsl(0deg 0% 89%);
   color: hsl(0deg 0% 45%);
   min-width: 173px;
+}
+.wallet_block_note {
+  text-align: center;
+  margin-top: 4px;
+  font-weight: 300;
+  font-style: italic;
+  color: #ead013;
+  font-size: 12px;
 }
 .dash_row_filters {
   margin-top: 49px;
@@ -3268,6 +3356,8 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   min-height: 100px;
   font-weight: 400;
+}
+.profile_text_area {
   margin-bottom: 20px;
 }
 
@@ -3553,6 +3643,10 @@ input::-webkit-inner-spin-button {
 .modal_action {
   text-align: center;
   margin-top: 21px;
+}
+.pr_modal .modal_close_btn {
+  margin-top: 0px;
+  min-width: 0px;
 }
 
 /* new modal design code code starts here */
@@ -3860,6 +3954,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 991px) {
+  .orders_waiting_left_block {
+    margin-top: 22px;
+  }
+  .table_fields_hide {
+    display: none;
+  }
   .order_progress_status li img {
     margin-top: 3px;
   }
@@ -3920,6 +4020,9 @@ input::-webkit-inner-spin-button {
   }
   .hire_people_count {
     padding: 6px 6px 0px 6px;
+  }
+  .order_description {
+    margin-top: 20px;
   }
 }
 
@@ -3987,6 +4090,9 @@ input::-webkit-inner-spin-button {
   .services_list_block .form-control {
     font-size: 10px;
   }
+  .go_back_block {
+    padding: 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 794px) {
@@ -4003,6 +4109,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 768px) {
+  .panel_title_go_back {
+    margin-top: 10px;
+  }
+  /* .custom_auth_title {
+    margin-top: 20px !important;
+  } */
   .orders_title h4 {
     font-size: 14px;
   }
@@ -4068,6 +4180,11 @@ input::-webkit-inner-spin-button {
     margin-top: 0px;
   }
   .cp-primary-btn {
+    height: 38px;
+    line-height: 36px;
+    font-size: 14px;
+  }
+  .custom_danger_btn {
     height: 38px;
     line-height: 36px;
     font-size: 14px;

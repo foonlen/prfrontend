@@ -56,7 +56,7 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_full_name: "*Required."
+        error_full_name: "Required."
       });
       
     }
@@ -72,7 +72,7 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_email_id: "*Required."
+        error_email_id: "Required."
       })
     }
     else if (!this.state.email_id.includes('@')) 
@@ -88,7 +88,7 @@ class register extends Component {
     {
       flag = false
       this.setState({
-        error_password: "*Required."
+        error_password: "Required."
       })
     }
     else if (this.state.password.length < 6) 
@@ -139,7 +139,7 @@ class register extends Component {
 
     if (this.state.username === '') {
       this.setState({
-        error_username: "*Required."
+        error_username: "Required."
       });
       formIsValid = false;
     }
@@ -153,7 +153,7 @@ class register extends Component {
 
     if (this.state.mobile_number === '') {
       this.setState({
-        error_mobile_number: "*Required."
+        error_mobile_number: "Required."
       });
       formIsValid = false;
     }
@@ -168,7 +168,7 @@ class register extends Component {
     if(this.state.country_row_id === '') 
     {
       this.setState({
-        error_country_row_id: "*Required."
+        error_country_row_id: "Required."
       })
       formIsValid = false;
     }
@@ -197,6 +197,7 @@ class register extends Component {
             jsCookie.set('alert_message', result.message.alert_message)
             jsCookie.set('login_user_type', 1)
             jsCookie.set('login_user_email_status', 0)
+            jsCookie.set('login_user_email_id', result.message.email_id)
             Router.push('/verify-email')
           }
           else 
@@ -292,11 +293,11 @@ class register extends Component {
                         <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
+                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription.</li>
+                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Continued business queries.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Fast payment system .</li>
                           </ul>
                         </div>
                       </div>
@@ -319,7 +320,7 @@ class register extends Component {
                                 </div>
 
                                  <div className="field auth__field">
-                                    <div className="field__label">Full Name</div>
+                                    <div className="field__label">Full Name <span className="validation_asteris">*</span></div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/username.png" /></div>
                                       <input className="field__input" type="text" placeholder="Enter your name" ref="full_name" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" autoComplete="off" />
@@ -329,7 +330,7 @@ class register extends Component {
                                     </div>
                                   </div>
                                   <div className="field auth__field">
-                                    <div className="field__label">Email ID</div>
+                                    <div className="field__label">Email ID <span className="validation_asteris">*</span></div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/email.png" width="22px" /></div>
                                       <input className="field__input" type="text" placeholder="Enter your Email Id" ref="email_id" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" autoComplete="off" />
@@ -339,7 +340,7 @@ class register extends Component {
                                     </div>
                                   </div>
                                   <div className="field auth__field">
-                                    <div className="field__label"> Password</div>
+                                    <div className="field__label"> Password <span className="validation_asteris">*</span></div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/lock.png" /></div>
                                       <input className="field__input" type="password" placeholder="Set password" ref="password" value={this.state.password} onChange={(e) => { this.setState({ password: e.target.value }) }} name="password" autoComplete="off" />
@@ -366,7 +367,7 @@ class register extends Component {
                                   <h1 className="greet_user">Hello {this.state.full_name}</h1>
                                   <p className="greet_user_sub">Lets setup your Publisher account.</p>
                               <div className="field auth__field">
-                                <div className="field__label">Username</div>
+                                <div className="field__label">Username <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/username.png" /></div>
                                   <input className="field__input" type="text" placeholder="Enter your username" ref="username" value={this.state.username} onChange={(e) => { this.setState({ username: e.target.value }) }} name="username" autoComplete="off" />
@@ -400,6 +401,7 @@ class register extends Component {
 
 
                             <div className="field auth__field">
+                              <div className="field__label">Phone Number <span className="validation_asteris">*</span></div>
                               <div className="input-group">
                                 <div className="input-group-prepend">
                                   <span className="input-group-text select_option_span"> 
@@ -424,7 +426,7 @@ class register extends Component {
                        
 
                               <div className="field auth__field">
-                                <div className="field__label">Location</div>
+                                <div className="field__label">Location <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/city.png" /></div>
                                   <Autocomplete className="field__input" apiKey={'AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po'} onPlaceSelected={(place) => console.log(place)} placeholder="Enter your location" ref="location" value={this.state.location} onChange={(e) => { this.setState({ location: e.target.value }) }} name="location" autoComplete="off" />

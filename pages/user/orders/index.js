@@ -11,9 +11,11 @@ import Axios from 'axios'
 import ReactPaginate from 'react-paginate'; 
 import TableContentLoader from '../../../components/tableLoader';
 import Advertiser_filters from '../../../components/advertiser/advertiser_filters';
+import { useRouter } from 'next/router'
 
 function orders({userAgent})
 {
+  const router = useRouter()
     const advertiser_full_name = userAgent.advertiser_full_name
     const advertiser_token = userAgent.advertiser_token
     const [API_BASE_URL] = useState(constants.API_BASE_URL)
@@ -26,6 +28,7 @@ function orders({userAgent})
     const [pageCount, setPageCount] = useState(0)
     const [selected_page, set_selected_page] = useState(0)
     const [dataLoaderStatus, setDataLoaderStatus] = useState(true)
+    const [activeTr, setActiveTr] =useState('');
 
     const orderList = () => {
         const config = {
@@ -67,6 +70,13 @@ function orders({userAgent})
     setOffset(selectedPage * perPage)
   };
 
+  const navigateFunction=(id)=>{
+    ordersList.map((e, i) => {
+      router.push('/user/orders/discussion/'+e.id);
+      setActiveTr(id)
+    })
+  }
+
 
   // ordersList.map((item, i) =>{
   //   console.log(i.length)
@@ -105,14 +115,14 @@ return(
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Serial Number</th>
-                    <th>Order Id</th>
-                    <th>Order Title</th>
-                    <th>Price Range</th>
-                    <th>Created On</th>
-                    <th>Orders Ends On</th>
+                    <th>#</th>
+                    <th>Order id</th>
+                    <th>Order title</th>
+                    <th className="table_fields_hide">Price range</th>
+                    <th className="table_fields_hide">Created on</th>
+                    <th className="table_fields_hide">Ends on</th>
                     {/* <th>Platform</th> */}
-                    <th>No Of Publishers</th>
+                    <th>Publishers</th>
                     <th>Status</th>
                     <th>View</th>
                   </tr>
@@ -122,17 +132,16 @@ return(
                 dataLoaderStatus === false ?
                 ordersList.length > 0 ?
                 ordersList.map((item, i) =>{
-                return <tr key={i}>
-                    <td className="table_ad_order_id">{i+1}
-                      
-                    </td>
+                  const id=item.id
+                return <tr key={i} onClick={()=>navigateFunction(id)} className={ activeTr === id ? "active_table_tr" : ""}>
+                    <td>{i+1}</td>
                     <td className="table_ad_order_id">{item.order_id}</td>
                     <td className="table_ad_order_title">{item.title.length > 20 ? (item.title).slice(0, 15)+"..." : item.title}</td>
-                    <td>
+                    <td className="table_price_range table_fields_hide">
                       ${item.min_price} - ${item.max_price}
                     </td>
-                    <td className="table_order_ends_on">{moment(item.date_n_time).format("DD MMM YYYY")}</td>
-                    <td className="table_order_ends_on">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
+                    <td className="table_fields_hide">{moment(item.date_n_time).format("DD MMM YYYY")}</td>
+                    <td className="table_fields_hide">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
                     {/* <td></td> */}
                     <td>{item.no_of_publisher}</td>
                     <td className="table_status">

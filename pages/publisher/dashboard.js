@@ -146,7 +146,7 @@ function dashboard({userAgent, data})
                   <img src="/assets/images/wallet-line.png" className="wallet_line" />
                   <h2 className="dash_available_balance"><span>$</span> 0</h2>
                   <h4>Available Balance  </h4>
-                  <p className="dash_coming_soon">{"( Coming Soon )"}</p>
+                  {/* <p className="dash_coming_soon">{"( Coming Soon )"}</p> */}
                   <div className="row">
                     <div className="col-md-4 col-4">
                       <h5>$ 0</h5>
@@ -165,6 +165,7 @@ function dashboard({userAgent, data})
                   <div className="col-md-12 wallet_btn">
                     <p><Link href="#"><a>Go To Wallet</a></Link></p>
                   </div>
+                  <p className="wallet_block_note">Note : The wallet feature will be updated in next version.</p>
 
                 </div>
               </div>

@@ -46,7 +46,8 @@ function MenuBar() {
                                     <img src="/assets/img/default_men.png" alt="John Doe" className="mr-2 rounded-circle" />
                                     <div className="media-body">
                                         <h4 className="text-capitalize">{advertiser_full_name}</h4>
-                                        <p>{advertiser_username}</p>
+                                        {/* <p>{advertiser_username}</p> */}
+                                        <p>Advertiser</p>
                                     </div>
                                 </div>
                                 <div className="nav__group sidemenu_navbar">

@@ -72,14 +72,14 @@ return (
         <TopMenuBar full_name={this.state.advertiser_full_name} />
           <div className="container__body">
               <div className="row">
-                <div className="col-lg-10">
+                <div className="col-lg-10 col-md-10 col-sm-10 col-8">
                   <div className="panel_title_block text-center">
-                    <h2>Order Details <span> ( {orderData.title} ) </span></h2>
+                    <h2>Order Details</h2>
                     <p>Track your campaign here with the help of our dedicated Agent.</p>
                   </div>
                 </div>
-                <div className="col-lg-2">
-                  <p className="panel_title_go_back"><Link href="/user/orders"><a ><i className="la la-arrow-left"></i>Go Back</a></Link></p>
+                <div className="col-lg-2 col-md-2 col-sm-2 col-4 go_back_block">
+                  <p className="panel_title_go_back"><Link href="/user/orders"><a ><i className="la la-arrow-left"></i>Back</a></Link></p>
                 </div>
               </div>
             {/* new advertiser panel image code starts here */}
@@ -120,7 +120,7 @@ return (
                     <div className="panel orders_waiting_left_block">
                       <div className="orders_title">
                         <div className='row'>
-                          <div className='col-lg-8 col-md-8 col-sm-8 col-7'><h4>BrandsNeed Launch</h4></div>
+                          <div className='col-lg-8 col-md-8 col-sm-8 col-7'><h4>{orderData.title}</h4></div>
                           {/* <div className='col-lg-4 col-md-4 col-sm-4 col-5'><div className="show_more"><p>Show More</p><img src="/assets/images/down_arrow.png" /></div></div> */}
                         </div>
                       </div>
@@ -241,7 +241,7 @@ return (
                         null
                       } */}
                       
-                      {
+                      {/* {
                          main_balance >=  orderData.min_price?
                        <div className="estimated_price paid text-center">
                           <p className="estimated_title" style={{color:'#fff'}}>Main Wallet Balance</p>
@@ -252,7 +252,7 @@ return (
                         </div>
                         :
                         null
-                      }
+                      } */}
                     </div>
 
                     <div className='orders_conversation_block'>

@@ -31,7 +31,7 @@ class forgotPassword extends React.Component {
 
         if (!this.state.login_id) {
             this.setState({
-                error_login_id: "The Login ID field is required."
+                error_login_id: "Required."
             });
             formIsValid = false;
         }
@@ -155,7 +155,7 @@ class forgotPassword extends React.Component {
                           <div className="row">
                             <div className="col-md-9">
                               <div className="field auth__field">
-                                <div className="field__label">Login ID</div>
+                                <div className="field__label">Login ID <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src='/assets/images/email.png' width="22px" /></div>
                                   <input className="field__input" type="text" placeholder="Username or Email" value={this.state.login_id} onChange={(e) => { this.setState({ login_id: e.target.value }) }} name="login_id" />
@@ -176,7 +176,7 @@ class forgotPassword extends React.Component {
                                     
                                 </button>
                                 <p className="reg_auth_link">
-                                  Have an Account ? <Link href="/login"><a className="auth__link">Login Here</a></Link>
+                                  Have an Account ? <Link href="/login"><a className="auth__link">Login here</a></Link>
                                 </p>
                             </div>
                           </div>

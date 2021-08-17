@@ -11,8 +11,11 @@ import moment from 'moment'
 import Popupmodal from '../../../components/popUpModal'
 import TableContentLoader from '../../../components/tableLoader'
 import Publisher_filters from '../../../components/publisher/publisher_filters';
+import { useRouter } from 'next/router'
 
 function platform({ userAgent }) {
+
+  const router = useRouter()
   const publisher_full_name = userAgent.publisher_full_name
   const publisher_token = userAgent.publisher_token
 
@@ -38,6 +41,7 @@ function platform({ userAgent }) {
     description: ""
   })
   const [pr_plat_status,setPr_plat_status]=useState(0);
+  const [activeTr, setActiveTr] =useState('');
 
   useEffect(() => {
     get_platform_list()
@@ -194,6 +198,13 @@ function platform({ userAgent }) {
     }
   }
 
+  const navigateFunction=(id)=>{
+    platform_list.map((e, i) => {
+      router.push('/publisher/platform/service/' + e.id);
+      setActiveTr(id)
+    })
+  }
+
   return (
     <>
       <Head>
@@ -222,11 +233,11 @@ function platform({ userAgent }) {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th className="table_platform">Serial Number</th>
+                      <th >#</th>
                       <th className="table_platform">Platform</th>
                       <th className="table_platform_name">Platform Name</th>
-                      <th className="table_service">Services</th>
-                      <th className="table_order_ends_on">Listed On</th>
+                      <th className="table_fields_hide">Services</th>
+                      <th className="table_order_ends_on table_fields_hide">Listed On</th>
                       <th className="table_status">Status</th>
                       <th className="table_platform_action">Action</th>
                     </tr>
@@ -238,13 +249,14 @@ function platform({ userAgent }) {
                   <>
                     {
                       platform_list.map((e, i) => {
-                        return <tr id={e.id} key={i}>
+                        const id=e.id
+                        return <tr onClick={()=>navigateFunction(id)} id={e.id} key={i} className={ activeTr === id ? "active_table_tr" : ""} >
                           <td>{i+1}</td>
                           <td className="text-capitalize">
                             {e.platform_type_name}
                            </td>
                           <td className="text-capitalize">{subStrFun(e.platform_name)}</td>
-                          <td>
+                          <td className="table_fields_hide">
                           {
                             e.service_data.length > 0 ?
                             e.service_data.length <= 2 ?
@@ -261,12 +273,12 @@ function platform({ userAgent }) {
                                     null 
                                 )
                               }
-                              <span>+{e.service_data.length-2} More..</span>
+                              <span className="one_plus_more">+{e.service_data.length-2} More..</span>
                               </>
                             :
                             <>Not Updated</>
                           }</td>
-                          <td>{moment(e.date_n_time).format("DD MMM YYYY")}</td>
+                          <td className="table_fields_hide">{moment(e.date_n_time).format("DD MMM YYYY")}</td>
                           <td>
                           {
                             parseInt(e.approval_status) === 0 ?
@@ -402,12 +414,12 @@ function platform({ userAgent }) {
                             ?
                             <button type="button" className="btn btn-success" onClick={() => enable_platform()}>Enable</button>
                             :
-                            <button type="button" className="btn btn-danger" onClick={() => disable_platform()}>Disable</button>
+                            <button type="button" className="btn custom_danger_btn" onClick={() => disable_platform()}>Disable</button>
                         }
                       </div>
 
                       <div className="col-lg-6 col-md-6 col-sm-6 col-6">
-                        <button className="btn btn-primary" onClick={() =>setPlatformAction(false)} >Close</button>
+                        <button className="btn cp-primary-btn modal_close_btn" onClick={() =>setPlatformAction(false)} >Close</button>
                       </div>
                     </div>
                   </div>

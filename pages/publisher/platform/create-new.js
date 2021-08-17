@@ -24,7 +24,7 @@ function addNewPlatform({userAgent, data, headers})
   const [API_BASE_URL] = useState(constants.API_BASE_URL)
   const [countryList] = useState(constants.countryList)
   const [orderPlatforms] = useState(data)
-  
+  console.log(data);
   
   const [modalMessage, setModalMessage] = useState({ title: "", image_name: "", description: "" })
   const [platform_name, setPlatformName] = useState('')
@@ -32,6 +32,7 @@ function addNewPlatform({userAgent, data, headers})
   const [country_row_id, setCountryRowId] = useState([])
   const [views_per_month, setViewsPerMonth] = useState('')
   const [platform_type, setPlatformType] = useState('')
+  const [platform_type_image, setPlatformTypeImage] = useState('')
   const [error_platform_name, setErrPlatformName] = useState('')
   const [error_platform_type, setErrPlatformType] = useState('')
   const [error_website_link, setErrWebsiteLink] = useState('')
@@ -57,6 +58,33 @@ function addNewPlatform({userAgent, data, headers})
     setErrViewsPerMonth('')
   }
 
+  const setFunPlatformType = (type) =>
+  {
+    //alert(type)
+    setPlatformType(type)
+    if(type === '')
+    {
+      setPlatformTypeImage('')
+    }
+    else
+    {
+      
+      for (const item of orderPlatforms)
+      {
+        if(item.id === type)
+        {
+          setPlatformTypeImage(API_BASE_URL+'assets/images/platforms/'+item.platform_image)
+        }
+      }
+    }
+    
+    // orderPlatforms.map(item => {
+      
+    // })
+    // setPlatformTypeImage
+    // platform_type_image
+  }
+
   const savePlatformDetails = () => 
   {
     let formIsValid = true
@@ -64,7 +92,7 @@ function addNewPlatform({userAgent, data, headers})
 
     if(platform_name === '') 
     {
-      setErrPlatformName('The Platform Name field is required.')
+      setErrPlatformName('Required.')
       formIsValid = false
     }
     else if(platform_name.length < 4) 
@@ -75,13 +103,13 @@ function addNewPlatform({userAgent, data, headers})
 
     if(platform_type === '') 
     {
-      setErrPlatformType('The Platform Type field is required.')
+      setErrPlatformType('Required.')
       formIsValid = false
     }
 
     if (website_link === '') 
     {
-      setErrWebsiteLink('The Website Link field is required.')
+      setErrWebsiteLink('Required.')
       formIsValid = false
     }
     else if(website_link.length < 4) 
@@ -92,14 +120,14 @@ function addNewPlatform({userAgent, data, headers})
 
     if(country_row_id.length === 0) 
     {
-      setErrCountryRowId('The Country field is required.')
+      setErrCountryRowId('Required.')
       formIsValid = false
     }
 
 
     if(views_per_month === '') 
     {
-      setErrViewsPerMonth('The Views or Followers field is required.')
+      setErrViewsPerMonth('Required.')
       formIsValid = false
     }
 
@@ -156,14 +184,22 @@ function addNewPlatform({userAgent, data, headers})
                           
                           <div className=" create_platform_fields">
                             <div className="field auth__field select_platform">
-                              <div className="field__label platform_field_label ">Select platform</div>
+                              <div className="field__label platform_field_label ">Select platform <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap create_platform_select">
-                                <div className="field__icon"><img src="/assets/images/youtube.png" width="22px" /></div>
+                                  <div className="field__icon">
+                                    {
+                                      platform_type_image ?
+                                      <img src={platform_type_image} width="22px" />
+                                      :
+                                      null
+                                    }
+                                  
+                                  </div>
                                 <div className="field__icon custom_dropdown_icon">
                                   {/* <img className="create_platform_img" src="/assets/images/verified.png" />  */}
                                 <i className="la la-angle-down"></i></div>
-                                <select className="field__select" value={platform_type} onChange={(e) => setPlatformType(e.target.value)} name='platform_type'>
-                                  <option disabled="" selected="">Select your platform</option>
+                                <select className="field__select" value={platform_type} onChange={(e) => setFunPlatformType(e.target.value)} name='platform_type'>
+                                  <option value="" selected="">Select your platform</option>
                                   {
                                     orderPlatforms ?
                                     orderPlatforms.map((item, i) =>
@@ -185,7 +221,7 @@ function addNewPlatform({userAgent, data, headers})
                                 {
                                   platform_type === '2'
                                     ?
-                                    <div className="platform_field_label">Name of channel or account *</div>
+                                    <div className="platform_field_label">Name of channel or account <span className="validation_asteris">*</span></div>
                                     :
                                     <div className="platform_field_label">Platform name*</div>
                                 }
@@ -201,7 +237,7 @@ function addNewPlatform({userAgent, data, headers})
                           <div className="create_platform_fields">
                             <div className="field auth__field">
                               {/* <div className="field__label platform_field_label">{platform_type == 2 ? "Channel link*" : platform_type == 3 ? "Social Media link*" : "Link*"}</div> */}
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Youtube channel link*" :  platform_type==3 ? "Twitter account link*" : platform_type==4 ? "Facebook account link*" : platform_type==5 ? "Telegram account link*" : platform_type== 6 ? "Instragram account Link"  : "Link*"}</div>
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Youtube channel link " :  platform_type==3 ? "Twitter account link" : platform_type==4 ? "Facebook account link" : platform_type==5 ? "Telegram account link" : platform_type== 6 ? "Instragram account Link"  : "Link"} <span className="validation_asteris">*</span></div>
                               
                               <div className="field__wrap platform_field_wrap">
                                 <div className="field__icon"><img src="/assets/images/channel_link.png" width="22px" /></div>
@@ -213,7 +249,7 @@ function addNewPlatform({userAgent, data, headers})
                           
                           <div className="create_platform_fields">
                             <div className="field auth__field">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Select Major followers  from Countries*" : platform_type == 3 ? "Select Major followers  from Countries*" : "Major visitors  from Countries*"}</div>
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Select Major followers  from Countries" : platform_type == 3 ? "Select Major followers  from Countries" : "Major visitors  from Countries"} <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon "><img src="/assets/images/followers.png"  /></div>
                                 <div className="pr_platform_country_list">
@@ -231,7 +267,7 @@ function addNewPlatform({userAgent, data, headers})
                           </div>
                           <div className="create_platform_fields">
                             <div className="field auth__field ">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Followers*" : platform_type == 3 ? "Followers*" : "Views per month*"}</div>
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Followers" : platform_type == 3 ? "Followers" : "Views per month"} <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon"><img src="/assets/images/follower_count.png"  /></div>
                                 <input autoComplete="off" min="0" className="field__input" type="number" placeholder={100} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />

@@ -42,7 +42,7 @@ class login extends React.Component {
     let formIsValid = true;
     if (!this.state.password) {
       this.setState({
-        error_password: "*Required."
+        error_password: "Required."
       });
       formIsValid = false;
     }
@@ -60,7 +60,7 @@ class login extends React.Component {
 
     if (!this.state.login_id) {
       this.setState({
-        error_login_id: "*Required."
+        error_login_id: "Required."
       });
       formIsValid = false;
     }
@@ -204,34 +204,34 @@ class login extends React.Component {
           <meta name="msapplication-TileColor" content="#da532c" />
         </Head>
         
-          <div className="auth_page">
+          <div className="auth_page ad_reg">
             <Authnavbar/>
                 <div className="row auth_page_form">
-                  <div className="col-md-6 auth_left">
+                  <div className="col-md-6 col-lg-6 col-md-pull-8   auth_left">
                     <div className="bg_auth_left"></div>
                     <div className="row">
                       <div className="col-md-1 col-lg-2"></div>
                       <div className="col-md-10 col-lg-8">
                         <div className="plan_details">
-                          <h4>Your plan includes</h4>
+                          <h4>The Source of Global PR and Influencer Marketing Business . </h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system .</li>
+                            <li><img src="/assets/images/plan-points.png" /> 100% job efficiency .</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support .</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     
                   </div>  
-                  <div className="col-md-6 auth_right">
+                  <div className="col-md-6 col-lg-6 col-md-push-4  auth_right">
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
                           <div className="auth__head">
-                            <div className="auth__title title ">
+                            <div className="auth__title title custom_auth_title">
                               <h1 className="title_xl">Login into your account</h1>
                               <p>Access your tool hassle free.</p>
                             </div>
@@ -240,7 +240,7 @@ class login extends React.Component {
                           <div className="row">
                             <div className="col-md-10">
                               <div className="field auth__field">
-                                <div className="field__label">Login ID</div>
+                                <div className="field__label">Login ID <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/username.png" /></div>
                                   <input className="field__input" type="text" placeholder="Username OR Email ID" useref="login_id" value={login_id} onChange={(e) => { this.setState({ login_id: e.target.value }) }} name="login_id" autoComplete='off' />
@@ -250,7 +250,7 @@ class login extends React.Component {
                                 </div>
                               </div>
                               <div className="field auth__field">
-                                <div className="field__label">Password</div>
+                                <div className="field__label">Password <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/lock.png" /></div>
                                   <input className="field__input" type="password" placeholder="**********" useref="password" value={password} onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" name="password" autoComplete='off' />
