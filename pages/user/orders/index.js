@@ -99,7 +99,7 @@ return(
 
   <div className="container__body">
     <div className='panel_title_block'>
-      <h2>My Orders</h2>
+      <h2>My orders</h2>
       <p>Manage all your orders here.</p>
     </div>
 
@@ -124,7 +124,7 @@ return(
                     {/* <th>Platform</th> */}
                     <th>Publishers</th>
                     <th>Status</th>
-                    <th className="table_fields_hide">View</th>
+                    <th className="table_fields_hide table_hide_fields">View</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -144,15 +144,15 @@ return(
                     <td className="table_fields_hide">{moment(item.end_date_n_time).format("DD MMM YYYY")}</td>
                     {/* <td></td> */}
                     <td>{item.no_of_publisher}</td>
-                    <td className="table_status">
+                    <td>
                       {
                           parseInt(item.order_status)  === 0 
                           ?
-                          <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Approval Pending</span></>
+                          <><span className="span_status_two status_pending"></span><span className="span_status status_pending_text">Approval pending</span></>
                         
                           : parseInt(item.order_status) === 1 
                           ? 
-                          <><span className="span_status_two status_hire_people"></span><span className="span_status status_hire_people_text">Hire People</span></>
+                          <><span className="span_status_two status_hire_people"></span><span className="span_status status_hire_people_text">Hire people</span></>
 
                           : 
                           parseInt(item.order_status) === 2 
@@ -162,7 +162,7 @@ return(
                           :
                           parseInt(item.order_status) === 3 
                           ? 
-                          <><span className="span_status_two status_work_process"></span><span className="span_status status_work_process_text">Work Process</span></>
+                          <><span className="span_status_two status_work_process"></span><span className="span_status status_work_process_text">Work process</span></>
                           :
                           parseInt(item.order_status) === 4 
                           ? 
@@ -174,36 +174,36 @@ return(
 
                     {
                       parseInt(item.order_status)  === 0 ? 
-                      <td className="table_fields_hide">
-                       <a title='view' href={'/user/orders/discussion/'+item.id}>
-                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                      <td className="table_fields_hide table_hide_fields">
+                        <a title='view' href={'/user/orders/discussion/'+item.id}>
+                          <img src="/assets/images/eye.png" className="ad_orders_view" />
                         </a>
                       </td>
                       : parseInt(item.order_status) === 1 ? 
-                      <td className="table_fields_hide">
+                      <td className="table_fields_hide table_hide_fields">
                         <Link href={'/user/orders/hire-people/'+item.id}><a title='view'>
-                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                          <img src="/assets/images/eye.png" className="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 2 ? 
-                      <td className="table_fields_hide">
+                      <td className="table_fields_hide table_hide_fields">
                         <Link href={'/user/orders/discussion/'+item.id}><a title='view'>
-                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                          <img src="/assets/images/eye.png" className="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 3 ? 
-                      <td className="table_fields_hide">
+                      <td className="table_fields_hide table_hide_fields">
                         <Link href={'/user/orders/work-process/'+item.id}><a title='view'>
-                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                          <img src="/assets/images/eye.png" className="ad_orders_view" />
                         </a></Link>
                       </td>
                       : 
                       parseInt(item.order_status) === 4 ? 
-                      <td className="table_fields_hide">
+                      <td className="table_fields_hide table_hide_fields">
                         <Link href={'/user/orders/completed/'+item.id}><a title='view'>
-                          <img src="/assets/images/eye.png" class="ad_orders_view" />
+                          <img src="/assets/images/eye.png" className="ad_orders_view" />
                         </a></Link>
                       </td>
                       :
@@ -220,7 +220,7 @@ return(
                     )
                     :
                     <p className="data__item text-center">
-                      <strong>Sorry, No Releated data found.</strong>
+                      <strong>Sorry, no releated data found.</strong>
                     </p>
                     :
                     <TableLoader row="5" col="9" /> 
@@ -232,7 +232,7 @@ return(
            </>
           :
           <div className="data__item text-center">
-            <strong>Sorry, No Releated data found.</strong>
+            <strong>Sorry, no releated data found.</strong>
           </div>
           :
           <TableContentLoader row="5" col="9" />

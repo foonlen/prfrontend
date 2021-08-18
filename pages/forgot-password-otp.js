@@ -118,37 +118,38 @@ class forgotPassword extends React.Component {
                     <meta charSet="utf-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                    <link rel="shortcut icon" href="/assets/images/brands_need_fav.png" />
                 </Head>
 
 
                 {/* ..........login page code starts here........... */}
 
-                <div className="auth_page">
+                <div className="auth_page ad_reg login_page">
                     <Authnavbar/>
                     <div className="row auth_page_form">
-                    <div className="col-md-6 auth_left">
+                    <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2 auth_left">
                         <div className="bg_auth_left"></div>
-                        <div className="row">
-                            <div className="col-md-1 col-lg-2"></div>
-                            <div className="col-md-10 col-lg-8">
-                                    <div className="plan_details">
-                                    <h4>Your plan includes</h4>
-                                    <ul>
-                                        <li><img src="/assets/images/plan-points.png" /> Get Continued Business Queries</li>
-                                        <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance</li>
-                                        <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                                        <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                                        <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
-                                    </ul>
+                            <div className="row">
+                                <div className="col-md-1 col-lg-2"></div>
+                                <div className="col-md-10 col-lg-8 plan_details_block">
+                                        <div className="plan_details">
+                                        <h4>The source of global PR and influencer marketing business</h4>
+                                        <ul>
+                                        <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers</li>
+                                        <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers</li>
+                                        <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system</li>
+                                        <li><img src="/assets/images/plan-points.png" /> 100% job efficiency</li>
+                                        <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support</li>
+                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>  
-                        <div className="col-md-6 auth_right">
+                            </div>  
+                        <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1 auth_right">
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="auth__inner">
-                                        <div className="verify_back">
+                                        <div className="reg_go_back custom_auth_title">
                                             <Link href="/login"><a><i className="la la-arrow-left"></i></a></Link>
                                         </div>
                                         <div className="auth__head">

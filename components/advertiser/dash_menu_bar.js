@@ -37,7 +37,7 @@ function MenuBar() {
                     <nav className="nav js-nav extended custom_nav pr_custom_nav">
                         <Link href='/'>
                             <a className="nav__link nav__link_head custom_nav_logo">
-                                <div className="nav__title nav_logo_title"><img className='nav_logo' src="/assets/images/logo-white.png" alt="CoinPedia" /></div>
+                                <div className="nav__title nav_logo_title"><img className='nav_logo' src="/assets/images/brands_need_logo_white.png" alt="BrandsNeed" /></div>
                             </a></Link>
                             
                             <div className="nav__list">
@@ -88,7 +88,7 @@ function MenuBar() {
                                                         </li>
                                                         <li>
                                                             <Link href="/user/orders">
-                                                                <a className="hrefLinks">Orders List</a>
+                                                                <a className="hrefLinks">Orders list</a>
                                                             </Link>
                                                         </li>
                                                     </ul>

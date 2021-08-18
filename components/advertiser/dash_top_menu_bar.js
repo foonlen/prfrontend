@@ -55,7 +55,7 @@ export default function TopMenuBar({ title, full_name }) {
             <div className="mobile_top_menu">
                 <nav className="navbar navbar-expand-md navbar-dark">
                     <Link href="/user/dashboard">
-                        <a className="navbar-brand"><img className="nav_logo" src="/assets/images/logo-white.png" alt="CoinPedia" /></a>
+                        <a className="navbar-brand"><img className="nav_logo" src="/assets/images/brands_need_logo_white.png" alt="BrandsNeed" /></a>
                     </Link>
                     <button className="navbar-toggler" type="button" onClick={() => setMenu_toggle(!menu_toggle)}>
                         <span className="navbar-toggler-icon" />
@@ -80,18 +80,18 @@ export default function TopMenuBar({ title, full_name }) {
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                    <img src="/assets/images/menu-platform.png" /> My&nbsp;Orders
+                                    <img src="/assets/images/menu-platform.png" /> My&nbsp;orders
                                     </a>
                                     <div className="dropdown-menu">
                                         <ul>
                                             <li>
                                                 <Link href="/user/orders/create-new">
-                                                    <a className="dropdown-item">Create Campagin</a>
+                                                    <a className="dropdown-item">Create campagin</a>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link href="/user/orders">
-                                                    <a className="dropdown-item">Campagins List</a>
+                                                    <a className="dropdown-item">Campagins list</a>
                                                 </Link>
                                             </li>
                                         </ul> 

@@ -234,26 +234,27 @@ class register extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
           <meta name="theme-color" content="#fff" />
           <meta name="format-detection" content="telephone=no" />
-          <meta name="description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
+          <meta name="description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@publisher_handle" />
           <meta name="twitter:title" content="Login to  Publisher Panel" />
-          <meta name="twitter:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta name="twitter:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta name="twitter:creator" content="@author_handle" />
           <meta name="twitter:image" content="http://www.example.com/image.jpg" />{/* Open Graph data*/}
           <meta property="og:title" content="Login to Publisher Panel" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="http://www.example.com/" />
           <meta property="og:image" content="http://example.com/image.jpg" />
-          <meta property="og:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta property="og:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta property="og:site_name" content="Site Name, i.e. Moz" />
           <meta property="fb:admins" content="Facebook numeric ID" />
-          <meta name="keywords" content="Coinpedia Publisher Login, Coinpedia, coinpedia PR Agency, list as influencers, Influencer marketing, " />
+          <meta name="keywords" content="BrandsNeed Publisher Login, BrandsNeed, BrandsNeed PR Agency, list as influencers, Influencer marketing, " />
 
           {/* favicon*/}
           <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+          {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" /> */}
+           
           <link rel="manifest" href="/assets/img/site.webmanifest" />
           <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
@@ -262,10 +263,10 @@ class register extends Component {
         
         
         {/* ..........login page code starts here........... */}
-        <div className="auth_page ad_reg">
+        <div className="auth_page ad_reg login_page">
             <Authnavbar/>
                 <div className="row auth_page_form ">
-                  <div className="col-md-6 auth_left">
+                  <div className="col-md-6 order-md-1 order-sm-2 order-2 auth_left">
                     <div className="bg_auth_left"></div>
                     <div className="row">
                       <div className="col-md-2 col-lg-2"></div>
@@ -273,18 +274,18 @@ class register extends Component {
                         <div className="plan_details">
                           <h2>Get the Job Done !</h2>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription.</li>
-                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Continued business queries.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Fast payment system .</li>
+                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription</li>
+                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms</li>
+                            <li><img src="/assets/images/plan-points.png" /> Continued business queries</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support</li>
+                            <li><img src="/assets/images/plan-points.png" /> Fast payment system</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     
                   </div>  
-                  <div className="col-md-6 auth_right reg_auth_right">
+                  <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1 auth_right reg_auth_right">
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
@@ -292,9 +293,9 @@ class register extends Component {
                             this.state.step 
                             ?
                             <div className="auth__head">
-                              <div className="auth__title title ">
-                                <h1 className="title_xl">Create Your Advertiser Account</h1>
-                                <p>Find the best Publishers and influencers for your promotional needs.</p>
+                              <div className="auth__title title custom_auth_title">
+                                <h1 className="title_xl">Create Your advertiser account</h1>
+                                <p>Find the best Publishers and influencers for your promotional needs</p>
                               </div>
                             </div>
                             :
@@ -306,7 +307,7 @@ class register extends Component {
 
     {/* new advertiser panel image design starts here */}
               <div className="row">
-              <div className="col-md-9">
+              <div className="col-md-12 col-lg-9">
 
               <div className="field auth__field">
                 <div className="field__wrap">
@@ -375,7 +376,7 @@ class register extends Component {
                   </p>
 
                   {this.state.loader ? (
-                      <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
+                      <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} ><div className="loader"><span className="spinner-border spinner-border-md"></span></div></button>
                     ) : (
                       <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.saveRegisteredUser() }} > Sign up <i className="la la-arrow-right"></i></button>
                     )
@@ -519,7 +520,7 @@ class register extends Component {
           <header className="main-header main-header-overlay">
             <div className="custom_auth_container container">
               <nav className="navbar navbar-expand-md bg-white navbar-light">
-                <a className="navbar-brand" href="#"><img className="logo-dark" src="/assets/img/coinpedia1.png" alt="Pr Coinpedia" /></a>
+                <a className="navbar-brand" href="#"><img className="logo-dark" src="/assets/img/BrandsNeed1.png" alt="Pr BrandsNeed" /></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                   <span className="navbar-toggler-icon"></span>
                 </button>

@@ -14,11 +14,11 @@ function publisher_filters() {
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-4">
                     <div className="orders_filters_search">
-                      <div class="order_search">
-                        <div class="input-group">
-                          <input type="text" class="form-control" name="search" placeholder="Search" />
-                          <div class="input-group-append">
-                            <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                      <div className="order_search">
+                        <div className="input-group">
+                          <input type="text" className="form-control" name="search" placeholder="Search" />
+                          <div className="input-group-append">
+                            <span className="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
                           </div>
                         </div>
                       </div>

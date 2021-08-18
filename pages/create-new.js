@@ -355,6 +355,7 @@ class new_order extends React.Component
                 <meta charset="utf-8" />
                 <title>Order Create</title>
                 <link rel="stylesheet" type="text/css" href="/assets/css/react-datetime.css" />
+                
             </Head>
             <div className="page">
                  <MenuBar/>

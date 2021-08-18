@@ -1,4 +1,4 @@
-@media(max-width: 1299px) {
+@media (max-width: 1299px) {
   .auth_page .auth_right {
     padding-top: 20vh;
   }
@@ -8,23 +8,18 @@
   }
 }
 
-@media(max-width: 1110px) {
+@media (max-width: 1110px) {
   .auth_page .auth__inner h1 {
     font-size: 26px;
   }
 
-  .plan_details {
-    padding: 25px;
-  }
-
-  .ad_reg .plan_details {
+  /* .ad_reg .plan_details {
     padding: 0;
     margin-top: 75px;
-  }
-
+  } */
 }
 
-@media(max-width: 900px) {
+@media (max-width: 1058px) {
   .auth_page .auth_right {
     padding-left: 50px;
     padding-right: 50px;
@@ -41,6 +36,7 @@
   .nav_images img {
     width: 13px;
     height: 13px;
+    display: inline-block;
   }
 
   .ad_reg .plan_details li {
@@ -52,7 +48,7 @@
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .auth__head {
     margin-bottom: 20px;
   }
@@ -69,10 +65,10 @@
     height: auto;
   }
 
-  .plan_details {
+  /* .plan_details {
     margin-top: 75px;
     margin-bottom: 50px;
-  }
+  } */
 
   .auth_page .navbar-toggler {
     border: 0;
@@ -86,7 +82,7 @@
   }
 
   .auth_page .navbar-expand-md {
-    background-color: #346cc2 !important;
+    background: #1f3bb3 !important;
   }
 
   .auth_page .auth_right {
@@ -97,7 +93,7 @@
   }
 
   .auth_page .auth__inner h1 {
-    font-size: 24px;
+    font-size: 19px;
     margin-bottom: 5px;
   }
 
@@ -106,15 +102,11 @@
   }
 
   .auth_page .auth__inner .auth__title p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .auth_page .navbar-nav .nav-item {
     margin: 0;
-  }
-
-  .plan_details {
-    padding: 25px;
   }
 
   .dash_row_filters ul li {
@@ -139,10 +131,9 @@
     margin-bottom: 0;
     margin-top: 25px;
   }
-
 }
 
-@media(max-width: 568px) {
+@media (max-width: 568px) {
   .ad_reg .plan_details li {
     font-size: 14px;
   }

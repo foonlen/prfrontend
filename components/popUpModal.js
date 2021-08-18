@@ -15,19 +15,22 @@ export default function Popupmodal(props)
         }
     }
      
-    return(    
-        <div className={"modal "+(showModal ? " show" : "")} tabIndex="-1" role="dialog">
-            <div className="modal-dialog modal-sm"  role="document">
-                <div className="modal-content">
-                    <div className="modal-body text-center"> 
-                            <img src={"../../../assets/img/"+props.message.image_name} alt="Select" className="alert-image-center" /> 
-                             <h5 className="modal-description mb-2">{props.message.title}</h5>
-                            <p className="modal-description mb-2"  dangerouslySetInnerHTML={{ __html: props.message.description }}></p>
-                        <button type="button" className="btn btn-secondary btn-m-10"  onClick={() => onClose()}>Close</button>
+    return(  
+        <div className="pr_modal">
+            <div className={"modal "+(showModal ? " show" : "")} tabIndex="-1" role="dialog">
+                <div className="modal-dialog modal-sm"  role="document">
+                    <div className="modal-content">
+                        <div className="modal-body text-center"> 
+                                <img src={"../../../assets/img/"+props.message.image_name} alt="Select" className="alert-image-center" /> 
+                                <h5 className="modal-description mb-2">{props.message.title}</h5>
+                                <p className="modal-description mb-2"  dangerouslySetInnerHTML={{ __html: props.message.description }}></p>
+                            <button type="button" className="btn btn-secondary btn-m-10"  onClick={() => onClose()}>Close</button>
+                        </div>
                     </div>
-                </div>
-            </div> 
-        </div>
+                </div> 
+            </div>
+        </div>  
+        
     )
 }
  

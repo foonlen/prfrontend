@@ -12,6 +12,11 @@ import TopMenuBar from '../../../components/advertiser/dash_top_menu_bar'
 import PopUpModal from '../../../components/popUpModal'
 
 //onChange={(e)=>{this.setState({end_date_n_time:e.target.value})}}  useref="end_date_n_time"
+var yesterday = moment().subtract( 1, 'day' );
+var valid = function( current ){
+    return current.isAfter( yesterday );
+};
+
 let inputProps = {
     placeholder: 'Order Deadline Time',
     name: 'end_date_n_time',
@@ -209,6 +214,7 @@ class new_order extends React.Component
 
     saveOrderDetails()
     {   
+
         let formIsValid = true;
         if(this.state.order_title === '') 
         {
@@ -381,9 +387,9 @@ class new_order extends React.Component
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="field auth__field select_platform">
-                            <div className="field__label platform_field_label">Order Name <img src="/assets/images/info.png" /></div>
+                            <div className="field__label platform_field_label">Order name <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
-                                <input autoComplete="off" useref="order_title" className="field__input" type="text" placeholder="Order Name"  onChange={(e)=>{this.setState({order_title:e.target.value})}}  name="order_title" />
+                                <input autoComplete="off" useref="order_title" className="field__input" type="text" placeholder="Order name"  onChange={(e)=>{this.setState({order_title:e.target.value})}}  name="order_title" />
                             </div>
                             <div className="error_class">
                             {this.state.error_order_title}
@@ -393,10 +399,10 @@ class new_order extends React.Component
                    
                     <div className="col-lg-3">
                         <div className="field auth__field select_platform">
-                            <div className="field__label platform_field_label">Order Budget <img src="/assets/images/info.png" /></div>
+                            <div className="field__label platform_field_label">Order budget <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <select className="field__select my_field__input" onChange={(e)=>{this.setState({price_range_id:e.target.value})}}  useref="price_range_id">
-                                   <option disabled="" selected="">Select Price range</option>
+                                   <option disabled="" selected="">Select price range</option>
                                     {
                                         this.state.priceRangeList ?
                                         this.state.priceRangeList.map((item, i) =>
@@ -415,7 +421,7 @@ class new_order extends React.Component
 
                     <div className="col-lg-3">
                         <div className="field auth__field select_platform">
-                            <div className="field__label platform_field_label">Order/Website Link <img src="/assets/images/info.png" /></div>
+                            <div className="field__label platform_field_label">Order/Website link <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <input className="field__input" type="text" placeholder="https://" name="website_link" onChange={(e)=>{this.setState({website_link:e.target.value})}}  useref="website_link"  />
                             </div>
@@ -427,9 +433,9 @@ class new_order extends React.Component
 
                     <div className="col-lg-3">
                         <div className="field select_platform">
-                            <div className="field__label platform_field_label">Order End on <img src="/assets/images/info.png" /></div>
+                            <div className="field__label platform_field_label">Order Dead Line <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
-                                <Datetime inputProps={ inputProps }  dateFormat="YYYY-MM-DD" timeFormat={false}  name="end_date_n_time" value={this.state.end_date_n_time} onChange={this.handleChange}/>
+                                <Datetime inputProps={ inputProps } dateFormat="YYYY-MM-DD" timeFormat={false} isValidDate={ valid }  name="end_date_n_time" value={this.state.end_date_n_time} onChange={this.handleChange}/>
                             </div>
                         </div>  
                         <div className="error_class">{this.state.error_end_date_n_time}</div>
@@ -442,7 +448,7 @@ class new_order extends React.Component
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                         <div className="field select_platform order_description">
-                            <div className="field__label platform_field_label">Order Description <img src="/assets/images/info.png" /></div>
+                            <div className="field__label platform_field_label">Order description <img src="/assets/images/info.png" /></div>
                             <div className="field__wrap platform_field_wrap">
                                 <textarea type="text"  className="field__textarea" placeholder="Order Description"  name="description" placeholder="Project Description" onChange={(e)=>{this.setState({description:e.target.value})}}  useref="description" />
                             </div>
@@ -463,7 +469,7 @@ class new_order extends React.Component
                         <div className="row">
                             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                                 <div className="field auth__field select_platform">
-                                    <div className="field__label platform_field_label">Platform Type<img src="/assets/images/info.png" /></div>
+                                    <div className="field__label platform_field_label">Platform type<img src="/assets/images/info.png" /></div>
                                     <div className="field__wrap platform_field_wrap">
                                         <div className="field__icon custom_dropdown_icon"><i className="la la-angle-down"></i></div>
                                         <select className="field__select my_field__input" name="platform_row_id" onChange={(e)=>{this.setFlatformRowID(e.target.value)}}  useref="platform_row_id" >
@@ -482,7 +488,7 @@ class new_order extends React.Component
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                                 <div className="field auth__field select_platform">
-                                    <div className="field__label platform_field_label">Select Services <img src="/assets/images/info.png" /></div>
+                                    <div className="field__label platform_field_label">Select services <img src="/assets/images/info.png" /></div>
                                     <div className="field__wrap platform_field_wrap">
                                         <div className="field__icon custom_dropdown_icon"><i className="la la-angle-down"></i></div>
                                             <select className="field__select my_field__input" name="service_row_id" onChange={(e)=>{this.setState({service_row_id:e.target.value})}}  useref="service_row_id" >
@@ -525,7 +531,7 @@ class new_order extends React.Component
                                 <div className="field auth__field select_platform">
                                     <div className="field__label platform_field_label">Requirements <img src="/assets/images/info.png" /></div>
                                     <div className="field__wrap platform_field_wrap">
-                                        <input className="field__input" type="text" placeholder="Requirements" name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}} useref="requirement" />
+                                        <input autoComplete="off" className="field__input" type="text" placeholder="Requirements" name="requirement" onChange={(e)=>{this.setState({requirement:e.target.value})}} useref="requirement" />
                                     </div>
                                     <div className="error_class">
                                         {this.state.error_requirement}
@@ -544,7 +550,7 @@ class new_order extends React.Component
             {   
                this.state.serviceList.length > 0 ?
             <div className="campaign_services_block">
-                <h5>Services Added</h5>
+                <h5>Services added</h5>
                 <div className="panel campaign_services">
                     <div className="panel-table">
                         {

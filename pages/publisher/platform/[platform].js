@@ -43,6 +43,7 @@ class UpdatePlatform extends Component {
       platform_name: '',
       platform_type: '',
       website_link: '',
+      platform_image:'',
       country_row_id: [],
       views_per_month: '',
 
@@ -102,6 +103,7 @@ class UpdatePlatform extends Component {
             website_link: data.website_link,
             views_per_month: data.followers_per_month,
             country_row_id: data.country_row_id,
+            
           })
 
           var countries = data.country_row_id;
@@ -525,7 +527,7 @@ class UpdatePlatform extends Component {
                             <div classname="field__label">Platform</div>
                             <div className="field__wrap update_wrap">
                               <div className="field__icon"><img src="/assets/images/youtube.png" width="22px" /></div>
-                              <input className="field__input" type="text" placeholder="Youtube CoinPedia News" />
+                              <input className="field__input" type="text" placeholder="Youtube BrandsNeed News" />
                             </div>
                           </div>
                         </div>
@@ -534,7 +536,7 @@ class UpdatePlatform extends Component {
                             <div classname="field__label">Channel Link</div>
                             <div className="field__wrap update_wrap">
                               <div className="field__icon"><img src="/assets/images/channel_link.png" width="22px" /></div>
-                              <input className="field__input" type="text" placeholder="www.youtube.com/coinpedia" />
+                              <input className="field__input" type="text" placeholder="www.youtube.com/BrandsNeed" />
                             </div>
                           </div>
                         </div>
@@ -644,7 +646,7 @@ class UpdatePlatform extends Component {
                             <div classname="field__label">Platform</div>
                             <div className="field__wrap update_wrap">
                               <div className="field__icon"><img src="/assets/images/youtube.png" width="22px" /></div>
-                              <input className="field__input" type="text" placeholder="Youtube CoinPedia News" />
+                              <input className="field__input" type="text" placeholder="Youtube BrandsNeed News" />
                             </div>
                           </div>
                         </div>
@@ -653,7 +655,7 @@ class UpdatePlatform extends Component {
                             <div classname="field__label">Channel Link</div>
                             <div className="field__wrap update_wrap">
                               <div className="field__icon"><img src="/assets/images/channel_link.png" width="22px" /></div>
-                              <input className="field__input" type="text" placeholder="www.youtube.com/coinpedia" />
+                              <input className="field__input" type="text" placeholder="www.youtube.com/BrandsNeed" />
                             </div>
                           </div>
                         </div>

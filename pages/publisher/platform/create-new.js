@@ -77,6 +77,8 @@ function addNewPlatform({userAgent, data, headers})
         }
       }
     }
+
+  
     
     // orderPlatforms.map(item => {
       
@@ -97,7 +99,7 @@ function addNewPlatform({userAgent, data, headers})
     }
     else if(platform_name.length < 4) 
     {
-      setErrPlatformName('The Platform Name field must be at least 4 characters in length.')
+      setErrPlatformName('Use atleast 4 characters.')
       formIsValid = false
     }
 
@@ -114,7 +116,7 @@ function addNewPlatform({userAgent, data, headers})
     }
     else if(website_link.length < 4) 
     {
-      setErrWebsiteLink('The Website Link field must be at least 4 characters in length.')
+      setErrWebsiteLink('Use atleast 4 characters.')
       formIsValid = false
     }
 
@@ -175,7 +177,7 @@ function addNewPlatform({userAgent, data, headers})
                   <div className="col-xl-4 col-lg-6">
                     <div className="addNewPlatform">
                       <div className="panel_title_block">
-                        <h2>Add new platform</h2>
+                        <h2>Add New Platform</h2>
                         <p>Create, verify and list your platform, open for opportunities.</p>
                       </div>
 
@@ -193,6 +195,8 @@ function addNewPlatform({userAgent, data, headers})
                                       :
                                       null
                                     }
+
+                                   
                                   
                                   </div>
                                 <div className="field__icon custom_dropdown_icon">
@@ -203,7 +207,7 @@ function addNewPlatform({userAgent, data, headers})
                                   {
                                     orderPlatforms ?
                                     orderPlatforms.map((item, i) =>
-                                      <option value={item.id} key={item.id}> {item.platform_name} </option>
+                                      <option value={item.id} key={item.id}>{item.platform_name} </option>
                                     )
                                     : null
                                   }
@@ -228,7 +232,7 @@ function addNewPlatform({userAgent, data, headers})
                               </div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon"><img src="/assets/images/channel_name.png"  /></div>
-                                <input autoComplete="off" value={platform_name} onChange={(e) => { setPlatformName(e.target.value) }} className="field__input" type="text" placeholder="Platform Name" name='platform_name' />
+                                <input autoComplete="off" value={platform_name} onChange={(e) => { setPlatformName(e.target.value) }} className="field__input" type="text" placeholder="Platform name" name='platform_name' />
                               </div>
                             </div>
                             <div className="error_class" >{error_platform_name}</div>
@@ -249,7 +253,7 @@ function addNewPlatform({userAgent, data, headers})
                           
                           <div className="create_platform_fields">
                             <div className="field auth__field">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Select Major followers  from Countries" : platform_type == 3 ? "Select Major followers  from Countries" : "Major visitors  from Countries"} <span className="validation_asteris">*</span></div>
+                              <div className="field__label platform_field_label">{platform_type == 2 ? "Select major followers from Countries" : platform_type == 3 ? "Select major followers from countries" : "Major visitors from countries"} <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon "><img src="/assets/images/followers.png"  /></div>
                                 <div className="pr_platform_country_list">
@@ -258,7 +262,7 @@ function addNewPlatform({userAgent, data, headers})
                                     onSelect={onSelect} // Function will trigger on select event
                                     onRemove={onRemove} // Function will trigger on remove event
                                     displayValue="country_name" // Property name to display in the dropdown options
-                                    placeholder='Select Visitors'
+                                    placeholder='Select visitors'
                                   />
                                 </div>
                               </div>
@@ -267,10 +271,10 @@ function addNewPlatform({userAgent, data, headers})
                           </div>
                           <div className="create_platform_fields">
                             <div className="field auth__field ">
-                              <div className="field__label platform_field_label">{platform_type == 2 ? "Followers" : platform_type == 3 ? "Followers" : "Views per month"} <span className="validation_asteris">*</span></div>
+                              <div className="field__label platform_field_label">Visitors/Views Per Month <span className="validation_asteris">*</span></div>
                               <div className="field__wrap platform_field_wrap">
                               <div className="field__icon"><img src="/assets/images/follower_count.png"  /></div>
-                                <input autoComplete="off" min="0" className="field__input" type="number" placeholder={platform_type == 1 ? " Enter visiters count"  : "Enter Followers count"} name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />
+                                <input autoComplete="off" min="0" className="field__input" type="number" placeholder='Enter visiters/Views count' name='views_per_month' value={views_per_month} onChange={(e) => { setViewsPerMonth(e.target.value)}} />
                               </div>
                             </div>
                             <div className="error_class" >{error_views_per_month}</div>
@@ -295,11 +299,11 @@ function addNewPlatform({userAgent, data, headers})
           </div>
         </div>
         {/* new modal design code starts here */}
-        <div class="platform_create_modal">
-            <div class={"modal "+(showModal ? " show": null)} id="thats_great">
-              <div class="modal-dialog modal-md">
-                <div class="modal-content">
-                  <div class="modal-body">
+        <div className="platform_create_modal">
+            <div className={"modal "+(showModal ? " show": null)} id="thats_great">
+              <div className="modal-dialog modal-md">
+                <div className="modal-content">
+                  <div className="modal-body">
                     <h3>That's Great !</h3>
                     <p className="platform_create_status">Your platform has been submitted for verification.</p>
                     <p className="platform_create_notice">You will recieve an email within 24 hours <br></br>about the review.</p>

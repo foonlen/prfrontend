@@ -89,8 +89,8 @@ console.log(ordersList)
 
         <div className="container__body">
           <div className="panel_title_block text-center">
-            <h2>One tool for all your Orders</h2>
-            <p>Use coinpedia publisher tool to manage all your campaigns in the most effective way</p>
+            <h2>One Tool For All Your Orders</h2>
+            <p>Use BrandsNeed publisher tool to manage all your campaigns in the most effective way</p>
           </div>
 
 
@@ -122,15 +122,15 @@ console.log(ordersList)
                   <div className="amount_block new_amount_block">
                     <div className="row">
                       <div className="col-lg-6 col-md-6 col-sm-6">
-                        <button className="btn locked_amount">Locked Amount</button>
+                        <button className="btn locked_amount">Locked amount</button>
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-6">
-                        <button className="available_amount" >Available Amount</button>
+                        <button className="available_amount" >Available amount</button>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-12 wallet_btn">
-                    <p><Link href="#"><a>Withdraw my Funds<i className="la la-angle-down"></i></a></Link></p>
+                    <p><Link href="#"><a>Withdraw my funds<i className="la la-angle-down"></i></a></Link></p>
                   </div>
                   <p className="wallet_block_note">Note : The wallet feature will be updated in next version.</p>
                 </div>
@@ -142,7 +142,7 @@ console.log(ordersList)
                       <div className="row">
                         <div className="col-md-8">
                           <h3><img src="/assets/images/dashboard-notification.png" />New order received</h3>
-                          <h4>From <span>Coinpedia News Site</span> for <span>PR Publishing</span></h4>
+                          <h4>From <span>BrandsNeed News Site</span> for <span>PR Publishing</span></h4>
                         </div>
                         <div className="col-md-4">
                           <p className="go_to_orders"><a href="/advertiser/orders/">Go to Order</a></p>
@@ -158,21 +158,21 @@ console.log(ordersList)
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-total-orders.png" />
                       <h2>{total_campaigns ? total_campaigns:0}</h2>
-                      <p>Total Orders</p>
+                      <p>Total orders</p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-completed-orders.png" />
                       <h2>{completedorder ? completedorder:0}</h2>
-                      <p>Completed Orders</p>
+                      <p>Completed orders</p>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-progress-order.png" />
                       <h2>{in_process ? in_process:0}</h2>
-                      <p>In Progress Orders</p>
+                      <p>In progress orders</p>
                     </div>
                   </div>
                 </div>
@@ -187,13 +187,13 @@ console.log(ordersList)
                   <div className="col-lg-9">
                     <ul>
                       <li>
-                        <p><img src="/assets/images/frame.png" /> Pending Approved</p>
+                        <p><img src="/assets/images/frame.png" /> Pending approved</p>
                       </li>
                       <li>
-                        <p><img src="/assets/images/tab_new_order.png" /> Hiring People</p>
+                        <p><img src="/assets/images/tab_new_order.png" /> Hiring people</p>
                       </li>
                       <li>
-                        <p><img src="/assets/images/tab_completed.png" />Work Process</p>
+                        <p><img src="/assets/images/tab_completed.png" />Work process</p>
                       </li>
                       <li>
                         <p><img src="/assets/images/tab_completed.png" />Completed</p>
@@ -225,13 +225,13 @@ console.log(ordersList)
                               <table className="table custom-table">
                                 <thead>
                                   <tr>
-                                    <th>Order Id</th>
-                                    <th>Order Title</th>
-                                    <th>Price Range</th>
-                                    <th>Created On</th>
-                                    <th>Orders Ends On</th>
+                                    <th>Order id</th>
+                                    <th>Order title</th>
+                                    <th>Price range</th>
+                                    <th>Created on</th>
+                                    <th>Orders ends on</th>
                                     <th>Platform</th>
-                                    <th>No Of Publishers</th>
+                                    <th>Publishers</th>
                                     <th>Status</th>
                                     <th>View</th>
                                   </tr>
@@ -262,7 +262,7 @@ console.log(ordersList)
                                           ? 
                                           <div className="order_status_dashboard">
                                             <div className="dot hire_order_dot"></div>
-                                            <span className="hire_order_status">Hire People</span>
+                                            <span className="hire_order_status">Hire people</span>
                                           </div>
 
                                           
@@ -278,7 +278,7 @@ console.log(ordersList)
                                           ? 
                                           <div className="order_status_dashboard">
                                             <div className="dot work_process_order_dot"></div>
-                                            <span className="work_process_order_status">Work Process</span>
+                                            <span className="work_process_order_status">Work process</span>
                                           </div>
                                           :
                                           parseInt(item.order_status) === 4 
@@ -292,7 +292,7 @@ console.log(ordersList)
                                           ? 
                                           <div className="order_status_dashboard">
                                             <div className="dot pending_order_dot"></div>
-                                            <span className="pending_order_status">Approval Pending</span>
+                                            <span className="pending_order_status">Approval pending</span>
                                           </div>
                                           :
                                           null

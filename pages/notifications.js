@@ -7,6 +7,9 @@ import Head from 'next/head'
 function notifications() {
     return (
         <>
+            <Head>
+                <link rel="shortcut icon" href="/assets/images/brands_need_fav.png" />
+            </Head>
             <div className="page">
                 <MenuBar />
 

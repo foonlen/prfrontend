@@ -80,7 +80,7 @@ export const orderPlatforms =  [
                                     },
                                     {
                                         "id": "6",
-                                        "platform_name": "Instagram Channel"
+                                        "platform_name": "Instagram Account"
                                     }
                             ]  
 export const people_range_list = [

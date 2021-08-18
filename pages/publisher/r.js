@@ -258,34 +258,35 @@ class register extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
           <meta name="theme-color" content="#fff" />
           <meta name="format-detection" content="telephone=no" />
-          <meta name="description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
+          <meta name="description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@publisher_handle" />
           <meta name="twitter:title" content="Login to  Publisher Panel" />
-          <meta name="twitter:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta name="twitter:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta name="twitter:creator" content="@author_handle" />
           <meta name="twitter:image" content="http://www.example.com/image.jpg" />{/* Open Graph data*/}
           <meta property="og:title" content="Login to Publisher Panel" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="http://www.example.com/" />
           <meta property="og:image" content="http://example.com/image.jpg" />
-          <meta property="og:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta property="og:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta property="og:site_name" content="Site Name, i.e. Moz" />
           <meta property="fb:admins" content="Facebook numeric ID" />
-          <meta name="keywords" content="Coinpedia Publisher Login, Coinpedia, coinpedia PR Agency, list as influencers, Influencer marketing, " />
+          <meta name="keywords" content="BrandsNeed Publisher Login, BrandsNeed, BrandsNeed PR Agency, list as influencers, Influencer marketing, " />
           <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+          {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" /> */}
+          
           <link rel="manifest" href="/assets/img/site.webmanifest" />
           <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
         </Head>
  
           {/* ..........login page code starts here........... */}
-          <div className="auth_page">
+          <div className="auth_page ad_reg login_page pub_reg">
             <Authnavbar/>
                 <div className="row auth_page_form">
-                  <div className="col-md-6 auth_left">
+                  <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2 auth_left">
                     <div className="bg_auth_left"></div>
                     <div className="row">
                     <div className="col-md-1 col-lg-2"></div>
@@ -293,34 +294,34 @@ class register extends Component {
                         <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription.</li>
-                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Continued business queries.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Fast payment system .</li>
+                            <li><img src="/assets/images/plan-points.png" /> 1 year of free subscription</li>
+                            <li><img src="/assets/images/plan-points.png" /> List unlimited platforms</li>
+                            <li><img src="/assets/images/plan-points.png" /> Continued business queries</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated agent support</li>
+                            <li><img src="/assets/images/plan-points.png" /> Fast payment system</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     
                   </div>  
-                  <div className="col-md-6 auth_right reg_auth_right">
+                  <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1 auth_right reg_auth_right ">
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
                          
                           <div className="row">
-                            <div className="col-md-9"> 
+                            <div className="col-md-12 col-lg-9"> 
                                 <div className={"reg_first_three_blocks " + (this.state.regStep ? " hide_register":null)}>
                                 <div className="auth__head">
-                                  <div className="auth__title title ">
+                                  <div className="auth__title title custom_auth_title">
                                     <h1 className="title_xl">Create your publisher account</h1>
-                                    <p>A free tool to find and manage business queries.</p>
+                                    <p>A free tool to find and manage business queries</p>
                                   </div>
                                 </div>
 
                                  <div className="field auth__field">
-                                    <div className="field__label">Full Name <span className="validation_asteris">*</span></div>
+                                    <div className="field__label">Full name<span className="validation_asteris">*</span></div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/username.png" /></div>
                                       <input className="field__input" type="text" placeholder="Enter your name" ref="full_name" value={this.state.full_name} onChange={(e) => { this.setState({ full_name: e.target.value }) }} name="full_name" autoComplete="off" />
@@ -330,7 +331,7 @@ class register extends Component {
                                     </div>
                                   </div>
                                   <div className="field auth__field">
-                                    <div className="field__label">Email ID <span className="validation_asteris">*</span></div>
+                                    <div className="field__label">Email id<span className="validation_asteris">*</span></div>
                                     <div className="field__wrap">
                                     <div className="field__icon"><img src="/assets/images/email.png" width="22px" /></div>
                                       <input className="field__input" type="text" placeholder="Enter your Email Id" ref="email_id" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" autoComplete="off" />
@@ -352,7 +353,7 @@ class register extends Component {
 
                                   {
                                     this.state.firstStepLoader ?
-                                    <button className="btn btn-primary cp-primary-btn" type="button" > <div className="loader"><span class="spinner-border spinner-border-md"></span></div> </button>
+                                    <button className="btn btn-primary cp-primary-btn" type="button" > <div className="loader"><span className="spinner-border spinner-border-md"></span></div> </button>
                                     :
                                     <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepOneReg() }} > Sign Up <i className="la la-arrow-right"></i></button>
                                   }
@@ -363,9 +364,9 @@ class register extends Component {
 
                                
                               <div className={"reg_seconds_three_blocks " + (!this.state.regStep ? " hide_register":null)}>
-                                  <div className="reg_go_back"><i className='la la-arrow-left' onClick={()=> this.setState({step: true})}></i></div>
+                                  <div className="custom_auth_title reg_go_back"><i className='la la-arrow-left' onClick={()=> this.setState({step: true})}></i></div>
                                   <h1 className="greet_user">Hello {this.state.full_name}</h1>
-                                  <p className="greet_user_sub">Lets setup your Publisher account.</p>
+                                  <p className="greet_user_sub">Lets setup your publisher account.</p>
                               <div className="field auth__field">
                                 <div className="field__label">Username <span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
@@ -401,7 +402,7 @@ class register extends Component {
 
 
                             <div className="field auth__field">
-                              <div className="field__label">Phone Number <span className="validation_asteris">*</span></div>
+                              <div className="field__label">Phone number <span className="validation_asteris">*</span></div>
                               <div className="input-group">
                                 <div className="input-group-prepend">
                                   <span className="input-group-text select_option_span"> 
@@ -435,7 +436,7 @@ class register extends Component {
 
                               {
                               this.state.loader ? 
-                                 <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} ><div className="loader"><span class="spinner-border spinner-border-md"></span></div></button>
+                                 <button className="btn btn-primary empty__btn btn-loader cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} ><div className="loader"><span className="spinner-border spinner-border-md"></span></div></button>
                                : 
                                  <button className="btn btn-primary cp-primary-btn" type="button" onClick={() => { this.stepStepTwoRegSave() }} > Verify account <i className="la la-arrow-right"></i></button>
                               }
@@ -445,7 +446,7 @@ class register extends Component {
  
 
                                 <p className="reg_auth_link">
-                                  Have an Account ? <Link href="/login"><a className="auth__link">Login here</a></Link>
+                                <span className="dont_have_an_account">Have an account ?</span> <Link href="/login"><a className="auth__link">Login here</a></Link>
                                 </p>
                                 
                               </div>
@@ -465,7 +466,7 @@ class register extends Component {
           <header className="main-header main-header-overlay">
             <div className="custom_auth_container container">
               <nav className="navbar navbar-expand-md bg-white navbar-light">
-                <a className="navbar-brand" href="#"><img className="logo-dark" src="/assets/img/coinpedia1.png" alt="Pr Coinpedia" /></a>
+                <a className="navbar-brand" href="#"><img className="logo-dark" src="/assets/img/BrandsNeed1.png" alt="Pr BrandsNeed" /></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                   <span className="navbar-toggler-icon"></span>
                 </button>

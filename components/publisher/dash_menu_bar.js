@@ -41,7 +41,7 @@ function sideMenuBar() {
                         <Link href='/'>
                             <a className="nav__link nav__link_head custom_nav_logo">
                                 {/* <div className="nav__preview"><Image className="nav__pic" width='30px' height='30px' src="/assets/img/logo.svg" alt="Logo" /></div> */}
-                                <div className="nav__title  nav_logo_title"><img className='nav_logo' src="/assets/images/logo-white.png" alt="CoinPedia" /></div>
+                                <div className="nav__title  nav_logo_title"><img className='nav_logo' src="/assets/images/brands_need_logo_white.png" alt="BrandsNeed" /></div>
                                 
                             </a></Link>
 
@@ -88,13 +88,13 @@ function sideMenuBar() {
                                                 <div className="sidebar_dropdown" id="myLinks">
                                                     <ul>
                                                         <li>
-                                                            <Link href="/publisher/platform">
-                                                                <a className="hrefLinks"><span>Platform list</span></a>
+                                                            <Link href="/publisher/platform/create-new">
+                                                                <a className="hrefLinks">Create&nbsp;platform</a>
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/publisher/platform/create-new">
-                                                                <a className="hrefLinks">Create&nbsp;Platform</a>
+                                                            <Link href="/publisher/platform">
+                                                                <a className="hrefLinks"><span>Platform list</span></a>
                                                             </Link>
                                                         </li>
                                                     </ul>

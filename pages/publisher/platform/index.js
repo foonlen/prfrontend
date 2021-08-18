@@ -221,7 +221,7 @@ function platform({ userAgent }) {
           <TopMenuBar full_name={publisher_full_name} />
           <div className="container__body">
             <div className="panel_title_block">
-              <h2>Manage your Platforms</h2>
+              <h2>Manage Your Platforms</h2>
               <p> Add, Edit or Remove your platforms from the tool</p>
             </div>
 
@@ -235,9 +235,9 @@ function platform({ userAgent }) {
                     <tr>
                       <th >#</th>
                       <th className="table_platform">Platform</th>
-                      <th className="table_platform_name">Platform Name</th>
+                      <th className="table_platform_name">Platform name</th>
                       <th className="table_fields_hide">Services</th>
-                      <th className="table_order_ends_on table_fields_hide">Listed On</th>
+                      <th className="table_order_ends_on table_fields_hide">Listed on</th>
                       <th className="table_status">Status</th>
                       <th className="table_platform_action">Action</th>
                     </tr>
@@ -276,7 +276,7 @@ function platform({ userAgent }) {
                               <span className="one_plus_more">+{e.service_data.length-2} More..</span>
                               </>
                             :
-                            <>Not Updated</>
+                            <>Not updated</>
                           }</td>
                           <td className="table_fields_hide">{moment(e.date_n_time).format("DD MMM YYYY")}</td>
                           <td>
@@ -297,13 +297,13 @@ function platform({ userAgent }) {
                           <td>
                             {
                               parseInt(e.approval_status) !== 2 ? 
-                                <a href={"/publisher/platform/service/" + e.id}>
-                                  <button className="action_stroke table-primary-btn dashboard_table_btn" title='Edit'><i className="la la-edit" /></button>
+                                <a  className="action_stroke table-primary-btn dashboard_table_btn" href={"/publisher/platform/service/" + e.id}>
+                                 <i className="la la-edit" />
                                 </a>
                              
                               :
-                                <a href={"/publisher/platform/service/" + e.id}>
-                                  <button className="action_stroke table-primary-btn dashboard_table_btn" title='View'><i className="la la-eye" /></button>
+                                <a  className="action_stroke table-primary-btn dashboard_table_btn" href={"/publisher/platform/service/" + e.id}>
+                                  <i className="la la-eye" />
                                 </a>
                             }
                             {
@@ -330,7 +330,7 @@ function platform({ userAgent }) {
                     <tr>
                       <td  colspan="6">
                       <div className="text-center">
-                        Sorry, No Releated data found.
+                        Sorry, no releated data found.
                         <Link href='/publisher/platform/create-new'>
                         <a style={{color:"#5e81f4"}}>Click to create new platform</a>
                         </Link>

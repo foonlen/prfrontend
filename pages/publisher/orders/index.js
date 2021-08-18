@@ -96,7 +96,7 @@ function orders(props) {
                     <table className="table">
                       <thead>
                         <tr>
-                          <th className="table_order_title">Serial Number</th>
+                          <th className="table_order_title">#</th>
                           <th className="table_order_title">Order Title</th>
                           <th className="table_platform_name">Platform Name</th>
                           <th className="table_service">Services</th>

@@ -101,10 +101,10 @@ export default function verifyEmail({userAgent, headers})
           <meta charSet="utf-8" />
           <title>Verify Email</title>
         </Head>
-      <div className="auth_page">
+      <div className="auth_page ad_reg login_page">
           <Authnavbar/>
           <div className="row auth_page_form">
-          <div className="col-md-6 auth_left">
+          <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2 auth_left">
               <div className="bg_auth_left"></div>
               <div className="row">
                   <div className="col-md-1 col-lg-2"></div>
@@ -112,27 +112,27 @@ export default function verifyEmail({userAgent, headers})
                           <div className="plan_details">
                           <h4>Your plan includes</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Get agent support.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems.</li>
+                            <li><img src="/assets/images/plan-points.png" /> Run multiple campaigns</li>
+                            <li><img src="/assets/images/plan-points.png" /> Verified and suitable publishers - influencers</li>
+                            <li><img src="/assets/images/plan-points.png" /> Publish on news sites, social media and youtube</li>
+                            <li><img src="/assets/images/plan-points.png" /> Get agent support</li>
+                            <li><img src="/assets/images/plan-points.png" /> Secure and fair payment systems</li>
                           </ul>
                           </div>
                       </div>
                   </div>
               </div>  
-              <div className="col-md-6 auth_right">
+              <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1 auth_right">
                   <div className="row">
                       <div className="col-md-12">
                           <div className="auth__inner">
-                              <div className="verify_back">
-                                <i onClick={() => router.back()} className="la la-arrow-left"></i>
+                              <div className="reg_go_back">
+                                <i onClick={() => router.back()} className="la la-arrow-left custom_auth_title"></i>
                               </div>
                               
                               <div className="auth__head">
-                                <div className="auth__title title ">
-                                  <h1 className="title_xl">Thanks, Verify your Email ID</h1>
+                                <div className="auth__title title">
+                                  <h1 className="title_xl">Thanks, verify your email id</h1>
                                   <p className="sub_text_verify_email">Enter the OTP sent to the provided email id <span>{login_user_email_id}</span></p>
                                 </div>
                               </div>
@@ -153,15 +153,15 @@ export default function verifyEmail({userAgent, headers})
                                         {loader ? (
                                             <span className="spinner-border spinner-border-sm mr-1"></span>
                                         ) : (
-                                            <>Verify Account <i className="la la-arrow-right"></i></>
+                                            <>Verify account <i className="la la-arrow-right"></i></>
                                         )}
                                       </button>
                                       :
-                                      <button className="btn btn-primary cp-primary-btn" style={{opacity:"0.5"}} type="button" onClick={()=>{submitVerifyEmail()}}>
+                                      <button className="btn btn-primary cp-primary-btn" style={{opacity:"0.5"}} type="button">
                                         {loader ? (
                                             <span className="spinner-border spinner-border-sm mr-1"></span>
                                         ) : (
-                                            <>Verify Account <i className="la la-arrow-right"></i></>
+                                            <>Verify account <i className="la la-arrow-right"></i></>
                                         )}
                                       </button>
 

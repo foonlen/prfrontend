@@ -34,7 +34,7 @@ export default function TopMenuBar({ title, full_name }) {
             <div className="mobile_top_menu">
                 <nav className="navbar navbar-expand-md navbar-dark">
                     <Link href="/publisher/dashboard">
-                        <a className="navbar-brand"><img className="nav_logo" src="/assets/images/logo-white.png" alt="CoinPedia" /></a>
+                        <a className="navbar-brand"><img className="nav_logo" src="/assets/images/brands_need_logo_white.png" alt="BrandsNeed" /></a>
                     </Link>
                     <button className="navbar-toggler" type="button" onClick={() => setMenu_toggle(!menu_toggle)}>
                         <span className="navbar-toggler-icon" />

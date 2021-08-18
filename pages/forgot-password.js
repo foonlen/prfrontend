@@ -113,37 +113,38 @@ class forgotPassword extends React.Component {
                     <meta charSet="utf-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                    <link rel="shortcut icon" href="/assets/images/brands_need_fav.png" />
                 </Head>
 
                 {/* ..........login page code starts here........... */}
-                <div className="auth_page">
+                <div className="auth_page ad_reg login_page">
             <Authnavbar/>
                 <div className="row auth_page_form">
-                  <div className="col-md-6 auth_left">
+                  <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2   auth_left">
                     <div className="bg_auth_left"></div>
                     <div className="row">
                         <div className="col-md-1 col-lg-2"></div>
                         <div className="col-md-10 col-lg-8">
-                        <div className="plan_details">
-                          <h4>Your plan includes</h4>
-                          <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Get continued business queries</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance</li>
-                            <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                            <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                            <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
-                          </ul>
+                            <div className="plan_details">
+                                <h4>The source of global PR and influencer marketing business</h4>
+                                <ul>
+                                <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers.</li>
+                                <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers.</li>
+                                <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system.</li>
+                                <li><img src="/assets/images/plan-points.png" /> 100% job efficiency.</li>
+                                <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support.</li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
                     </div>
                     
                   </div>  
-                  <div className="col-md-6 auth_right">
+                  <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1   auth_right">
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
-                            <div className="verify_back">
-                                <Link href="/login"><a><i className="la la-arrow-left"></i></a></Link>
+                            <div className="reg_go_back">
+                                <Link href="/login"><a><i className="la la-arrow-left custom_auth_title"></i></a></Link>
                             </div>
                           <div className="auth__head">
                             <div className="auth__title title ">
@@ -155,7 +156,7 @@ class forgotPassword extends React.Component {
                           <div className="row">
                             <div className="col-md-9">
                               <div className="field auth__field">
-                                <div className="field__label">Login ID <span className="validation_asteris">*</span></div>
+                                <div className="field__label">Login id<span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src='/assets/images/email.png' width="22px" /></div>
                                   <input className="field__input" type="text" placeholder="Username or Email" value={this.state.login_id} onChange={(e) => { this.setState({ login_id: e.target.value }) }} name="login_id" />
@@ -176,7 +177,7 @@ class forgotPassword extends React.Component {
                                     
                                 </button>
                                 <p className="reg_auth_link">
-                                  Have an Account ? <Link href="/login"><a className="auth__link">Login here</a></Link>
+                                <span className="dont_have_an_account">Have an account ?</span> <Link href="/login"><a className="auth__link">Login here</a></Link>
                                 </p>
                             </div>
                           </div>

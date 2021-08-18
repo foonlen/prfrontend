@@ -34,7 +34,8 @@ export default function Home() {
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#3ed2a7"/>
-    <link rel="shortcut icon" href="./favicon.png" />
+    {/* <link rel="shortcut icon" href="./favicon.png" /> */}
+    <link rel="shortcut icon" href="/assets/images/brands_need_fav.png" />
     <link rel="stylesheet" href="/assets/css/theme-vendors.min.css" />
     <link rel="stylesheet" href="/assets/css/theme.min.css" />
     <link rel="stylesheet" href="/assets/css/seo.css" /> 
@@ -57,10 +58,10 @@ export default function Home() {
                     <Link href="/">
                       <a className="navbar-brand" >
                         <span className="navbar-brand-inner">
-                          <img className="logo-dark" src="/assets/img/logo-white.png" alt="Pr Coinpedia" />
-                          <img className="logo-sticky" src="/assets/img/logo-white.png" alt="Pr Coinpedia" />
-                          <img className="mobile-logo-default" src="/assets/img/logo-white.png" alt="Pr Coinpedia" />
-                          <img className="logo-default" src="/assets/img/logo-white.png" alt="Pr Coinpedia" />
+                          <img className="logo-dark" src="/assets/images/brands_need_logo_white.png" alt="Pr BrandsNeed" />
+                          <img className="logo-sticky" src="/assets/images/brands_need_logo_white.png" alt="Pr BrandsNeed" />
+                          <img className="mobile-logo-default" src="/assets/images/brands_need_logo_white.png" alt="Pr BrandsNeed" />
+                          <img className="logo-default" src="/assets/images/brands_need_logo_white.png" alt="Pr BrandsNeed" />
                         </span>
                       </a>
                     </Link>
@@ -397,7 +398,7 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center indexFooter">
               <div className="lqd-column col-md-3 col-xs-6 mb-30">
-                <a href="/"><img src="/assets/img/logo-white.png" alt="Coinpedia logo" style={{width: '200px', marginBottom: '15px'}} /></a>
+                <a href="/"><img src="/assets/img/brands_need_logo_white.png" alt="BrandsNeed logo" style={{width: '200px', marginBottom: '15px'}} /></a>
                 <p>We Understand the Needs of brands and We're to Fill the Gap. </p>
               </div>
               <div className="lqd-column col-md-3 col-xs-6 mb-30">
@@ -433,7 +434,7 @@ export default function Home() {
           <div className="container">
             <div className="row d-flex flex-wrap align-items-center">
               <div className="lqd-column col-md-12 text-center flex-wrap align-items-center">
-                <p className="font-size-16 my-0 text-center">Copyright 2020 <span className="text-secondary font-weight-bold">PR Coinpedia</span>. All Rights Reserved.</p>
+                <p className="font-size-16 my-0 text-center">Copyright 2020 <span className="text-secondary font-weight-bold">PR BrandsNeed</span>. All Rights Reserved.</p>
               </div>
             </div>
           </div>

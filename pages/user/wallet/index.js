@@ -184,13 +184,13 @@ export default function addFunds({userAgent}) {
                                         <div className="wallet_details_block locked_block">
                                             <h6>Total Balance</h6>
                                             <h3>$ 3600.30</h3>
-                                            <div class="locked_amount_nav">
-                                                <ul class="nav  nav-pills" id="pills-tab" role="tablist">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Locked Amount</a>
+                                            <div className="locked_amount_nav">
+                                                <ul className="nav  nav-pills" id="pills-tab" role="tablist">
+                                                    <li className="nav-item">
+                                                        <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Locked Amount</a>
                                                     </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Locked Amount</a>
+                                                    <li className="nav-item">
+                                                        <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Locked Amount</a>
                                                     </li>
                                                     
                                                 </ul>
@@ -214,20 +214,20 @@ export default function addFunds({userAgent}) {
                                             <div className="row">
                                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6 ">
                                                     <div className="wallet_view_all">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="View" />
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><img src="/assets/images/down_arrow_grey.png"  /></span>
+                                                        <div className="input-group">
+                                                            <input type="text" className="form-control" placeholder="View" />
+                                                            <div className="input-group-append">
+                                                                <span className="input-group-text"><img src="/assets/images/down_arrow_grey.png"  /></span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                                                     <div className="wallet_search">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Search" />
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><img src="/assets/images/search.png"  /></span>
+                                                        <div className="input-group">
+                                                            <input type="text" className="form-control" placeholder="Search" />
+                                                            <div className="input-group-append">
+                                                                <span className="input-group-text"><img src="/assets/images/search.png"  /></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -239,8 +239,8 @@ export default function addFunds({userAgent}) {
                                 {/* .........advertiser wallet page page title and filter ends here.......... */}
                                 
                                 <div className="panel-table">
-                                    <div class="table-responsive">          
-                                        <table class="table">
+                                    <div className="table-responsive">          
+                                        <table className="table">
                                             <thead>
                                                 <tr>
                                                     <th>Serial Number</th>

@@ -139,38 +139,39 @@ class Set_Password extends React.Component {
                     <title>Set Password</title>
                     <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                
                 </Head>
 
 
                 {/* ..........login page code starts here........... */}
-                <div className="auth_page">
+                <div className="auth_page ad_reg login_page">
                     <Authnavbar/>
                         <div className="row auth_page_form">
-                        <div className="col-md-6 auth_left">
+                        <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2   auth_left">
                             <div className="bg_auth_left"></div>
                             <div className="row">
                             <div className="col-md-1 col-lg-2"></div>
                             <div className="col-md-10 col-lg-8">
                                 <div className="plan_details">
-                                <h4>Your plan includes</h4>
+                                <h4>The source of global PR and influencer marketing business</h4>
                                 <ul>
-                                    <li><img src="/assets/images/plan-points.png" /> Get continued business queries</li>
-                                    <li><img src="/assets/images/plan-points.png" /> Dedicated Agent at assistance </li>
-                                    <li><img src="/assets/images/plan-points.png" /> Faster Payments</li>
-                                    <li><img src="/assets/images/plan-points.png" /> Manage Campaigns hussle free</li>
-                                    <li><img src="/assets/images/plan-points.png" /> Publisher Profile Page</li>
+                                <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers</li>
+                                <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers</li>
+                                <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system</li>
+                                <li><img src="/assets/images/plan-points.png" /> 100% job efficiency</li>
+                                <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support</li>
                                 </ul>
                                 </div>
                             </div>
                             </div>
                             
                         </div>  
-                        <div className="col-md-6 auth_right">
+                        <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1   auth_right">
                             <div className="row">
                             <div className="col-md-12">
                                 <div className="auth__inner">
                                 <div className="auth__head">
-                                    <div className="auth__title title ">
+                                    <div className="auth__title title custom_auth_title">
                                     <h1 className="title_xl">Set new password</h1>
                                     <p>Your OTP has been verified, set new password.</p>
                                     </div>
@@ -205,7 +206,7 @@ class Set_Password extends React.Component {
                                         {this.state.loader ? (
                                             <span className="spinner-border spinner-border-sm mr-1"></span>
                                         ) : (
-                                            <>Set New Password <i className="la la-arrow-right"></i></>
+                                            <>Set new password <i className="la la-arrow-right"></i></>
                                         )}
                                     </button>
                                     

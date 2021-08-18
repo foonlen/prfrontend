@@ -126,9 +126,9 @@ return (
                       </div>
                       
                       <div className="order_details">
-                        <h5 className="order_details_about_campaign">Order Description</h5>
+                        <h5 className="order_details_about_campaign">Order description</h5>
                         <p>{orderData.description}</p>
-                        <h5 className="order_details_services_required">Service Required</h5>
+                        <h5 className="order_details_services_required">Service required</h5>
                         <div className="panel-table">
                           {
                             <div className="table-responsive">
@@ -137,7 +137,7 @@ return (
                                   <tr>
                                     <th className="table_platform_name">Platform</th>
                                     <th className="table_service">Services</th>
-                                    <th>No of Publishers</th>
+                                    <th>Publishers</th>
                                     <th>Requirements</th>
                                   </tr>
                                 </thead>
@@ -169,7 +169,7 @@ return (
                     <div className='panel orders_details_block'>
                       <div className='first'>
                         <div className='row'>
-                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order ID</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order id</p></div>
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'>
                             <p className="order_values">
@@ -178,13 +178,13 @@ return (
                           </div>
                         </div>
                         <div className='row'>
-                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Title</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order title</p></div>
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.title}</p></div>
                         </div>
                         
                         <div className='row'>
-                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Budget</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order budget</p></div>
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{parseFloat(orderData.min_price)} - {parseFloat(orderData.max_price)} USD</p></div>
                         </div>
@@ -196,12 +196,12 @@ return (
                         </div>
 
                         <div className='row'>
-                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Created On</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order created on</p></div>
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.date_n_time}</p></div>
                         </div>
                         <div className='row'>
-                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order Ends On</p></div>
+                          <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Order ends on</p></div>
                           <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                           <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.end_date_n_time}</p></div>
                         </div>
@@ -209,7 +209,7 @@ return (
                         {
                           orderData.order_status == 2 ?
                           <div className='row'>
-                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Rejected Reason</p></div>
+                            <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p>Rejected reason</p></div>
                             <div className='col-lg-2 col-md-2 col-sm-2 col-2'>:</div>
                             <div className='col-lg-5 col-md-5 col-sm-5 col-5'><p className="order_values">{orderData.reason}</p></div>
                           </div>
@@ -222,7 +222,7 @@ return (
                       {
                         orderData.order_status == 0 ?
                         <div className="waiting_approval_btn">
-                          <button className="btn btn-block">Waiting for Approval</button>
+                          <button className="btn btn-block">Waiting for approval</button>
                         </div>
                         :
                         null
@@ -256,7 +256,7 @@ return (
                     </div>
 
                     <div className='orders_conversation_block'>
-                      <h6>Start Discussion To Admin</h6>
+                      <h6>Start discussion to admin</h6>
                       <div className='conversation_block'>
                         <div className="media conversation_media">
                           <div className="media-left">
@@ -297,7 +297,7 @@ return (
                       </div>
                       <div className="conversation_send">
                         <div className="input-group">
-                          <input type="text" className="form-control" placeholder="Type Your Message Here" />
+                          <input type="text" className="form-control" placeholder="Type your message here" />
                           <div className="input-group-append">
                               <img src="/assets/images/send.png" />
                           </div>
@@ -355,11 +355,11 @@ return (
                                 </div>
                                 <div className="col-lg-4 col-md-4 col-sm-6">
                                   <div className="orders_filters_search">
-                                    <div class="order_search">
-                                      <div class="input-group">
-                                        <input type="text" class="form-control" name="search" placeholder="Search" />
-                                        <div class="input-group-append">
-                                          <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                    <div className="order_search">
+                                      <div className="input-group">
+                                        <input type="text" className="form-control" name="search" placeholder="Search" />
+                                        <div className="input-group-append">
+                                          <span className="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
                                         </div>
                                       </div>
                                     </div>
@@ -528,11 +528,11 @@ return (
                                           </div>
                                           <div className="col-lg-4 col-md-4 col-sm-6">
                                             <div className="orders_filters_search">
-                                              <div class="order_search">
-                                                <div class="input-group">
-                                                  <input type="text" class="form-control" name="search" placeholder="Search" />
-                                                  <div class="input-group-append">
-                                                    <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                              <div className="order_search">
+                                                <div className="input-group">
+                                                  <input type="text" className="form-control" name="search" placeholder="Search" />
+                                                  <div className="input-group-append">
+                                                    <span className="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
                                                   </div>
                                                 </div>
                                               </div>
@@ -700,11 +700,11 @@ return (
                                             </div>
                                             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                                               <div className="orders_filters_search">
-                                                <div class="order_search">
-                                                  <div class="input-group">
-                                                    <input type="text" class="form-control" name="search" placeholder="Search" />
-                                                    <div class="input-group-append">
-                                                      <span class="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
+                                                <div className="order_search">
+                                                  <div className="input-group">
+                                                    <input type="text" className="form-control" name="search" placeholder="Search" />
+                                                    <div className="input-group-append">
+                                                      <span className="input-group-text"><button type="submit"><img src="/assets/images/search.png" /></button></span>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -835,25 +835,25 @@ return (
 
 
                 {/* ....................rejected popup modal design starts here..................... */}
-                  {/* <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#new_rejected">
+                  {/* <button type="button" className="btn btn-primary mt-2" data-toggle="modal" data-target="#new_rejected">
                     Rejected Popup
                   </button>
 
                   <div className="pr_modal ">
                     <div className="rejected_modal">
-                      <div class="modal" id="new_rejected">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
+                      <div className="modal" id="new_rejected">
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            <div className="modal-header">
                               <div className="row">
                                 <div className="col-lg-9 col-md-10 col-sm-10 col-10">
-                                  <h4 class="modal-title">Your Request Rejected :(</h4>
+                                  <h4 className="modal-title">Your Request Rejected :(</h4>
                                 </div>
-                                <div className="col-lg-3 col-md-2 col-sm-2 col-2"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                                <div className="col-lg-3 col-md-2 col-sm-2 col-2"><button type="button" className="close" data-dismiss="modal">&times;</button></div>
                               </div>
                               
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                               <img src="/assets/images/rejected_popup.png" />
                               <p className="rejected_popup_text rejected_popup_subtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                               <p className="rejected_popup_category mt-4">Category</p>
@@ -873,22 +873,22 @@ return (
 
 
                 {/* ....................Approve modal design starts here..................... */}
-                  {/* <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#approve_work">
+                  {/* <button type="button" className="btn btn-primary mt-2" data-toggle="modal" data-target="#approve_work">
                     Approve Work Modal
                   </button>
 
                   <div className="pr_modal approve_work_modal">
-                    <div class="modal" id="approve_work">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h4 class="modal-title">Publisher Name</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div className="modal" id="approve_work">
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h4 className="modal-title">Publisher Name</h4>
+                            <button type="button" className="close" data-dismiss="modal">&times;</button>
                           </div>
-                          <div class="modal-body">
-                            <div class="modal_fields">
-                              <div class="modal_label">Work Titles</div>
-                              <textarea class="modal_textarea" placeholder="Work Details in Brief" required></textarea>
+                          <div className="modal-body">
+                            <div className="modal_fields">
+                              <div className="modal_label">Work Titles</div>
+                              <textarea className="modal_textarea" placeholder="Work Details in Brief" required></textarea>
                             </div>
                             <div className="">
                               <div className="row">
@@ -1099,7 +1099,7 @@ return (
                     <div className="modal-dialog modal-md">
                       <div className="modal-content">
                         <div className="modal-header">
-                        <h4 class="modal-title">Service Details</h4>
+                        <h4 className="modal-title">Service Details</h4>
                           <button type="button" className="close"  onClick={()=>{this.setState({servModalStatus:false})}} >&times;</button>
                         </div>
                         <div className="modal-body">

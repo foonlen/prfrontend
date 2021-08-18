@@ -38,9 +38,8 @@ function addNewPlatform({userAgent, preData, headers})
   const [platform_id, setPlatformID] = useState(data.platform_id)
   const [platform_type, setPlatformType] = useState(data.platform_type)
   const [platform_type_name, setPlatformTypeName] = useState(data.platform_type_name)
+  const [platform_image, setPlatformImage] = useState(data.platform_image)
   const [services, setServices] = useState(data.services)
- 
-  
   
   const [service_row_id, setServiceRowId] = useState('')
   const [price, setPrice] = useState('')
@@ -268,9 +267,9 @@ function addNewPlatform({userAgent, preData, headers})
             <div className="panel_title_block">
               {
                 parseInt(data.approval_status) !== 2 ?
-                <h2>View your Services</h2>
+                <h2>View your services</h2>
                 :
-                <h2>Update your Services</h2>
+                <h2>Update your services</h2>
               }
                   
                   <p>Provide your services in detail for better findings.</p>
@@ -301,18 +300,18 @@ function addNewPlatform({userAgent, preData, headers})
                     
                     <div className="form__col platform_form_col">
                         <div className="field form__field active">
-                        <div className="field__label">Platform Type </div>
+                        <div className="field__label">Platform type </div>
                         <div className="field__wrap update_wrap">
-                            <div className="field__icon"><img className="services_img" src="/assets/images/youtube.png" width="22px" /></div>
+                            <div className="field__icon"><img className="services_img" src={API_BASE_URL + "assets/images/platforms/" + platform_image} width="22px" /></div>
                             {/* <input className="field__input" type="text" value={platform_type_name}  /> */}
                             <p className="platform_service_display">{platform_type_name}</p>
                         </div>
                         </div>
                     </div>
-
+                   
                     <div className="form__col platform_form_col">
                         <div className="field form__field active">
-                        <div className="field__label">Platform ID</div>
+                        <div className="field__label">Platform id</div>
                         <div className="field__wrap update_wrap">
                             <div className="field__icon"><img className="services_img" src="/assets/images/channel_name.png" width="22px" /></div>
                             {/* <input className="field__input" type="text" value={platform_id}  /> */}
@@ -325,7 +324,7 @@ function addNewPlatform({userAgent, preData, headers})
                     
                     <div className="form__col platform_form_col">
                         <div className="field form__field active">
-                        <div className="field__label">Platform Name</div>
+                        <div className="field__label">Platform name</div>
                         <div className="field__wrap update_wrap">
                             <div className="field__icon"><img className="services_img" src="/assets/images/platform_new.png" width="22px" /></div>
                             {/* <input className="field__input" type="text" value={platform_name}  /> */}
@@ -335,7 +334,7 @@ function addNewPlatform({userAgent, preData, headers})
                     </div>
                     <div className="form__col">
                         <div className="field form__field active">
-                        <div className="field__label">Channel Link</div>
+                        <div className="field__label">Channel link</div>
                         <div className="field__wrap update_wrap">
                             <div className="field__icon"><img className="services_img" src="/assets/images/channel_link.png" width="22px" /></div>
                             {/* <input className="field__input" type="text" value={website_link} /> */}
@@ -345,7 +344,7 @@ function addNewPlatform({userAgent, preData, headers})
                     </div>
                     <div className="form__col">
                         <div className="field form__field active">
-                        <div className="field__label">Channel Followers</div>
+                        <div className="field__label">{platform_type == 2 ? "Channel Subcribers" : "Monthly Visitors"}</div>
                         <div className="field__wrap update_wrap">
                             <div className="field__icon"><img className="services_img" src="/assets/images/follower_count.png" /></div>
                             {/* <input className="field__input" type="text" value={views_per_month} /> */}
@@ -380,7 +379,7 @@ function addNewPlatform({userAgent, preData, headers})
                       parseInt(data.approval_status) === 2 ?
                       <div className="form__col">
                           <div className="field form__field active">
-                          <div className="field__label">Rejected Reason</div>
+                          <div className="field__label">Rejected reason</div>
                             {/* <div className="field__wrap update_wrap">
                               <div className="field__icon"><img src="/assets/images/reject.png" /></div>
                               <div className="platform_rejected_reason">
@@ -426,7 +425,7 @@ function addNewPlatform({userAgent, preData, headers})
                     {
                   parseInt(data.approval_status) !== 2 ?
                   <>
-                  <h5 className="mb-2">Add New Service</h5>
+                  <h5 className="mb-2">Add new service</h5>
                     <div className="row">
                         <div className="col-md-7 add_new_services services_edit">
                      
@@ -467,7 +466,7 @@ function addNewPlatform({userAgent, preData, headers})
 
                             <div className="col-lg-5 col-md-4">
                               <div className="form-group">
-                                <label htmlFor="email">Reference Link <span className="validation_asteris">*</span></label>
+                                <label htmlFor="email">Reference link <span className="validation_asteris">*</span></label>
                                 <input className="form-control" type="text" placeholder="https://"   value={reference_link} onChange={(e) => setReferenceLink(e.target.value)} name='reference_link' />
                               </div>
                               <div className="error_class">
@@ -484,7 +483,7 @@ function addNewPlatform({userAgent, preData, headers})
                             parseInt(data.platform_type) === 2 ?
                             <div className="col-lg-4 ">
                             <div className="form-group">
-                                <label htmlFor="email">Video Duration <span className="validation_asteris">*</span></label>
+                                <label htmlFor="email">Video duration <span className="validation_asteris">*</span></label>
                                 <TimePicker className="form-control"
                                     placeholder="HH:MM:SS"
                                     value={video_duration}
@@ -513,7 +512,7 @@ function addNewPlatform({userAgent, preData, headers})
                                   </div>
                                   <div className="form-check form-check-inline"  >
                                     <input className="form-check-input" type="radio" value="2" name="addition"  onChange={(e) => setAddition(e.target.value)} readOnly />
-                                    <label className="form-check-label">Unfollow</label>
+                                    <label className="form-check-label">No follow</label>
                                   </div>
                                 </div>
                               </div>
@@ -525,12 +524,12 @@ function addNewPlatform({userAgent, preData, headers})
 
                           <div className="col-lg-5 col-md-4 col-sm-6 col-12">
                             <div className="form-group">
-                              <label htmlFor="email">Also Share With <span className="validation_asteris">*</span></label>
+                              <label htmlFor="email">Also share with <span className="validation_asteris">*</span></label>
                               <div className="pr_platform_website_share_block">
                                 <div className="form-check"  >
                                   <input className="form-check-input" type="checkbox" value="1" onChange={e => addToAlsoShare(e)} readOnly/>
                                   <label className="form-check-label">
-                                    Social Media
+                                    Social media
                                   </label>
                                 </div>
                               
@@ -573,7 +572,7 @@ function addNewPlatform({userAgent, preData, headers})
                   }
                            
                      {/* bootstrap table starts here */}
-                        <h5 className="mb-2 mt-4">Listed Services</h5>
+                        <h5 className="mb-2 mt-4">Listed services</h5>
 
                           <div className="panel-table">
                             <div className="table-responsive">
@@ -637,13 +636,13 @@ function addNewPlatform({userAgent, preData, headers})
                                           {
                                             parseInt(item2.addition) === 1 ?
                                             <>
-                                              <span class="badge custom_badge_success">Follow</span>
+                                              <span className="badge custom_badge_success">Follow</span>
                                             </>
                                             :
                                             
                                             parseInt(item2.addition) === 2 ?
                                             <>
-                                              <span class="badge custom_badge_danger">UnFollow</span>
+                                              <span className="badge custom_badge_danger">No Follow</span>
                                             </>
                                             :
                                             null  

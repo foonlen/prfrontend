@@ -180,25 +180,26 @@ class login extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
           <meta name="theme-color" content="#fff" />
           <meta name="format-detection" content="telephone=no" />
-          <meta name="description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
+          <meta name="description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />{/* Twitter Card data*/}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@publisher_handle" />
-          <meta name="twitter:title" content="Login to  Publisher Panel" />
-          <meta name="twitter:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta name="twitter:title" content="Login to Publisher Panel" />
+          <meta name="twitter:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta name="twitter:creator" content="@author_handle" />
           <meta name="twitter:image" content="http://www.example.com/image.jpg" />{/* Open Graph data*/}
           <meta property="og:title" content="Login to Publisher Panel" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="http://www.example.com/" />
           <meta property="og:image" content="http://example.com/image.jpg" />
-          <meta property="og:description" content="CoinPedia Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
+          <meta property="og:description" content="BrandsNeed Publisher Panel is a work management tool for Crypto , Fintech and Social media by Coinpeda.org . The tool helps publishers and influencers to find business opportunities for sponsored posts and freelancing work and also manage wallet and orders." />
           <meta property="og:site_name" content="Site Name, i.e. Moz" />
           <meta property="fb:admins" content="Facebook numeric ID" />
-          <meta name="keywords" content="Coinpedia Publisher Login, Coinpedia, coinpedia PR Agency, list as influencers, Influencer marketing, " />
+          <meta name="keywords" content="BrandsNeed Publisher Login, BrandsNeed, BrandsNeed PR Agency, list as influencers, Influencer marketing, " />
           {/* favicon*/}
           <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+          {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" /> */}
+          
           <link rel="manifest" href="/assets/img/site.webmanifest" />
           <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
@@ -207,40 +208,40 @@ class login extends React.Component {
           <div className="auth_page ad_reg login_page">
             <Authnavbar/>
                 <div className="row auth_page_form">
-                  <div className="col-md-6 col-lg-6 col-md-pull-8   auth_left">
+                  <div className="col-md-6 col-lg-6 order-md-1 order-sm-2 order-2   auth_left">
                     <div className="bg_auth_left"></div>
                     <div className="row">
                       <div className="col-md-1 col-lg-2"></div>
-                      <div className="col-md-10 col-lg-8">
+                      <div className="col-md-10 col-lg-8 plan_details_block">
                         <div className="plan_details">
-                          <h4>The Source of Global PR and Influencer Marketing Business . </h4>
+                          <h4>The source of global PR and influencer marketing business</h4>
                           <ul>
-                            <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers.</li>
-                            <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system .</li>
-                            <li><img src="/assets/images/plan-points.png" /> 100% job efficiency .</li>
-                            <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support .</li>
+                            <li><img src="/assets/images/plan-points.png" /> Rapidly growing global advertisers</li>
+                            <li><img src="/assets/images/plan-points.png" /> 3000+ verified publishers and influencers</li>
+                            <li><img src="/assets/images/plan-points.png" /> Safe and fast payment system</li>
+                            <li><img src="/assets/images/plan-points.png" /> 100% job efficiency</li>
+                            <li><img src="/assets/images/plan-points.png" /> Dedicated assistance and support</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     
                   </div>  
-                  <div className="col-md-6 col-lg-6 col-md-push-4  auth_right">
+                  <div className="col-md-6 col-lg-6 order-md-2 order-sm-1 order-1   auth_right">
                     <div className="row">
                       <div className="col-md-12">
                         <div className="auth__inner">
                           <div className="auth__head">
                             <div className="auth__title title custom_auth_title">
                               <h1 className="title_xl">Login into your account</h1>
-                              <p>Access your tool hassle free.</p>
+                              <p>Access your tool hassle free</p>
                             </div>
                           </div>
 
                           <div className="row">
-                            <div className="col-md-10">
+                            <div className="col-md-12 col-lg-10">
                               <div className="field auth__field">
-                                <div className="field__label">Login ID <span className="validation_asteris">*</span></div>
+                                <div className="field__label">Login id<span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/username.png" /></div>
                                   <input className="field__input" type="text" placeholder="Username OR Email ID" useref="login_id" value={login_id} onChange={(e) => { this.setState({ login_id: e.target.value }) }} name="login_id" autoComplete='off' />
@@ -250,7 +251,7 @@ class login extends React.Component {
                                 </div>
                               </div>
                               <div className="field auth__field">
-                                <div className="field__label">Password <span className="validation_asteris">*</span></div>
+                                <div className="field__label">Password<span className="validation_asteris">*</span></div>
                                 <div className="field__wrap">
                                 <div className="field__icon"><img src="/assets/images/lock.png" /></div>
                                   <input className="field__input" type="password" placeholder="**********" useref="password" value={password} onChange={(e) => { this.setState({ password: e.target.value }) }} type="password" name="password" autoComplete='off' />
@@ -260,9 +261,9 @@ class login extends React.Component {
                                 </div>
                                 <p className="auth_forgot"><Link href="/forgot-password"><a>Forgot password ?</a></Link></p>
                               </div>
-                              <button className="btn cp-primary-btn" type="button" onClick={() => { this.loginFun() }} >
+                              <button className="btn cp-primary-btn login_btn" type="button" onClick={() => { this.loginFun() }} >
                                 {this.state.loader ? (
-                                  <div className="loader"><span class="spinner-border spinner-border-md"></span></div>
+                                  <div className="loader"><span className="spinner-border spinner-border-md"></span></div>
                                 ) : (
                                   <>Take me in <i className="la la-arrow-right"></i></>
                                 )}
@@ -275,7 +276,7 @@ class login extends React.Component {
                               <div className="row">
                                 <div className="col-md-12">
                                   <p className="reg_auth_link">
-                                    Don't have an Account ?
+                                    <span className="dont_have_an_account">Don't have an account ?</span>
                                     <Link href="/user/r">
                                       <a className="auth__link">Advertiser</a>
                                     </Link>

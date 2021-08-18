@@ -478,7 +478,7 @@ class profile extends React.Component
                         <TopMenuBar full_name={this.state.advertiser_full_name} />
                         <div className="container__body">
                             <div className="panel_title_block">
-                                <h2>My Profile</h2>
+                                <h2>My profile</h2>
                                 <p>Manage your profile here</p>
                             </div>
                             <div>
@@ -501,7 +501,7 @@ class profile extends React.Component
                                         <div className="layout__panel panel profilehead">
 
                                             <div className="panel__group">
-                                                <div className="panel__title title">Main Info</div>
+                                                <div className="panel__title title">Main info</div>
                                                 <div>
                                                     <div className="profile_col">
                                                         <div className="field form__field">
@@ -531,7 +531,7 @@ class profile extends React.Component
                                                         <div className="field form__field">
                                                             <div className="field__label">Email id <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
-                                                                <input autoComplete="off" type="text" className="field__input" placeholder="Email ID" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
+                                                                <input autoComplete="off" type="text" className="field__input" placeholder="Email id" value={this.state.email_id} onChange={(e) => { this.setState({ email_id: e.target.value }) }} name="email_id" ref="email_id" />
                                                                 <div className="field__icon"><img src="/assets/images/email.png" /></div>
                                                             </div>
                                                             <div className="error_class">
@@ -580,7 +580,7 @@ class profile extends React.Component
                                                         <div className="field form__field">
                                                             <div className="field__label">Mobile number <span className="validation_asteris">*</span></div>
                                                             <div className="field__wrap">
-                                                                <input autoComplete="off" type="text" className="field__input" placeholder="Mobile Number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
+                                                                <input autoComplete="off" type="text" className="field__input" placeholder="Mobile number" value={this.state.mobile_number} onChange={(e) => { this.setState({ mobile_number: e.target.value }) }} name="mobile_number" ref="mobile_number" />
                                                                 <div className="field__icon"><img src="/assets/images/mobile.png" /></div>
                                                             </div>
                                                             <div className="error_class">
@@ -604,7 +604,7 @@ class profile extends React.Component
                                         <div className="layout__panel layout__panel_x2 panel profiledetails_tabs">
                                             <Tabs>
                                                 <TabList>
-                                                    <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-user"></i> Profile Info</Tab>
+                                                    <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-user"></i> Profile info</Tab>
                                                     <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-key "></i> Security</Tab>
                                                     {/* <Tab className="btn custom_button btn_light btn_icon js-panel-btn "><i className="la la-wallet"></i> Wallet</Tab> */}
                                                 </TabList>
@@ -694,7 +694,7 @@ class profile extends React.Component
                                                     <div className="security_details profile_auth" >
                                                         <div className="row">
                                                             <div className="col-md-10 col-lg-6">
-                                                                <div className='container__title title profile_tab_titles'>Security Details</div>
+                                                                <div className='container__title title profile_tab_titles'>Security details</div>
                                                                     <div className="field auth__field">
                                                                         <div className="field__label">Old password <span className="validation_asteris">*</span></div>
                                                                         <div className="field__wrap">

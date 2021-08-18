@@ -37,6 +37,10 @@ function dashboard({userAgent, data})
   const [this_month_earnings, setThisMonthEarnings] = useState(0)
   const [modalData, setModalData] = useState({title: "", image_name: "", description: ""})
   const [pr_plat_status,setPr_plat_status]= useState('')
+  const [totalPlatform,setTotalPlatform]= useState('')
+  const [pendingPlatform,setPendingPlatform]= useState('')
+  const [approvedPlatform,setApprovedPlatform]= useState('')
+  const [rejectedPlatform,setRejectedPlatform]= useState('')
 
 
   var recent_order = []
@@ -60,6 +64,7 @@ function dashboard({userAgent, data})
   Axios.get(API_BASE_URL+"publisher/dashboard/overview", config)
   .then(response=>
     setPr_plat_status(response.data.message.platform_added_status),
+    
   )
 
 
@@ -79,12 +84,28 @@ function dashboard({userAgent, data})
     })
   }
 
+  const getPlatformsCounts = () =>
+  {
+    Axios.get(API_BASE_URL+"publisher/dashboard/overview", config)
+    .then(res => { 
+      // console.log(res.data)
+      if(res.data.status) 
+      { 
+        setTotalPlatform(res.data.message.platforms_counts.total_platforms)
+        setPendingPlatform(res.data.message.platforms_counts.pending)
+        setApprovedPlatform(res.data.message.platforms_counts.approved)
+        setRejectedPlatform(res.data.message.platforms_counts.rejected)
+      }
+    })
+  }
+
   useEffect(()=>{
     // if(userAgent.alert_message)
     // {
     //   jsCookie.remove('alert_message')
     // }
     getWalletBal();
+    getPlatformsCounts();
     
     },[])
 
@@ -109,8 +130,8 @@ function dashboard({userAgent, data})
 
         <div className="container__body">
           <div className="panel_title_block text-center">
-            <h2>One tool for all your Orders</h2>
-            <p>Use coinpedia publisher tool to manage all your campaigns in the most effective way</p>
+            <h2>One Tool For All Your Orders</h2>
+            <p>Use BrandsNeed publisher tool to manage all your campaigns in the most effective way</p>
           </div>
           <div className="dashboard_banner">
             <div className="row">
@@ -145,25 +166,25 @@ function dashboard({userAgent, data})
                   <img src="/assets/images/wallet.png" className="wallet_img" />
                   <img src="/assets/images/wallet-line.png" className="wallet_line" />
                   <h2 className="dash_available_balance"><span>$</span> 0</h2>
-                  <h4>Available Balance  </h4>
+                  <h4>Available balance</h4>
                   {/* <p className="dash_coming_soon">{"( Coming Soon )"}</p> */}
                   <div className="row">
-                    <div className="col-md-4 col-4">
+                    <div className="col-lg-4 col-md-4 col-4 dash_inner_block">
                       <h5>$ 0</h5>
-                      <h6>Total Earned</h6>
+                      <h6>Total earned</h6>
                     </div>
-                    <div className="col-md-4 col-4">
+                    <div className="col-lg-4 col-md-4 col-4 dash_inner_block">
                       <h5>$ 0</h5>
-                      <h6>On Process</h6>
+                      <h6>On process</h6>
                     </div>
-                    <div className="col-md-4 col-4">
+                    <div className="col-lg-4 col-md-4 col-4 dash_inner_block">
                       <h5>$ 0</h5>
                       <h6>Withdrawn</h6>
                     </div>
                   </div>
 
                   <div className="col-md-12 wallet_btn">
-                    <p><Link href="#"><a>Go To Wallet</a></Link></p>
+                    <p><Link href="#"><a>Go to wallet</a></Link></p>
                   </div>
                   <p className="wallet_block_note">Note : The wallet feature will be updated in next version.</p>
 
@@ -193,27 +214,36 @@ function dashboard({userAgent, data})
                     
                   </div>
                 </div>
-
+                
+              
+              
                 <div className="row">
-                  <div className="col-md-4">
+                  <div className="col-md-3">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-total-orders.png" />
-                      <h2>{totalorders}</h2>
-                      <p>Total Orders</p>
+                      <h2>{totalPlatform ? totalPlatform:0}</h2>
+                      <p>Total Platforms</p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-3">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-completed-orders.png" />
-                      <h2>{completedorder ? completedorder:0}</h2>
-                      <p>Completed Orders</p>
+                      <h2>{pendingPlatform ? pendingPlatform:0}</h2>
+                      <p>Pending Platforms</p>
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-3">
                     <div className="orders_details">
                       <img src="/assets/images/dashboard-progress-order.png" />
-                      <h2>{pendingorder ? pendingorder : 0}</h2>
-                      <p>In Progress Orders</p>
+                      <h2>{approvedPlatform ? approvedPlatform : 0}</h2>
+                      <p>Approved Platforms</p>
+                    </div>
+                  </div>
+                  <div className="col-md-3">
+                    <div className="orders_details">
+                      <img src="/assets/images/reject.png" />
+                      <h2>{rejectedPlatform ? rejectedPlatform : 0}</h2>
+                      <p>Rejected Platforms</p>
                     </div>
                   </div>
                 </div>
@@ -225,10 +255,10 @@ function dashboard({userAgent, data})
               <div className="custom_panel my_orders_dashboard">
                 <div className="row">
                   <div className="col-lg-8 col-md-8 col-sm-8 col-7">
-                    <h3 className="panel__title title">My Orders</h3>
+                    <h3 className="panel__title title">My orders</h3>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-4 col-5 go_back" >
-                    <Link href="/publisher/orders/" ><a>View All<i className="la la-angle-right"></i></a></Link>
+                    <Link href="/publisher/orders/" ><a>View all<i className="la la-angle-right"></i></a></Link>
                   </div>
                 </div>
                 <div className="panel-table">
@@ -237,7 +267,7 @@ function dashboard({userAgent, data})
                     pr_plat_status === 0
                     ?
                     <div className='sorry_block'>
-                      <div className='sorry_block_text'>Sorry No Related Data Found</div>
+                      <div className='sorry_block_text'>Sorry no related data found</div>
                     </div>
                     :
                     pr_plat_status === 1
@@ -248,10 +278,10 @@ function dashboard({userAgent, data})
                       <table className="table custom-table">
                         <thead>
                           <tr>
-                            <th>Order Title</th>
-                            <th>Platform Name</th>
+                            <th>Order title</th>
+                            <th>Platform name</th>
                             <th>Services</th>
-                            <th>Last Date</th>
+                            <th>Last date</th>
                             <th>Price</th>
                             <th>Status</th>
                             <th>View</th>

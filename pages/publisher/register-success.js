@@ -12,7 +12,7 @@ export default function welcome_popup()
                 <div className='auth_navbar '>
                   <nav className="navbar navbar-expand-md navbar-white bg-transparent fixed-top">
                     <div className='container-fluid'>
-                      <a className="navbar-brand" href="#"><img src="/assets/images/logo-color.png" width='170px'/></a>
+                      <a className="navbar-brand" href="#"><img src="/assets/images/brands_need_logo_color.png" /></a>
 
                       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span className="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@ export default function welcome_popup()
                   <div className="col-lg-4"></div>
                   <div className="col-lg-4">
                       <div className='popup_main_block'>
-                        <h4>Welcome to CoinPedia Agency Publisher Tool</h4>
+                        <h4>Welcome to BrandsNeed Agency Publisher Tool</h4>
                         <p>Let's start with Updating your Platform and Services</p>
                         <div className="row">
                           <div className="col-lg-2"></div>
